@@ -1,0 +1,648 @@
+{
+  "pool20_k5": {
+    "System A": {
+      "mean_redundancy_all": 0.46725059250990547,
+      "mean_redundancy_pros": 0.471820667386055,
+      "mean_redundancy_cons": 0.46576196352640786,
+      "mean_conflict_density": 0.3577834955411902,
+      "mean_conflict_count": 8.866666666666667,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7403542776902516,
+      "mean_redundancy_pros": 0.75245028535525,
+      "mean_redundancy_cons": 0.7603952646255493,
+      "mean_conflict_density": 0.8944483156632583,
+      "mean_conflict_count": 22.366666666666667,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7525526901086171,
+      "mean_redundancy_pros": 0.7967997868855794,
+      "mean_redundancy_cons": 0.7562110364437103,
+      "mean_conflict_density": 0.7264456913375131,
+      "mean_conflict_count": 18.133333333333333,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48477437496185305,
+      "mean_redundancy_pros": 0.5020941178003947,
+      "mean_redundancy_cons": 0.49568832218647,
+      "mean_conflict_density": 0.35837012899612686,
+      "mean_conflict_count": 8.933333333333334,
+      "n_policies": 30
+    }
+  },
+  "pool20_k10": {
+    "System A": {
+      "mean_redundancy_all": 0.49040246605873106,
+      "mean_redundancy_pros": 0.5085506836573283,
+      "mean_redundancy_cons": 0.49675194919109344,
+      "mean_conflict_density": 0.3554557273221316,
+      "mean_conflict_count": 35.43333333333333,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.6908762951691946,
+      "mean_redundancy_pros": 0.6917851587136586,
+      "mean_redundancy_cons": 0.7196774482727051,
+      "mean_conflict_density": 0.7999117922749985,
+      "mean_conflict_count": 80.0,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.6758461356163025,
+      "mean_redundancy_pros": 0.7085620502630869,
+      "mean_redundancy_cons": 0.6911743064721425,
+      "mean_conflict_density": 0.5195379705821218,
+      "mean_conflict_count": 51.93333333333333,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.50165047844251,
+      "mean_redundancy_pros": 0.5116690884033839,
+      "mean_redundancy_cons": 0.5203099101781845,
+      "mean_conflict_density": 0.3905126037061508,
+      "mean_conflict_count": 39.06666666666667,
+      "n_policies": 30
+    }
+  },
+  "pool20_k15": {
+    "System A": {
+      "mean_redundancy_all": 0.5080198884010315,
+      "mean_redundancy_pros": 0.528407660126686,
+      "mean_redundancy_cons": 0.5204210172096888,
+      "mean_conflict_density": 0.36786405374005327,
+      "mean_conflict_count": 82.43333333333334,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.6361268778642019,
+      "mean_redundancy_pros": 0.6529661387205123,
+      "mean_redundancy_cons": 0.6436490694681803,
+      "mean_conflict_density": 0.7175452892268553,
+      "mean_conflict_count": 161.7,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.571325475970904,
+      "mean_redundancy_pros": 0.6034371594587962,
+      "mean_redundancy_cons": 0.5814912696679433,
+      "mean_conflict_density": 0.42926889576960375,
+      "mean_conflict_count": 96.33333333333333,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.49135273198286694,
+      "mean_redundancy_pros": 0.515773868560791,
+      "mean_redundancy_cons": 0.49762760400772094,
+      "mean_conflict_density": 0.3644661187532865,
+      "mean_conflict_count": 81.5,
+      "n_policies": 30
+    }
+  },
+  "pool20_k20": {
+    "System A": {
+      "mean_redundancy_all": 0.4919660210609436,
+      "mean_redundancy_pros": 0.5117031713326772,
+      "mean_redundancy_cons": 0.5031858166058858,
+      "mean_conflict_density": 0.3673874327157573,
+      "mean_conflict_count": 146.43333333333334,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.5972941269477209,
+      "mean_redundancy_pros": 0.6200829684734345,
+      "mean_redundancy_cons": 0.5975259333848953,
+      "mean_conflict_density": 0.6225252310182193,
+      "mean_conflict_count": 249.16666666666666,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.49196601907412213,
+      "mean_redundancy_pros": 0.511703168352445,
+      "mean_redundancy_cons": 0.5031858255465825,
+      "mean_conflict_density": 0.3673874321515321,
+      "mean_conflict_count": 146.43333333333334,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.49196602404117584,
+      "mean_redundancy_pros": 0.5117031693458557,
+      "mean_redundancy_cons": 0.5031858225663502,
+      "mean_conflict_density": 0.3673874338052324,
+      "mean_conflict_count": 146.43333333333334,
+      "n_policies": 30
+    }
+  },
+  "pool50_k5": {
+    "System A": {
+      "mean_redundancy_all": 0.46224888861179353,
+      "mean_redundancy_pros": 0.4518890152374903,
+      "mean_redundancy_cons": 0.45954803824424745,
+      "mean_conflict_density": 0.3549695458674638,
+      "mean_conflict_count": 8.866666666666667,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7637038747469584,
+      "mean_redundancy_pros": 0.7793575555086136,
+      "mean_redundancy_cons": 0.7756224592526754,
+      "mean_conflict_density": 0.920482850949639,
+      "mean_conflict_count": 23.066666666666666,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8246216197808584,
+      "mean_redundancy_pros": 0.8545834501584371,
+      "mean_redundancy_cons": 0.8333021521568298,
+      "mean_conflict_density": 0.9349368051650042,
+      "mean_conflict_count": 23.4,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48591375549634297,
+      "mean_redundancy_pros": 0.4923578490813573,
+      "mean_redundancy_cons": 0.5127562334140142,
+      "mean_conflict_density": 0.36456521015677573,
+      "mean_conflict_count": 9.066666666666666,
+      "n_policies": 30
+    }
+  },
+  "pool50_k10": {
+    "System A": {
+      "mean_redundancy_all": 0.4836766541004181,
+      "mean_redundancy_pros": 0.4907177408536275,
+      "mean_redundancy_cons": 0.4936138133207957,
+      "mean_conflict_density": 0.3408270034859283,
+      "mean_conflict_count": 33.8,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7401768386363983,
+      "mean_redundancy_pros": 0.7565303961435954,
+      "mean_redundancy_cons": 0.7515163669983546,
+      "mean_conflict_density": 0.8856652869751573,
+      "mean_conflict_count": 88.8,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7736181418100992,
+      "mean_redundancy_pros": 0.8014379282792409,
+      "mean_redundancy_cons": 0.7809669276078542,
+      "mean_conflict_density": 0.775630525149088,
+      "mean_conflict_count": 77.53333333333333,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.47277912894884744,
+      "mean_redundancy_pros": 0.4860341896613439,
+      "mean_redundancy_cons": 0.490038655201594,
+      "mean_conflict_density": 0.35843475752323894,
+      "mean_conflict_count": 35.766666666666666,
+      "n_policies": 30
+    }
+  },
+  "pool50_k15": {
+    "System A": {
+      "mean_redundancy_all": 0.49774204393227894,
+      "mean_redundancy_pros": 0.5073665956656138,
+      "mean_redundancy_cons": 0.5121529708305995,
+      "mean_conflict_density": 0.36608357631788346,
+      "mean_conflict_count": 81.73333333333333,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7142047037680944,
+      "mean_redundancy_pros": 0.7227701743443807,
+      "mean_redundancy_cons": 0.7343129287163417,
+      "mean_conflict_density": 0.8501579492589179,
+      "mean_conflict_count": 191.73333333333332,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7382633825143178,
+      "mean_redundancy_pros": 0.7663921813170115,
+      "mean_redundancy_cons": 0.7475283563137054,
+      "mean_conflict_density": 0.6721133128348357,
+      "mean_conflict_count": 151.06666666666666,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.47493395109971365,
+      "mean_redundancy_pros": 0.48995245397090914,
+      "mean_redundancy_cons": 0.487432399392128,
+      "mean_conflict_density": 0.37438279469986874,
+      "mean_conflict_count": 84.0,
+      "n_policies": 30
+    }
+  },
+  "pool50_k20": {
+    "System A": {
+      "mean_redundancy_all": 0.5130307982365291,
+      "mean_redundancy_pros": 0.525041463971138,
+      "mean_redundancy_cons": 0.5296480099360148,
+      "mean_conflict_density": 0.37504907571876006,
+      "mean_conflict_count": 149.26666666666668,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7067964762449265,
+      "mean_redundancy_pros": 0.7116365045309067,
+      "mean_redundancy_cons": 0.7289323409398397,
+      "mean_conflict_density": 0.8287482121469626,
+      "mean_conflict_count": 332.1333333333333,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7082520882288615,
+      "mean_redundancy_pros": 0.7363318900267283,
+      "mean_redundancy_cons": 0.7206386208534241,
+      "mean_conflict_density": 0.5778365631285803,
+      "mean_conflict_count": 230.5,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48291424810886385,
+      "mean_redundancy_pros": 0.5001012523969014,
+      "mean_redundancy_cons": 0.49374191065629325,
+      "mean_conflict_density": 0.36673522137809755,
+      "mean_conflict_count": 145.93333333333334,
+      "n_policies": 30
+    }
+  },
+  "pool50_k30": {
+    "System A": {
+      "mean_redundancy_all": 0.5306416779756546,
+      "mean_redundancy_pros": 0.5498938649892807,
+      "mean_redundancy_cons": 0.5452039410670598,
+      "mean_conflict_density": 0.39165370592372095,
+      "mean_conflict_count": 351.1333333333333,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.6689507633447647,
+      "mean_redundancy_pros": 0.6764358917872111,
+      "mean_redundancy_cons": 0.6870718379815419,
+      "mean_conflict_density": 0.7624973249674916,
+      "mean_conflict_count": 686.9,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.6374959250291189,
+      "mean_redundancy_pros": 0.6661272982756297,
+      "mean_redundancy_cons": 0.6547162930170695,
+      "mean_conflict_density": 0.483201098840074,
+      "mean_conflict_count": 434.26666666666665,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48562085429827373,
+      "mean_redundancy_pros": 0.5015671024719874,
+      "mean_redundancy_cons": 0.4977648168802261,
+      "mean_conflict_density": 0.37482352584591666,
+      "mean_conflict_count": 335.3666666666667,
+      "n_policies": 30
+    }
+  },
+  "pool100_k5": {
+    "System A": {
+      "mean_redundancy_all": 0.4536465615034103,
+      "mean_redundancy_pros": 0.4395906945069631,
+      "mean_redundancy_cons": 0.4426378458738327,
+      "mean_conflict_density": 0.3369838579258157,
+      "mean_conflict_count": 8.433333333333334,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7485794425010681,
+      "mean_redundancy_pros": 0.7719087938467661,
+      "mean_redundancy_cons": 0.7483884493509928,
+      "mean_conflict_density": 0.9061137370181193,
+      "mean_conflict_count": 22.666666666666668,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8546042402585348,
+      "mean_redundancy_pros": 0.8884115854899088,
+      "mean_redundancy_cons": 0.8623523195584615,
+      "mean_conflict_density": 0.9447972551020213,
+      "mean_conflict_count": 23.633333333333333,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.4842197984457016,
+      "mean_redundancy_pros": 0.48867912391821544,
+      "mean_redundancy_cons": 0.5135446061690648,
+      "mean_conflict_density": 0.3750245213468127,
+      "mean_conflict_count": 9.3,
+      "n_policies": 30
+    }
+  },
+  "pool100_k10": {
+    "System A": {
+      "mean_redundancy_all": 0.4690455118815104,
+      "mean_redundancy_pros": 0.4740559806426366,
+      "mean_redundancy_cons": 0.47930135726928713,
+      "mean_conflict_density": 0.3327795744490299,
+      "mean_conflict_count": 33.03333333333333,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7253787279129028,
+      "mean_redundancy_pros": 0.7584727386633555,
+      "mean_redundancy_cons": 0.7189030269781749,
+      "mean_conflict_density": 0.8696752183204953,
+      "mean_conflict_count": 87.03333333333333,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8228854576746623,
+      "mean_redundancy_pros": 0.8579966247081756,
+      "mean_redundancy_cons": 0.8267994205156962,
+      "mean_conflict_density": 0.8956892041698836,
+      "mean_conflict_count": 89.63333333333334,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.4827328592538834,
+      "mean_redundancy_pros": 0.5096152504285176,
+      "mean_redundancy_cons": 0.4942703942457835,
+      "mean_conflict_density": 0.37461904186246164,
+      "mean_conflict_count": 37.333333333333336,
+      "n_policies": 30
+    }
+  },
+  "pool100_k15": {
+    "System A": {
+      "mean_redundancy_all": 0.48979052901268005,
+      "mean_redundancy_pros": 0.5014382759730022,
+      "mean_redundancy_cons": 0.5001897921164831,
+      "mean_conflict_density": 0.363568607035519,
+      "mean_conflict_count": 81.36666666666666,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7184829443693161,
+      "mean_redundancy_pros": 0.7440701136986415,
+      "mean_redundancy_cons": 0.7204613298177719,
+      "mean_conflict_density": 0.8651452986900948,
+      "mean_conflict_count": 194.76666666666668,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7979338745276133,
+      "mean_redundancy_pros": 0.8314507166544597,
+      "mean_redundancy_cons": 0.8015486160914104,
+      "mean_conflict_density": 0.8450443838807655,
+      "mean_conflict_count": 190.26666666666668,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48047875265280404,
+      "mean_redundancy_pros": 0.49720875720183055,
+      "mean_redundancy_cons": 0.4967098404963811,
+      "mean_conflict_density": 0.3757999593321465,
+      "mean_conflict_count": 84.13333333333334,
+      "n_policies": 30
+    }
+  },
+  "pool100_k20": {
+    "System A": {
+      "mean_redundancy_all": 0.5083210647106171,
+      "mean_redundancy_pros": 0.5254973302284877,
+      "mean_redundancy_cons": 0.5160992741584778,
+      "mean_conflict_density": 0.36695299628384237,
+      "mean_conflict_count": 145.76666666666668,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7132378985484441,
+      "mean_redundancy_pros": 0.7374603321154912,
+      "mean_redundancy_cons": 0.7132762352625529,
+      "mean_conflict_density": 0.8596492114192097,
+      "mean_conflict_count": 344.1666666666667,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7764850000540415,
+      "mean_redundancy_pros": 0.8091159204641978,
+      "mean_redundancy_cons": 0.7801457504431407,
+      "mean_conflict_density": 0.7816857579619606,
+      "mean_conflict_count": 312.96666666666664,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48295123477776847,
+      "mean_redundancy_pros": 0.5011584927638372,
+      "mean_redundancy_cons": 0.49730489452679955,
+      "mean_conflict_density": 0.3850817381934702,
+      "mean_conflict_count": 153.6,
+      "n_policies": 30
+    }
+  },
+  "pool100_k30": {
+    "System A": {
+      "mean_redundancy_all": 0.5315079053243001,
+      "mean_redundancy_pros": 0.5478036959966024,
+      "mean_redundancy_cons": 0.544092039267222,
+      "mean_conflict_density": 0.3938031587082102,
+      "mean_conflict_count": 352.1666666666667,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.701045764485995,
+      "mean_redundancy_pros": 0.7204376786947251,
+      "mean_redundancy_cons": 0.7068616102139155,
+      "mean_conflict_density": 0.8285483933121431,
+      "mean_conflict_count": 746.3666666666667,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.7395190993944804,
+      "mean_redundancy_pros": 0.7696152706940969,
+      "mean_redundancy_cons": 0.7474082152048747,
+      "mean_conflict_density": 0.6674056032702251,
+      "mean_conflict_count": 600.8333333333334,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.482604385415713,
+      "mean_redundancy_pros": 0.5032194246848424,
+      "mean_redundancy_cons": 0.489598286151886,
+      "mean_conflict_density": 0.378895356790948,
+      "mean_conflict_count": 339.76666666666665,
+      "n_policies": 30
+    }
+  },
+  "pool200_k5": {
+    "System A": {
+      "mean_redundancy_all": 0.45279762943585716,
+      "mean_redundancy_pros": 0.44780727724234265,
+      "mean_redundancy_cons": 0.4302929917971293,
+      "mean_conflict_density": 0.3340371920721293,
+      "mean_conflict_count": 8.2,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.7265575706958771,
+      "mean_redundancy_pros": 0.7513272106647492,
+      "mean_redundancy_cons": 0.7214431246121724,
+      "mean_conflict_density": 0.895098934110579,
+      "mean_conflict_count": 22.4,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8712708314259847,
+      "mean_redundancy_pros": 0.9024774213631948,
+      "mean_redundancy_cons": 0.882617038488388,
+      "mean_conflict_density": 0.9399626488612653,
+      "mean_conflict_count": 23.533333333333335,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.4864712158838908,
+      "mean_redundancy_pros": 0.5103638201951981,
+      "mean_redundancy_cons": 0.5054616838693619,
+      "mean_conflict_density": 0.43679266653140064,
+      "mean_conflict_count": 10.933333333333334,
+      "n_policies": 30
+    }
+  },
+  "pool200_k10": {
+    "System A": {
+      "mean_redundancy_all": 0.470340750614802,
+      "mean_redundancy_pros": 0.47821479141712187,
+      "mean_redundancy_cons": 0.4740897576014201,
+      "mean_conflict_density": 0.33433563668885224,
+      "mean_conflict_count": 33.166666666666664,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.706182740132014,
+      "mean_redundancy_pros": 0.726684499780337,
+      "mean_redundancy_cons": 0.7112985908985138,
+      "mean_conflict_density": 0.850329369285441,
+      "mean_conflict_count": 85.16666666666667,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8555500149726868,
+      "mean_redundancy_pros": 0.8876983761787415,
+      "mean_redundancy_cons": 0.8639576296011607,
+      "mean_conflict_density": 0.9467953659484404,
+      "mean_conflict_count": 94.8,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48003843824068704,
+      "mean_redundancy_pros": 0.5146568755308787,
+      "mean_redundancy_cons": 0.47396285037199654,
+      "mean_conflict_density": 0.36392135833778533,
+      "mean_conflict_count": 35.9,
+      "n_policies": 30
+    }
+  },
+  "pool200_k15": {
+    "System A": {
+      "mean_redundancy_all": 0.48978147506713865,
+      "mean_redundancy_pros": 0.5039033969243367,
+      "mean_redundancy_cons": 0.49684978723526,
+      "mean_conflict_density": 0.33605512787061104,
+      "mean_conflict_count": 75.1,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.6875506341457367,
+      "mean_redundancy_pros": 0.7121349622805914,
+      "mean_redundancy_cons": 0.6901345868905385,
+      "mean_conflict_density": 0.8331561942135493,
+      "mean_conflict_count": 187.63333333333333,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8423981885115306,
+      "mean_redundancy_pros": 0.8754218260447184,
+      "mean_redundancy_cons": 0.8492101510365804,
+      "mean_conflict_density": 0.9337615408987319,
+      "mean_conflict_count": 210.4,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.4837717205286026,
+      "mean_redundancy_pros": 0.512043156226476,
+      "mean_redundancy_cons": 0.4917193581660589,
+      "mean_conflict_density": 0.36848940747237635,
+      "mean_conflict_count": 82.2,
+      "n_policies": 30
+    }
+  },
+  "pool200_k20": {
+    "System A": {
+      "mean_redundancy_all": 0.5047405819098155,
+      "mean_redundancy_pros": 0.5219811936219533,
+      "mean_redundancy_cons": 0.513311356306076,
+      "mean_conflict_density": 0.3523179609930848,
+      "mean_conflict_count": 139.96666666666667,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.6813384632269541,
+      "mean_redundancy_pros": 0.7059029042720795,
+      "mean_redundancy_cons": 0.6837099532286326,
+      "mean_conflict_density": 0.8232389888276972,
+      "mean_conflict_count": 329.6,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8282683829466502,
+      "mean_redundancy_pros": 0.8635985255241394,
+      "mean_redundancy_cons": 0.8314585149288177,
+      "mean_conflict_density": 0.9144063394938331,
+      "mean_conflict_count": 366.2,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.49414045015970864,
+      "mean_redundancy_pros": 0.5129908422629038,
+      "mean_redundancy_cons": 0.5070555239915848,
+      "mean_conflict_density": 0.3727593375134639,
+      "mean_conflict_count": 148.26666666666668,
+      "n_policies": 30
+    }
+  },
+  "pool200_k30": {
+    "System A": {
+      "mean_redundancy_all": 0.5287675847609837,
+      "mean_redundancy_pros": 0.550607078274091,
+      "mean_redundancy_cons": 0.5352058132489522,
+      "mean_conflict_density": 0.37195774622364886,
+      "mean_conflict_count": 332.8,
+      "n_policies": 30
+    },
+    "System B": {
+      "mean_redundancy_all": 0.6675547907749811,
+      "mean_redundancy_pros": 0.6924080421527227,
+      "mean_redundancy_cons": 0.6692198127508163,
+      "mean_conflict_density": 0.7904095546843002,
+      "mean_conflict_count": 711.7666666666667,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "mean_redundancy_all": 0.8039873937765757,
+      "mean_redundancy_pros": 0.8389434655507405,
+      "mean_redundancy_cons": 0.8055274566014607,
+      "mean_conflict_density": 0.8660564703784976,
+      "mean_conflict_count": 780.7666666666667,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "mean_redundancy_all": 0.48810900151729586,
+      "mean_redundancy_pros": 0.5056268165508906,
+      "mean_redundancy_cons": 0.497546183069547,
+      "mean_conflict_density": 0.3769465880908811,
+      "mean_conflict_count": 338.23333333333335,
+      "n_policies": 30
+    }
+  }
+}

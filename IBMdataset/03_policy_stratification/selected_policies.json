@@ -1,0 +1,163 @@
+{
+  "seed": 42,
+  "per_tercile": 10,
+  "selection_method": "tercile-stratified by argument count, fixed seed, from full 71-policy graph",
+  "tercile_ranges": {
+    "sparse": "331–404 args",
+    "medium": "405–432 args",
+    "dense": "432–554 args"
+  },
+  "selected": [
+    {
+      "policy": "We should adopt a multi-party system",
+      "n_args": 402,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should prohibit women in combat",
+      "n_args": 375,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "Social media brings more harm than good",
+      "n_args": 331,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should subsidize space exploration",
+      "n_args": 388,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should subsidize student loans",
+      "n_args": 386,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should subsidize Wikipedia",
+      "n_args": 400,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should adopt atheism",
+      "n_args": 379,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should limit judicial activism",
+      "n_args": 402,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should ban algorithmic trading",
+      "n_args": 390,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "Homeschooling should be banned",
+      "n_args": 395,
+      "tercile": "sparse"
+    },
+    {
+      "policy": "We should prohibit school prayer",
+      "n_args": 427,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should subsidize stay-at-home dads",
+      "n_args": 405,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should ban whaling",
+      "n_args": 428,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should ban fast food",
+      "n_args": 422,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should legalize sex selection",
+      "n_args": 405,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should fight urbanization",
+      "n_args": 405,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should subsidize vocational education",
+      "n_args": 431,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should abolish the Olympic Games",
+      "n_args": 410,
+      "tercile": "medium"
+    },
+    {
+      "policy": "Entrapment should be legalized",
+      "n_args": 406,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should ban factory farming",
+      "n_args": 414,
+      "tercile": "medium"
+    },
+    {
+      "policy": "We should legalize prostitution",
+      "n_args": 504,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should abolish intellectual property rights",
+      "n_args": 432,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should legalize polygamy",
+      "n_args": 500,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should stop the development of autonomous cars",
+      "n_args": 446,
+      "tercile": "dense"
+    },
+    {
+      "policy": "Blockade of the Gaza Strip should be ended",
+      "n_args": 521,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should ban naturopathy",
+      "n_args": 540,
+      "tercile": "dense"
+    },
+    {
+      "policy": "Intelligence tests bring more harm than good",
+      "n_args": 472,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should close Guantanamo Bay detention camp",
+      "n_args": 447,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should abandon the use of school uniform",
+      "n_args": 480,
+      "tercile": "dense"
+    },
+    {
+      "policy": "We should oppose collectivism",
+      "n_args": 454,
+      "tercile": "dense"
+    }
+  ],
+  "n_selected": 30
+}

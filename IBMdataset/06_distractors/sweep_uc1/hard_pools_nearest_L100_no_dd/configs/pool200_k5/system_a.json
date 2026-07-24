@@ -1,0 +1,512 @@
+[
+  {
+    "policy": "We should adopt a multi-party system",
+    "retrieved_pros": [
+      "a multi-party system would bring more choices for people to speak up and vote.",
+      "compulsory voting gives everyone a say in their elections",
+      "maximizing political freedom will help unite our country.",
+      "the multi-party system works and ensures that everybody has their say",
+      "its better to have a government made up of multiple ideas."
+    ],
+    "retrieved_cons": [
+      "introducing a multi-party system would be detrimental to stability and consistency of our political system",
+      "compulsory voting sounds mandatory and many people choose not to vote.",
+      "a larger group of people can often offer more value with power in numbers. there is more value to a large group with more ideas and more manpower.",
+      "sometimes in political and economic turmoil we must turn to a majority rule to ease tensions",
+      "sometimes too many choices make it harder to decide, with just two parties to pick from it is easier to decide on the best one"
+    ]
+  },
+  {
+    "policy": "We should prohibit women in combat",
+    "retrieved_pros": [
+      "we should prohibit women in combat because they shouldn't be fighting that should be left for the men",
+      "Keeping and bearing arms is dangerous because accidents happen and people could die needlessly.",
+      "private militarys are for profit organizations - profit shouldn't be the deciding factor on  how we behave during war time. this eye on the bottom line is what leads to people getting treating  like a product.",
+      "there is a greater danger in combat because of the thought that they will be unable to fight and the men will be watching them to see what they are doing",
+      "they have no need in society today with the amount of military we have"
+    ],
+    "retrieved_cons": [
+      "we should not prohibit women in combat because  they should be considered equal to men",
+      "sometimes countries do not have enough military to protect their people and should be able to hire private military companies.",
+      "people have the right to protect themselves and should have the right to keep and bear arms.",
+      "there is no reason to force those who are fit for combat to leave the armed forces as long as they voluntarily want to be in them",
+      "safe spaces provide a place where minorities or women can feel safe; they are valuable and there is no reason to abolish them."
+    ]
+  },
+  {
+    "policy": "Social media brings more harm than good",
+    "retrieved_pros": [
+      "social media is hurting the most vulnerable who cannot alway see through other's bad intentions.",
+      "people can get all of the same information on the internet that they get on tv so there's no need for television.",
+      "wikipedia is an inexhaustible source of knowledge and we must take care of it",
+      "social media is addictive to young people to the point where it affects their education because they are distracted from their studies.",
+      "social media contributes to the fomo culture."
+    ],
+    "retrieved_cons": [
+      "social media does a lot of good, for instance in allowing family and friends a way of communicating when they are far apart.",
+      "television provides an easy way of gaining knowledge of what is going on in the world.",
+      "social media is the fastest place to find  breaking news stories",
+      "we find it convenient to be able to get connected with others and see what people are up to",
+      "although new technologies are gaining more ground every day, there are still many parts of the world where it continues to be the main medium of information."
+    ]
+  },
+  {
+    "policy": "We should subsidize space exploration",
+    "retrieved_pros": [
+      "we should subsidize space exploration because it can help provide us with education of the universe around us",
+      "companies are spending to much money to register their patents and that money could be spent to develop better products",
+      "Technologies developed for space exploration have lead to the development of other very valuable technologies.",
+      "it can open doors for advancement and should be supported by the government.",
+      "climate change and overpopulation make the future of life on earth dubious. therefore, we should be exploring other options in case we need them down the line."
+    ],
+    "retrieved_cons": [
+      "we should not subsidize space exploration because the money spent could be put to better use such as hunger and finding homes for our homeless.",
+      "intellectual property rights give an incentive to people to keep inventing useful and often lifesaving technology",
+      "taxes are already too high, and vocational education grants would be too onerous.",
+      "there are more practical needs, like housing and infrastructure, in which we should invest.",
+      "it costs far too much and takes too much time for it to be of use and we have far more pressing matters that our money could fund."
+    ]
+  },
+  {
+    "policy": "We should subsidize student loans",
+    "retrieved_pros": [
+      "we should subsidize student loans to ensure all who seek a good education can obtain one. this sets up success for life which also saves the government money when people are self sufficient",
+      "subsidies for vocational education help send the message that it is a valid and important career path for those who don't benefit from more academic studies",
+      "it leads to unmanageable debt that hamstrings graduates for many decades",
+      "subsidizing student loans lets the students work in their classes not at jobs to pay for their education",
+      "for it may encourage more of those on low income to apply to study at university."
+    ],
+    "retrieved_cons": [
+      "We should not subsidize student loans as it is their choice whether or not to pursue higher education and they should pay for it themselves.",
+      "Why subsidize vocational education when students pay tuition and colleges get grant money.",
+      "the cost to our society to educate is very high",
+      "any subsidy for education after school is unnecessary, the right to access education ends at 16 at which point people can fund their own adult decisions",
+      "there is not enough taxpayer money to subsidize every college student"
+    ]
+  },
+  {
+    "policy": "We should subsidize Wikipedia",
+    "retrieved_pros": [
+      "wikipedia is a valuable resource used by many around the world. it is an important source of knowledge that should be subsidized to ensure it remains free for all to use.",
+      "Social media brings more harm than good because social media distracts everyone from their daily lives",
+      "we should because it provides a wealth of good information on a variety of topics.",
+      "We should abandon television as other media sources are more supported and television is only holding their development back.",
+      "independent thought is important; children's exposure to ideas their parents don't like will keep them from becoming brainwashed."
+    ],
+    "retrieved_cons": [
+      "Subsidizing Wikipedia is not a good use of government money. Government funds should be spent on more important societal concerns.",
+      "television still serves an important role of keeping people informed about the world.",
+      "the content cannot always be trusted and can't be used in academic research",
+      "the social media es very important for free information",
+      "we shouldn't because normal people contribute and that information could be misleading or false."
+    ]
+  },
+  {
+    "policy": "We should adopt atheism",
+    "retrieved_pros": [
+      "we should adopt atheism because religion is at the root of many worldwide conflicts.",
+      "school prayer forces the children who don't believe into something they must be a part of.",
+      "why should god botherers be allowed to spout their idiologies to people",
+      "in the first amendment clearly prohibits an establishment of one religion over another.",
+      "religion is a highly controversial topic that has no place in public education"
+    ],
+    "retrieved_cons": [
+      "people have the right to choose any religion they with, atheism should not be forced upon them.",
+      "religions around the world provide the basis of the moral code by which most people live their lives",
+      "religion is protected under the bill of rights",
+      "we should abolish the separation between church and state and put more prayer in schools. students would not be so harsh to others if they believed in something bigger than themselves.",
+      "everyone should be free to worship as they want"
+    ]
+  },
+  {
+    "policy": "We should limit judicial activism",
+    "retrieved_pros": [
+      "judicial activism should be limited so that judgements are reached based on factual evidence only. allowing personal opinions to cloud the issue can result in mis-trials of justice.",
+      "the problem with this kind of law is that without a fair trial they could imprison innocent people",
+      "our justice system follows the constitution for a reason, and if more and more judicial activism takes place the us will have a broken justice system",
+      "mandating the  use of public defenders will ensure that all defendents are treated equally and not more favourably for those who can afford the best lawyers",
+      "judges are there to enforce the law, not their own opinions."
+    ],
+    "retrieved_cons": [
+      "judicial activism has a place in the law",
+      "everyone has freedom to choose so the use of public defenders should not be mandatory.",
+      "it is impossible to expect human beings, even judges, to not use their inherent biases when rendering a decision.",
+      "it could lead to a very large prison population which can be very expensive for the state.",
+      "We shouldn't limit what the judicial system has the potential to do, it is an un-nuanced policy to ban something outright."
+    ]
+  },
+  {
+    "policy": "We should ban algorithmic trading",
+    "retrieved_pros": [
+      "algorithmic trading puts too many others at a drastic disadvantage and should be banned.",
+      "People  will be sprialling debt problem and can not pay in time",
+      "many useful inventions never make it to the market due to the laws regarding intellectual property.",
+      "some executives make ridiculous amounts of money raising costs to consumers.",
+      "it forces more qualified people out of jobs & replaces them with less qualified people"
+    ],
+    "retrieved_cons": [
+      "algorithmic trading allows for a more balanced economy and should not be banned.",
+      "companies and individuals spend a long time often even years developing services and products , they will have spent a lot of their own money too and need the chance to recoup this.",
+      "algorithmic trading provides new technology to maximize profits in a rapid and more concise manner.",
+      "without payday loans will not be able for ordinary working families to buy stuff which they will not be able to buy it from their salaries.",
+      "the people taking the biggest risks should be compensated accordingly"
+    ]
+  },
+  {
+    "policy": "Homeschooling should be banned",
+    "retrieved_pros": [
+      "homeschooling prevent children to socialize and confront with others, therefore it should be banned.",
+      "many families are adopting their own curriculum and are leaving out important details. children's educations are being limited because their parents have limited education.",
+      "a zero-tolerance policy in schools shows children that the schools are not playing around when it comes to punishment",
+      "children should be learning and playing, not working",
+      "this isolates those who already do not feel as smart as their peers"
+    ],
+    "retrieved_cons": [
+      "some children have no choice but to be homeschooled. if they learn best in that environment, it wouldn’t be fair to take that away from them.",
+      "almost all schools already have zero tolerance policies and they clearly do not work. violence in schools is at an all time high. they clearly have no effect.",
+      "it can help with educational placement, so students are challenged but not forced into something that is above their limit.",
+      "we have already proven that home-schooled kids attend more extra-curricular activities than public-school kids",
+      "as long as the child is not forced and wants to act then they should be allowed"
+    ]
+  },
+  {
+    "policy": "We should prohibit school prayer",
+    "retrieved_pros": [
+      "school prayer should be prohibited because we are forcing children to conform to one religious view.",
+      "differences in religion may cause some people to feel left out or offended",
+      "religion has no place in modern society",
+      "it is our given right to live our life as we wish including religion and atheism should be adopted",
+      "everybody believes in something different so it’s best to avoid religion in school to avoid offending others"
+    ],
+    "retrieved_cons": [
+      "we shouldn't prohibit school prayer as it's a human right to be able to pray",
+      "freedom of religion is a pillar of our society.  people should be able to practice whichever religion they please.",
+      "a person should be able to pray to whatever form of god they want.  adopting atheism would just out religion underground not stop it.",
+      "prayer is uplifting and children finding their faith is important",
+      "everyone should be allowed to practice their own faith wherever they are, many people rely on prayer to manage stressful situations such as exams and without prayer mental health issues are likely to increase."
+    ]
+  },
+  {
+    "policy": "We should subsidize stay-at-home dads",
+    "retrieved_pros": [
+      "stay at home dads should be subsidized because it would create more equal pay for women and give them more opportunities to expand their careers",
+      "student loans set children up to be valuable citizens and the state should support this",
+      "support for parents is woefully lacking in this country; anything that eases the burden on families should be considered.",
+      "children grow up to be better citizens with stay-at-home fathers in the house",
+      "we should end mandatory retirement some people have to work to supplement government pensions. \nit gives them social interaction which they may not have if they arent working"
+    ],
+    "retrieved_cons": [
+      "stay-at-home dads should not be subsidized because people shouldn't have children if they can't afford them",
+      "higher education, such as vocational education, should be paid for only by those partaking in it.  otherwise there would be a lot of wasted funds with drop out rates.",
+      "we cannot afford to pay people not to work, even when it is for an admirable cause.",
+      "we can't bail out all those with student loans so subsidizing loans is not a great idea.",
+      "we should not pay for other peoples life style choices"
+    ]
+  },
+  {
+    "policy": "We should ban whaling",
+    "retrieved_pros": [
+      "we should ban whaling because it is inhumane and because whales are becoming extinct.",
+      "factory farming exploits animals cruelly.",
+      "animals need to be free to roam in their natural environment",
+      "we should abolish zoos because they serve as captivity for some species and this does more harm than good",
+      "the indiscriminate hunting of whales is diminishing the quantity of these mammals to dangerous levels"
+    ],
+    "retrieved_cons": [
+      "whaling is an important indstry for several countries and should not be banned",
+      "we shouldn't abolish zoos because they attract visitors and money to be able to put back into the zoo for animal feed and vet bills",
+      "factory farming supports our large consumption of meat, and without it people would not be able to meet their demands for meat.",
+      "humans need food and this is simply another way to cultivate it.  at the end of the day these animals are going to be food no matter what, so the way they get there is of little interest.",
+      "whales don't do very much in the circle of life, but their bodies do produce useful products."
+    ]
+  },
+  {
+    "policy": "We should ban fast food",
+    "retrieved_pros": [
+      "fast food should be banned because it leads to obesity and heart disease among other problems.",
+      "factory farming is harmful to the society, produces lower quality food and is an inhumane way in which to keep and kill livestock.",
+      "if we want to have a physically healthy society we have to take the scrap out of their diet.",
+      "is leading to increased obesity and many health problems.",
+      "we should ban it as it often inhumane to animals as they are poorly treated and often kept in confined spaces"
+    ],
+    "retrieved_cons": [
+      "fast food is a convenient way to feed yourself and should not be banned",
+      "Factory farming not only keeps costs low for the consumer but it also guarantees more meat and other animal products as opposed to regular farms.   The population is huge and needs to be fed.",
+      "it is entirely down to consumers to  make an informed decision and choice with regards to the food they consume.",
+      "should not be eliminated, what happens is that campaigns should continue to inform people about collateral damage, because overeating this type of food brings terrible damage can be consumed in moderate wood",
+      "we should not ban whaling because it provides jobs and food for people."
+    ]
+  },
+  {
+    "policy": "We should legalize sex selection",
+    "retrieved_pros": [
+      "Sex selection should be legal because sometimes parents prefer to have either a boy or girl.",
+      "legalizing polygamy helps reinforce that we live in a free country and can do what we please.",
+      "we should adopt gender-neutral language so that society will begin to understand gender neutrality",
+      "as it does away with people continuously having children so that they can get the gender they want.",
+      "we should end it so that every persons are equal"
+    ],
+    "retrieved_cons": [
+      "we shouldn´t legalize sex selection for principles and moral",
+      "There's no need to adopt gender-neutral language as it actually causes the opposite problem, instead of alienating the minority, it causes problems to the masses.",
+      "if one gender greatly outnumbers the other, it could cause big problems when they become adults and can't find partners to have children with.",
+      "Sex selection reinforces a culture of male-dominated sexism and devalues women.",
+      "polygamy should be banned as it harmful to women and has a negative impact on children."
+    ]
+  },
+  {
+    "policy": "We should fight urbanization",
+    "retrieved_pros": [
+      "urbanization encroaches on nature and creates terrible environmental damage",
+      "factory farming should be banned as it has forced out the small family owned farms who cannot sell their products at the lower price to close therefore factory farming should be banned.",
+      "urbanization is bad for farmers because they have less land to grow crops and is hurtful for the environment",
+      "lead to an increase in animal cruelty",
+      "We should fight urbanization as it is leeching talent and investment from the countryside and creating inequality."
+    ],
+    "retrieved_cons": [
+      "urbanization brings jobs, and is good for the economy.",
+      "factory farming is a necessary evil to keep up with modern food demands",
+      "we need to leave urbanization as is at let rural areas expand so that we have enough crops to support the increasing number of humans.",
+      "it does provide the benefit of more affordable food",
+      "helping people in having a houses and flats is obligatory for all of us with support from our government."
+    ]
+  },
+  {
+    "policy": "We should subsidize vocational education",
+    "retrieved_pros": [
+      "we should subsidize vocational education because it helps educate people towards getting qualifications to enable them to get a good job later in life",
+      "a college education is too expensive for most people to afford.  yet, it is almost a requirement to get a great job.  by helping to pay student loans we are also helping our economy and providing better jobs.",
+      "Education should be available to people of all economic backgrounds.",
+      "it helps fill valuable positions in the workforce.",
+      "providing vocational education to individuals not suited for traditional college will help them become productive members of society."
+    ],
+    "retrieved_cons": [
+      "We should subsidize not vocational education because it is unfair to make taxpayers subsidize some people's education.",
+      "student loans are a poor investment in many cases - graduate unemployment is rife, and too often universities are more interested in milking the system than in offering quality courses.",
+      "it's their choice to study, they should cough up the funds for their education",
+      "it does not make economic growth any better",
+      "it may create a two tier system were the wealthy choose formal education and the poor feel the only option is vocational training, it may be better to help poorer students to attend university."
+    ]
+  },
+  {
+    "policy": "We should abolish the Olympic Games",
+    "retrieved_pros": [
+      "the olympic games should be abolished because they are a financial drain on host cities",
+      "zoos are dangerous and not allowing animals to live in their natural environment.",
+      "we should ban whaling because sometimes people kill too many whales just for the fun of it",
+      "these activities do not allow the contestants to have a normal life.",
+      "the olympic games leave us open to possible terrorism due to the large number of people in one place at the same time."
+    ],
+    "retrieved_cons": [
+      "the olympic games is one time that the entire world can come together and celebrate and create community so they should not be abolished.",
+      "zoos do very important work for conservation. their breeding programmes have stopped some species from becoming extinct.",
+      "we shouldn't ban whaling because it can help people keep up with their traditions",
+      "promotes peace and sportsmanship amongst countries",
+      "people should be allowed to go where they wish to live and work and inevitably they will wish to go to developed areas for greater job opportunities and amenities."
+    ]
+  },
+  {
+    "policy": "Entrapment should be legalized",
+    "retrieved_pros": [
+      "entrapment can help rid our society of criminals and therefore should be legalized",
+      "racial profiling is biased and unfair.",
+      "sometimes there is no other way to catch a criminal",
+      "Three strikes laws destroy the ability of detectives to trace large crime organizations by preventing the use of plea deals to leverage information from lower level gang violence.",
+      "we all have free will.   nobody forces someone to commit a crime.   even if the crime is being done based on law enforcement setting it up.   it filters out the bad people from the good in society."
+    ],
+    "retrieved_cons": [
+      "entrapment is unfair and often tempts people into committing crimes they normally would not have",
+      "racial profiling does help catch criminals and it should be allowed.",
+      "that is, it can not be legalized, because if the police do not initiate the crime you will not necessarily have committed it",
+      "capital punishment is a real deterant to crime and should not be abolished.",
+      "Entrapment should not be legalized because police will use it to target African Americans and other minority groups."
+    ]
+  },
+  {
+    "policy": "We should ban factory farming",
+    "retrieved_pros": [
+      "factory farming is cruel to the animals and harms the enviornment around the farms and should be banned.",
+      "We should abolish zoos as they do not provide an appropriate environment for many of the animals that they contain.",
+      "there is too much animal cruelty and the food isn't always healthy or pure",
+      "whaling is inhumane and adversely affects the entire ecosystem",
+      "animals are kept in artificial environments that are drastically different in climate and natural vegetation, this is bad for the creatures' health."
+    ],
+    "retrieved_cons": [
+      "factory farming allows us to increase our supply of food and it should not be banned.",
+      "some countries rely on whaling to feed themselves. with this they will starve.",
+      "fast food is necessary in our modern world and help people have a cheap meal",
+      "Raising animals take a lot of land and resources while demand for meat on the market is still steady and important. This is the best way to raise animals by reducing space used and better taking care of animals",
+      "we should not abolish zoos because most of them use the money to help the animals"
+    ]
+  },
+  {
+    "policy": "We should legalize prostitution",
+    "retrieved_pros": [
+      "We should legalize prostitution as this would enable sex workers to have better healthcare, support and workers' rights.",
+      "legalizing organ trade will help people looking for a specific organ to find it easier.",
+      "it will be a safer environment for women to make this legitimate choice to sell their companionship and sexual services",
+      "prostitution will be practiced anyway, legalizing makes it much safer and easy to regulate.",
+      "people should be able to do what they want with their bodies. by bringing it out in the open it will be far safer."
+    ],
+    "retrieved_cons": [
+      "prostitution should not be legalized as it can lead to human trafficking and sexually transmitted diseases",
+      "an organ trade would incentivise people to do whatever they can to sell organs when they need money for their next drug deal.",
+      "providing men with the legal ability to cheat will just encourage infidelity.",
+      "society might not be ready for such a bold move. it could lead to girls being coerced into the industry.",
+      "legalizing this will make it easier for more nefarious forms of the practice, such as trafficking, fly under the radar"
+    ]
+  },
+  {
+    "policy": "We should abolish intellectual property rights",
+    "retrieved_pros": [
+      "we should abolish intellectual property rights because it could be an idea never gets acted upon and therefore can not benefit anyone",
+      "algorithmic trading gives people an unfair advantage.",
+      "intellectual property rights get in the way of sharing information.",
+      "intellectual property rights leads to monopolies, which drives up the prices for consumers.",
+      "executive compensation should be limited as it unfairly results in trickling down to the end user to pay more money than a product or service is worth."
+    ],
+    "retrieved_cons": [
+      "having intellectual property rights is a deterrent for those that would steal another persons ideas and creations so we must not abolish that.",
+      "space exploration should be funded by those who profit from it",
+      "if someone invents something they should be able to profit from it",
+      "companies need to be able to offer whatever salaries they need to to ensure they get the necessary talent.",
+      "persons who develop and intellectual property should be compensated for their efforts and benefit from their mental prowess.  protecting those rights encourages more tie committed to more discovery."
+    ]
+  },
+  {
+    "policy": "We should legalize polygamy",
+    "retrieved_pros": [
+      "polygamy should be legalised because it is no business of the state what people do in their private lives",
+      "marriage is an outdated instituion.",
+      "Polygamous unions provide a greater support system as  there are more adult members to help each other out.",
+      "polygamy would be an option for those religions that support this and want to return to the old ways.",
+      "if people are willing to share their spouse it is their choice"
+    ],
+    "retrieved_cons": [
+      "polygamy is immoral and creates a bad environment",
+      "marriage is important to many people. a lot of people have dreams and goals of marrying. it protects those in the relationship. it provides assurance. why not allow those who do want to marry, the choice.",
+      "We should not legalize sex selection because an imbalance of men and women will lead to more violence against women down the line as more young men are unable to find partners.",
+      "if everyone were allowed to marry multiple people the income tax system would be an even bigger mess than it already is. people would marry multiple people just to take advantage of deductions.",
+      "marriage should be between one man and one woman."
+    ]
+  },
+  {
+    "policy": "We should stop the development of autonomous cars",
+    "retrieved_pros": [
+      "autonomous cars are a danger to everyone on the roads they can not react the way a human driver can.",
+      "intelligence tests are not reliable enough to be counted on and do damage to esteem or self-worth that may not be warranted.",
+      "We should ban telemarketing as it is invasive and un-productive as little is ever sold in this manner.",
+      "no matter how good the technology gets, one minor bug could cause a lot of accidents",
+      "we should stop this development until we can be totally certain that the cars are safe."
+    ],
+    "retrieved_cons": [
+      "autonomous cars will reduce the number of car accidents due to driver error and save lives.",
+      "we should not ban telemarketing because it would put people out of jobs",
+      "intelligence tests should not be abolished because they are useful way for prospective employers or colleges to see if a candidate has the intelligence required for the job.",
+      "when they become safe, it would be a safe alternative to drunk driving.",
+      "we should not stop the development of autonomous cars because they can help with people that can't or don't drive and they won't drive drunk, tired or on drugs"
+    ]
+  },
+  {
+    "policy": "Blockade of the Gaza Strip should be ended",
+    "retrieved_pros": [
+      "blockade should be ended as it directly harms the population of gaza.",
+      "economic sanctions have not always proven to work and cause other countries to take sides.",
+      "A blockade is what you do when you want any chance for peace eliminated and for both nations to grow suspicious towards each other",
+      "Israeli sanctions make diplomacy between Gaza and Israel more difficult, creating more, longer wars.",
+      "ultimately, it is the poor and vulnerable that suffer as a result of economic sanctions, so ending them should happen."
+    ],
+    "retrieved_cons": [
+      "blockade of the gaza strip should not be ended for safety and security reasons.",
+      "economic sanctions provide a way that other countries an bring a country to book that is stepping out of line in a serious way.",
+      "the blockade is a way that protects the people, hindering conflict and a takeover of the country.",
+      "denying support to other countries could be the only way to get them to listen to your side of the argument.",
+      "Damaging Hamas economically in order to weaken them is a legitimate action."
+    ]
+  },
+  {
+    "policy": "We should ban naturopathy",
+    "retrieved_pros": [
+      "naturopathy is based on very little scientific evidence and could delay much needed treatment for serious conditions.",
+      "homeopathic medicine contains no active ingredient so cannot cure illness, people using this instead of conventional medicine are likely to become more ill.",
+      "we should ban it because people with serious illnesses that can be healed by normal medicine could die if they seek this as an alternative.",
+      "using herbal remedies are not regulated and may contain heavy metals",
+      "natural medicine doesn't work all the time."
+    ],
+    "retrieved_cons": [
+      "naturopathy provides an alternative way to address a health concern and people should have the right to do so.",
+      "homeopathy has been used since the beginning of time, aren't addictive, and don't contain harmful chemicals that are present in pharmaceuticals",
+      "natural remedies can cure certain diseases without the risk associated with some drugs that can cause patients to have adverse side affects.",
+      "self-healing has been proven as ancient civilizations like china have been harnessing the power of natural herbal remedies to cure all sorts of ailments",
+      "for some people it is an alternative way as the cost of treatment could be unaffordable for some people"
+    ]
+  },
+  {
+    "policy": "Intelligence tests bring more harm than good",
+    "retrieved_pros": [
+      "intelligence tests can do more harm than good because it labels the takers as gifted or failure and don't cover other forms of intelligence.",
+      "home-schooled children aren't socialized properly and may have difficulty adapting to the general populace",
+      "just knowing that there is a zero-tolerance policy will stop many students from starting trouble",
+      "this isolates those who already do not feel as smart as their peers",
+      "children have a right to education and ignorant parents that think they are more qualified than they are should not have tyranny over that right"
+    ],
+    "retrieved_cons": [
+      "intelligence tests allow us to teach children better based on their individual needs.",
+      "zero-tolerance policies lack common sense because it does not allow second chances, one mistake and you out. it puts too much pressure on the students.",
+      "homeschooling is a better way to help talented kids get an in-depth knowledge of  the subject they are really good at,",
+      "we need to have some measures in place to be able to help students.",
+      "it does not bring harm, they can be a more objective way of identifying children who could benefit"
+    ]
+  },
+  {
+    "policy": "We should close Guantanamo Bay detention camp",
+    "retrieved_pros": [
+      "guantanamo bay detection camp should be closed because it's a place of extreme torture.",
+      "capital punishment is simply a waste of resources, and it does not serve as an effective deterrent to major crimes.",
+      "the holding of prisoners without trial is wrong",
+      "we must stop the selective killings because they are a serious abuse of universal human rights",
+      "Guantanamo harms America's image abroad, making diplomacy more difficult."
+    ],
+    "retrieved_cons": [
+      "we should not close guantanamo bay detection camp because we need a place to punish dangerous people",
+      "Targeted killing can prevent terrorism and save lives",
+      "it is necessary to keep terrorists in a place where they are able to be questioned and are in a secure location",
+      "I believe this is acceptable when there is a tyrant or despot who is a real threat and it saves the taxpayer money rather than putting them in prison.",
+      "Capital punishment is the only way to guarantee a prisoner won't be released, because prisoners can be released on technicalities or based on abuse by guards."
+    ]
+  },
+  {
+    "policy": "We should abandon the use of school uniform",
+    "retrieved_pros": [
+      "school uniforms  take away the freedom of choosing what to wear and create even more problems  because students feel as if they already have limits",
+      "we should adopt a zero tolerance policy in schools because we should not tolerate crimes.",
+      "using child actors keeps the children out of school .",
+      "students should be able to express themselves within reason and not be subject to what a third party says is proper",
+      "certain items and weapons etc. have no place in a school and only create problems"
+    ],
+    "retrieved_cons": [
+      "school uniforms are important to keep students the same and prevents prejudices",
+      "a zero-tolerance policy in schools is the wrong way to go as it would too often cause innocent students being punished for being pushed too far.",
+      "some children can't adjust to a regular school and homeschooling means they can still get an education.",
+      "we should not ban school uniform because if a child has less money than their friends they will not be singled out or bullied because of their normal clothes.",
+      "kids will always find ways to bully each other. uniforms don't solve that. even with uniforms there's still shoes that can signal being poor and appearance. it doesn't solve everything."
+    ]
+  },
+  {
+    "policy": "We should oppose collectivism",
+    "retrieved_pros": [
+      "we should oppose collectivism because it is not fair to each individual",
+      "libertarianism give more freedom to the people and cuts out government influence in their lives.",
+      "government rules and regulations are getting too restrictive on an individual's rights, as set out by the constitution so there needs to be a relaxation so people can take responsibility for their own lives",
+      "collectivism leads to authoritarian rule and order imposed by police states, people need to be free for a political system to be just",
+      "people could be less likely to play their part"
+    ],
+    "retrieved_cons": [
+      "collectivism is the much need antidote to the increased focus on selfish individual needs, rather than doing what is best for society as a whole and promotes social cohesiveness",
+      "libertarianism gives too much power to people who might make terrible, uninformed decisions.",
+      "it can make some people more \"equal\"",
+      "under collectivism the majority benefit, not merely the minority who hold power under libertarian regimes.",
+      "we should not oppose this because groups are what make society and should be recognised all together."
+    ]
+  }
+]

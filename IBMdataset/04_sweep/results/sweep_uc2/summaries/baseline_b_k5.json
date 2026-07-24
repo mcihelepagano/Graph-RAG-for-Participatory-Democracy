@@ -1,0 +1,722 @@
+{
+  "We should adopt a multi-party system": {
+    "fields": {
+      "STRONGEST_PRO": "A multi-party system forces politicians to collaborate across diverse ideologies, ensuring solutions prioritize public interest over partisan gains, as no single party can dominate.",
+      "STRONGEST_CON": "Multi-party systems create legislative gridlock and inefficiency, as parties prioritize factional bickering over productive governance and consensus-building.",
+      "KEY_TENSION": "PROs argue multi-party systems enhance democratic representation and problem-solving through collaboration; CONs claim they cause legislative chaos and stagnation due to fragmented decision-making.",
+      "MISSING_PERSPECTIVES": "The role of institutional safeguards (e.g., coalition agreements) in mitigating gridlock, and how voter behavior might adapt to multi-party dynamics (e.g., strategic voting).",
+      "OVERALL_BALANCE": "The debate is closely balanced, with compelling arguments on both democratic benefits and practical governance risks, requiring context-specific evaluation of institutional design."
+    },
+    "summary_text": "STRONGEST PRO: A multi-party system forces politicians to collaborate across diverse ideologies, ensuring solutions prioritize public interest over partisan gains, as no single party can dominate.\nSTRONGEST CON: Multi-party systems create legislative gridlock and inefficiency, as parties prioritize factional bickering over productive governance and consensus-building.\nKEY TENSION: PROs argue multi-party systems enhance democratic representation and problem-solving through collaboration; CONs claim they cause legislative chaos and stagnation due to fragmented decision-making.\nMISSING PERSPECTIVES: The role of institutional safeguards (e.g., coalition agreements) in mitigating gridlock, and how voter behavior might adapt to multi-party dynamics (e.g., strategic voting).\nOVERALL BALANCE: The debate is closely balanced, with compelling arguments on both democratic benefits and practical governance risks, requiring context-specific evaluation of institutional design.",
+    "retrieved_pros": [
+      "this would increase the chance of people's views being represented by a party.",
+      "its better to have a government made up of multiple ideas.",
+      "a multi-party system is the most democratic system available, since it gives recognition to a broader canvas of viewpoints.",
+      "we should adopt a multi-party system so that we have more viewpoints to solve problems.",
+      "the current  system is broken and doesn't work. neither side can work together so having more options would force politicians to come together and do what's best for the people because no side would be majority"
+    ],
+    "retrieved_cons": [
+      "multi-party system should not be adopted as it will cause bickering among political parties and nothing will get done.",
+      "a multi party system would spend more time arguing than resolving problems and wouldn’t be beneficial.",
+      "a multi-party system only makes it harder to choose a presidential candidate",
+      "a multi-party system offers too many options and decreases the election voting for one candidate, spreading out the votes over too many options.",
+      "multi-party systems can cause those in charge  a lot of havoc when it comes to law making.  they need to be able to depend on those they work with."
+    ]
+  },
+  "We should prohibit women in combat": {
+    "fields": {
+      "STRONGEST_PRO": "Women lack the physical strength and endurance naturally required for combat, making them inherently disadvantaged and a liability on the battlefield.",
+      "STRONGEST_CON": "Women are equally capable of meeting combat standards and should have the same opportunities as men, as capability is determined by performance, not biology.",
+      "KEY_TENSION": "PROs argue biological differences make women unsuited for combat; CONs claim equal opportunity and performance capabilities override biological distinctions.",
+      "MISSING_PERSPECTIVES": "The role of training and technology in mitigating physical disparities, societal impacts on military culture, and potential challenges in specific combat roles (e.g., close-quarters combat vs. strategic roles).",
+      "OVERALL_BALANCE": "Evenly balanced, with compelling arguments on both biological determinism and equality of opportunity, but the strongest claims center on physical capability vs. merit-based access."
+    },
+    "summary_text": "STRONGEST PRO: Women lack the physical strength and endurance naturally required for combat, making them inherently disadvantaged and a liability on the battlefield.\nSTRONGEST CON: Women are equally capable of meeting combat standards and should have the same opportunities as men, as capability is determined by performance, not biology.\nKEY TENSION: PROs argue biological differences make women unsuited for combat; CONs claim equal opportunity and performance capabilities override biological distinctions.\nMISSING PERSPECTIVES: The role of training and technology in mitigating physical disparities, societal impacts on military culture, and potential challenges in specific combat roles (e.g., close-quarters combat vs. strategic roles).\nOVERALL BALANCE: Evenly balanced, with compelling arguments on both biological determinism and equality of opportunity, but the strongest claims center on physical capability vs. merit-based access.",
+    "retrieved_pros": [
+      "due to their physical makeup women do not naturally have the strength that men do and they would be at an unfair disadvantage in combat",
+      "Women in combat can be an unwanted distraction, they can also be a serious liability on the battlefield that can cost lives. Combat should be left to the men like it's always been.",
+      "women should be prohibited in combat because i think they are better suited at home and in the community.",
+      "women in combat  can cause problems.",
+      "women are not as physically strong or able as their male comrades."
+    ],
+    "retrieved_cons": [
+      "women are equally as capable as men and should be afforded the same opportunities",
+      "if women can pass all the tests required then they are fit for combat",
+      "many women are just as tough and capable to handle combat as men are",
+      "women are just as able as men in perfoming all of the roles that military service requires",
+      "women have the same right to bodily autonomy as men and this includes choosing a career path, including service in a combat role"
+    ]
+  },
+  "Social media brings more harm than good": {
+    "fields": {
+      "STRONGEST_PRO": "Social media enables bullying, which directly contributes to depression and mental health crises, compounded by the spread of misinformation that undermines trust in legitimate news sources.",
+      "STRONGEST_CON": "Social media bridges geographical divides, allowing families to stay connected, reuniting long-lost relatives, and fostering communities for marginalized groups like the elderly or immobile individuals.",
+      "KEY_TENSION": "PROs argue social media causes harm through bullying and misinformation; CONs counter that its benefits for connectivity and reconnection outweigh these harms.",
+      "MISSING_PERSPECTIVES": "The role of platform regulation in mitigating harm, mental health benefits from supportive online communities, and economic impacts of social media infrastructure.",
+      "OVERALL_BALANCE": "The debate is closely contested, but CONs present stronger arguments for social media's transformative benefits in connectivity, while PROs highlight critical harms requiring mitigation."
+    },
+    "summary_text": "STRONGEST PRO: Social media enables bullying, which directly contributes to depression and mental health crises, compounded by the spread of misinformation that undermines trust in legitimate news sources.\nSTRONGEST CON: Social media bridges geographical divides, allowing families to stay connected, reuniting long-lost relatives, and fostering communities for marginalized groups like the elderly or immobile individuals.\nKEY TENSION: PROs argue social media causes harm through bullying and misinformation; CONs counter that its benefits for connectivity and reconnection outweigh these harms.\nMISSING PERSPECTIVES: The role of platform regulation in mitigating harm, mental health benefits from supportive online communities, and economic impacts of social media infrastructure.\nOVERALL BALANCE: The debate is closely contested, but CONs present stronger arguments for social media's transformative benefits in connectivity, while PROs highlight critical harms requiring mitigation.",
+    "retrieved_pros": [
+      "social media is an outlet for bullying.",
+      "social media promotes bullying and adds to depression",
+      "social media helps to enable bullying.",
+      "social media has given everyone the impression that their voice is so important.  unfortunately social media has taken over from legitimate news outlets and people are now often fed misinformation.",
+      "social media has made it more difficult than ever for people to interact face to face."
+    ],
+    "retrieved_cons": [
+      "social media can provide a great way for people who are separated by distance to stay in touch. families can use it to post pictures of key milestones such as birthdays which might otherwise have been missed.",
+      "social media brings people together, not only familes and friends, but likeminded people who may never have talked or met each other in real life, bonding over a common interest or topic.",
+      "social media can be used by the elderly and other otherwise immobile persons to stay in touch with friends and relatives that they could otherwise never stay in contact with.",
+      "social media is a great place to meet new like minded individuals and make new friends",
+      "social media allow long-lost family members to reconnect and communicate with other, for free, and irrespective of the physical distances involved."
+    ]
+  },
+  "We should subsidize space exploration": {
+    "fields": {
+      "STRONGEST_PRO": "Space exploration is essential for addressing Earth's environmental crises and ensuring humanity's long-term survival by developing technologies and preparing for potential planetary extinction.",
+      "STRONGEST_CON": "Subsidizing space exploration is wasteful given its high cost and lack of immediate societal benefits, with funds better allocated to pressing terrestrial needs like healthcare, education, or climate mitigation.",
+      "KEY_TENSION": "PROs argue space exploration is critical for survival and technological advancement; CONs claim its costs are unjustifiable compared to immediate societal priorities.",
+      "MISSING_PERSPECTIVES": "Economic spin-offs from space technology, ethical considerations of resource allocation, and the role of private sector investment in reducing government subsidies.",
+      "OVERALL_BALANCE": "Close balance: Pro arguments emphasize long-term survival and innovation, while Con arguments highlight fiscal responsibility and immediate human needs, making the debate context-dependent."
+    },
+    "summary_text": "STRONGEST PRO: Space exploration is essential for addressing Earth's environmental crises and ensuring humanity's long-term survival by developing technologies and preparing for potential planetary extinction.\nSTRONGEST CON: Subsidizing space exploration is wasteful given its high cost and lack of immediate societal benefits, with funds better allocated to pressing terrestrial needs like healthcare, education, or climate mitigation.\nKEY TENSION: PROs argue space exploration is critical for survival and technological advancement; CONs claim its costs are unjustifiable compared to immediate societal priorities.\nMISSING PERSPECTIVES: Economic spin-offs from space technology, ethical considerations of resource allocation, and the role of private sector investment in reducing government subsidies.\nOVERALL BALANCE: Close balance: Pro arguments emphasize long-term survival and innovation, while Con arguments highlight fiscal responsibility and immediate human needs, making the debate context-dependent.",
+    "retrieved_pros": [
+      "space exploration is necessary as we continue to make our earth more and more uninhabitable.",
+      "space exploration needs our support to help us understand the universe and our place in it.",
+      "it is good to invest in space technology to explore and know as well as for technological development",
+      "space exploration is a good adventure. our planet is in a future risk of extinct and we should best prepare our refuge in space exploration",
+      "there are so many things in this world left to discover, so we should definitely support space research."
+    ],
+    "retrieved_cons": [
+      "it should be funded by those who profit from it",
+      "we should not subsidize space exploration because we already have nasa which does enough work with space research. we have more important things to subsidize which have direct impacts on people now",
+      "we should not subsidize space exploration because it could fall into the wrong hands and have bad purposes.",
+      "space exploration is very costly and the money could be spent elsewhere for something more beneficial for the society",
+      "the money spent on subsidizing space exploration could be better spent on other things that help all of society"
+    ]
+  },
+  "We should subsidize student loans": {
+    "fields": {
+      "STRONGEST_PRO": "Subsidizing student loans fosters economic productivity by creating a well-educated workforce that generates higher taxation revenue, benefiting the nation long-term.",
+      "STRONGEST_CON": "Subsidizing loans exacerbates over-enrollment in universities, strains public finances, and risks creating systemic corruption or dependency, diverting resources from critical areas like healthcare and infrastructure.",
+      "KEY_TENSION": "PROs argue subsidies enhance national economic productivity through education; CONs counter that subsidies worsen over-subscription and financial strain on public budgets.",
+      "MISSING_PERSPECTIVES": "The role of private vs. public funding in education, potential for income-based repayment models, and long-term debt sustainability for individual borrowers.",
+      "OVERALL_BALANCE": "Moderate split: PROs emphasize economic returns and equity, while CONs highlight fiscal risks and systemic overuse; neither side fully addresses alternative financing mechanisms or targeted support models."
+    },
+    "summary_text": "STRONGEST PRO: Subsidizing student loans fosters economic productivity by creating a well-educated workforce that generates higher taxation revenue, benefiting the nation long-term.\nSTRONGEST CON: Subsidizing loans exacerbates over-enrollment in universities, strains public finances, and risks creating systemic corruption or dependency, diverting resources from critical areas like healthcare and infrastructure.\nKEY TENSION: PROs argue subsidies enhance national economic productivity through education; CONs counter that subsidies worsen over-subscription and financial strain on public budgets.\nMISSING PERSPECTIVES: The role of private vs. public funding in education, potential for income-based repayment models, and long-term debt sustainability for individual borrowers.\nOVERALL BALANCE: Moderate split: PROs emphasize economic returns and equity, while CONs highlight fiscal risks and systemic overuse; neither side fully addresses alternative financing mechanisms or targeted support models.",
+    "retrieved_pros": [
+      "people should be able to go to school and better themselves without having to pay back thousands of dollars when they graduate.",
+      "an educated population is a productive population, and it ultimately makes financial sense for a government to support learning activities in return for enhanced taxation revenue down the line.",
+      "students are the future and we ought to subsidize them to ensure we have a well educated workforce to power our economy",
+      "student loans set children up to be valuable citizens and the state should support this",
+      "subsidizing students via the loans process enables a greater diversity of students froma greater range of economic and social backgrounds to pursue education, for long term national benefit."
+    ],
+    "retrieved_cons": [
+      "too many people go to university, subsidising loans would make the problem even worse",
+      "student loans are just another loan.they need to be paid only by the beneficee.",
+      "if we subsidize student loans we will create corruption mechanisms so that others can take advantage of these subsidies",
+      "We cannot afford subsidizing student loans when there are other areas to focus on such as healthcare, infrastructure, and security.",
+      "a person's education should be the responsibility of themselves"
+    ]
+  },
+  "We should subsidize Wikipedia": {
+    "fields": {
+      "STRONGEST_PRO": "Subsidizing Wikipedia ensures universal access to unbiased, comprehensive knowledge, which is a critical public good that benefits society globally.",
+      "STRONGEST_CON": "Wikipedia's reliability is compromised by open editing, and it already generates sufficient funds through donations, making subsidies unnecessary and misallocated.",
+      "KEY_TENSION": "PROs argue subsidizing Wikipedia preserves unbiased, globally accessible knowledge; CONs counter that open editing undermines accuracy and Wikipedia's self-funding model negates the need for subsidies.",
+      "MISSING_PERSPECTIVES": "The role of public funding in maintaining digital infrastructure vs. private sector alternatives, potential conflicts between open-source models and commercial interests, and cost-benefit analyses of alternative information sources.",
+      "OVERALL_BALANCE": "The debate is closely balanced, with PROs emphasizing Wikipedia's societal value and CONs highlighting risks to accuracy and fiscal responsibility, but the strongest arguments lean toward supporting subsidies as a strategic investment in knowledge equity."
+    },
+    "summary_text": "STRONGEST PRO: Subsidizing Wikipedia ensures universal access to unbiased, comprehensive knowledge, which is a critical public good that benefits society globally.\nSTRONGEST CON: Wikipedia's reliability is compromised by open editing, and it already generates sufficient funds through donations, making subsidies unnecessary and misallocated.\nKEY TENSION: PROs argue subsidizing Wikipedia preserves unbiased, globally accessible knowledge; CONs counter that open editing undermines accuracy and Wikipedia's self-funding model negates the need for subsidies.\nMISSING PERSPECTIVES: The role of public funding in maintaining digital infrastructure vs. private sector alternatives, potential conflicts between open-source models and commercial interests, and cost-benefit analyses of alternative information sources.\nOVERALL BALANCE: The debate is closely balanced, with PROs emphasizing Wikipedia's societal value and CONs highlighting risks to accuracy and fiscal responsibility, but the strongest arguments lean toward supporting subsidies as a strategic investment in knowledge equity.",
+    "retrieved_pros": [
+      "wikipedia provides a great service which provides a safe place to find info on all types of topics",
+      "Subsidizing Wikipedia will help it encompass more knowledge, generating the greatest, unbiased documentation of life on earth as we know it.",
+      "we should subsidize wikipedia so they can better serve and cover many area not just for the united states for example but also for other part of the world",
+      "wikipedia provides a vast amount of information at our fingertips",
+      "wikipedia provides a vast amount of knowledge to be accessible to all. subsidizing this will ensure this knowledge continues to be available."
+    ],
+    "retrieved_cons": [
+      "anyone can edit wikipedia which can sometimes not be the truth",
+      "we should not subsidize wikipedia since they are already able to raise their own money for the site through fundraisers, we do not need to give them extra money.",
+      "there is so many important institution  which have to be subsidize, as a hospital, health insurance, etc and subsidize wikipedia is just wrong.",
+      "no subsidizing ought to be given since not all of the information provided by wikipedia is accurate",
+      "we shouldn't subsidize wikipedia because have many activities an win much money in advertising"
+    ]
+  },
+  "We should adopt atheism": {
+    "fields": {
+      "STRONGEST_PRO": "Atheism would foster scientific progress critical for addressing global challenges like climate change, leveraging logic and evidence over dogma.",
+      "STRONGEST_CON": "Adopting atheism would violate the foundational principle of religious freedom enshrined in the country's founding documents.",
+      "KEY_TENSION": "PROs argue atheism's scientific basis will prevent societal harm; CONs claim it undermines constitutional rights to religious belief.",
+      "MISSING_PERSPECTIVES": "The role of religion in personal identity and cultural heritage,以及 potential psychological benefits of spiritual belief systems.",
+      "OVERALL_BALANCE": "Tied - PROs emphasize practical survival benefits while CONs prioritize constitutional rights, creating a deadlock over governance philosophy."
+    },
+    "summary_text": "STRONGEST PRO: Atheism would foster scientific progress critical for addressing global challenges like climate change, leveraging logic and evidence over dogma.\nSTRONGEST CON: Adopting atheism would violate the foundational principle of religious freedom enshrined in the country's founding documents.\nKEY TENSION: PROs argue atheism's scientific basis will prevent societal harm; CONs claim it undermines constitutional rights to religious belief.\nMISSING PERSPECTIVES: The role of religion in personal identity and cultural heritage,以及 potential psychological benefits of spiritual belief systems.\nOVERALL BALANCE: Tied - PROs emphasize practical survival benefits while CONs prioritize constitutional rights, creating a deadlock over governance philosophy.",
+    "retrieved_pros": [
+      "switching to a belief system based on logic and provable fact would be much better for us as a society.",
+      "atheism could be of great benefit because it would foster more scientific ideas which could prevent our demise from global warming and other looming challenges",
+      "Many crimes have been committed in the name of religion.",
+      "major wars have never fought over atheism, but history is full of bloody battles over religion.",
+      "everyone has a right to their own beliefs, atheism included."
+    ],
+    "retrieved_cons": [
+      "Atheism would remove the freedom of religion which this country is founded on.",
+      "people should be able to believe whatever they want and not be forced into atheism.",
+      "we should not adopt atheism because everyone has the right to believe in god if they so choose.",
+      "we should not adopt atheism because our country was founded on the beliefs that there is a god.",
+      "we should not adopt atheism as people have the right to believe the way they want when it come to a higher power."
+    ]
+  },
+  "We should limit judicial activism": {
+    "fields": {
+      "STRONGEST_PRO": "Judicial activism subverts the law and creates bias by allowing judges to impose personal views instead of interpreting existing laws.",
+      "STRONGEST_CON": "Judges possess superior legal expertise compared to juries and are better equipped to uphold the law in complex cases.",
+      "KEY_TENSION": "PROs argue judicial activism causes bias and undermines democratic will; CONs claim judges' legal expertise justifies activist rulings as necessary for justice.",
+      "MISSING_PERSPECTIVES": "The role of judicial review in protecting minority rights, the impact on legislative accountability, and the potential for democratic deliberation versus judicial efficiency.",
+      "OVERALL_BALANCE": "The debate is closely balanced, but the PRO case has stronger moral and institutional arguments about accountability, while the CON case relies more on technical legal expertise claims."
+    },
+    "summary_text": "STRONGEST PRO: Judicial activism subverts the law and creates bias by allowing judges to impose personal views instead of interpreting existing laws.\nSTRONGEST CON: Judges possess superior legal expertise compared to juries and are better equipped to uphold the law in complex cases.\nKEY TENSION: PROs argue judicial activism causes bias and undermines democratic will; CONs claim judges' legal expertise justifies activist rulings as necessary for justice.\nMISSING PERSPECTIVES: The role of judicial review in protecting minority rights, the impact on legislative accountability, and the potential for democratic deliberation versus judicial efficiency.\nOVERALL BALANCE: The debate is closely balanced, but the PRO case has stronger moral and institutional arguments about accountability, while the CON case relies more on technical legal expertise claims.",
+    "retrieved_pros": [
+      "judicial activism goes against the will of the people",
+      "there should be limits as personal views can end up giving a biased decision.",
+      "we should limit it, laws should not be changed for special circumstances",
+      "we should limit judicial activism because it can become too powerful and become it's own judge and jury and become impartial.",
+      "judicial activism subverts the law and creates bias"
+    ],
+    "retrieved_cons": [
+      "we should not limit judicial activism because judges have better knowledge of the laws than juries do",
+      "judicial activism is sometimes the best way to get things done",
+      "judicial activism allows a judge to give an opinion which is true to their beliefs.",
+      "we should not limit judicial activism because the judge would do a better job at what is lawful than a jury would",
+      "we should not limit judicial activism because the judge knows more about the law than juries do"
+    ]
+  },
+  "We should ban algorithmic trading": {
+    "fields": {
+      "STRONGEST_PRO": "Algorithmic trading can cause rapid market fluctuations with no safeguards, creating systemic risks and giving unfair advantages to large-scale traders.",
+      "STRONGEST_CON": "Algorithmic trading enhances market efficiency and reduces human error, making markets more active and profitable through high-volume transactions.",
+      "KEY_TENSION": "PROs argue algorithmic trading causes uncontrollable market instability; CONs claim it enhances efficiency and fairness through automated, high-speed transactions.",
+      "MISSING_PERSPECTIVES": "Regulatory oversight as an alternative to banning algorithmic trading, and the impact on small vs. large institutional investors.",
+      "OVERALL_BALANCE": "The CON arguments about efficiency and profitability outweigh the PRO concerns, but significant risks remain unresolved."
+    },
+    "summary_text": "STRONGEST PRO: Algorithmic trading can cause rapid market fluctuations with no safeguards, creating systemic risks and giving unfair advantages to large-scale traders.\nSTRONGEST CON: Algorithmic trading enhances market efficiency and reduces human error, making markets more active and profitable through high-volume transactions.\nKEY TENSION: PROs argue algorithmic trading causes uncontrollable market instability; CONs claim it enhances efficiency and fairness through automated, high-speed transactions.\nMISSING PERSPECTIVES: Regulatory oversight as an alternative to banning algorithmic trading, and the impact on small vs. large institutional investors.\nOVERALL BALANCE: The CON arguments about efficiency and profitability outweigh the PRO concerns, but significant risks remain unresolved.",
+    "retrieved_pros": [
+      "algorithmic trading can cause rapid fluctuations in the stock market that are far beyond human control and no safeguards are implemented to stop them as well as giving unfair advantage to large-scale traders.",
+      "it often tries to make trades that are too large,",
+      "algorithmic trading is not available to all and hinders the vitality of all in a level playing field.",
+      "algorithmic trading is computer based and does not allow for any type of inspiration in trading.",
+      "algorithmic trading is another way for the finance industry to make even greater profits that are not passed on to society"
+    ],
+    "retrieved_cons": [
+      "allow to maximize profits in a shorter time",
+      "it takes out the hassle for humans to perform the actions on their own.",
+      "companies should have the freedom to offer merchandize any way they please.",
+      "algorithmic trading is no less fair than people with more direct access to the trade floor, and, thus, should not be illegal.",
+      "the high volume that automatic trading allows makes for a more efficient and active market."
+    ]
+  },
+  "Homeschooling should be banned": {
+    "fields": {
+      "STRONGEST_PRO": "Homeschooling deprives children of essential social skills and cooperative experiences critical for lifelong development, and institutional education provides a more comprehensive and standardized curriculum.",
+      "STRONGEST_CON": "Parents have an inherent right to direct their children's education, and homeschooling offers personalized, flexible learning environments that can be more effective and safer for certain families.",
+      "KEY_TENSION": "PROs argue homeschooling undermines social development and educational quality; CONs counter that parental choice and individualized education are fundamental rights that should not be restricted.",
+      "MISSING_PERSPECTIVES": "The role of government in education, potential disparities in homeschooling quality based on parental expertise, and the needs of special needs or gifted children who may benefit from tailored homeschooling.",
+      "OVERALL_BALANCE": "The debate is evenly weighted, with PROs emphasizing socialization and educational standards while CONs prioritize parental autonomy and individualized learning, leaving room for nuanced policy solutions."
+    },
+    "summary_text": "STRONGEST PRO: Homeschooling deprives children of essential social skills and cooperative experiences critical for lifelong development, and institutional education provides a more comprehensive and standardized curriculum.\nSTRONGEST CON: Parents have an inherent right to direct their children's education, and homeschooling offers personalized, flexible learning environments that can be more effective and safer for certain families.\nKEY TENSION: PROs argue homeschooling undermines social development and educational quality; CONs counter that parental choice and individualized education are fundamental rights that should not be restricted.\nMISSING PERSPECTIVES: The role of government in education, potential disparities in homeschooling quality based on parental expertise, and the needs of special needs or gifted children who may benefit from tailored homeschooling.\nOVERALL BALANCE: The debate is evenly weighted, with PROs emphasizing socialization and educational standards while CONs prioritize parental autonomy and individualized learning, leaving room for nuanced policy solutions.",
+    "retrieved_pros": [
+      "homeschooling may not offer as many educational opportunities or social interactions.",
+      "homeschooling tends to isolate children and not provide them with necessary social supports.",
+      "to homeschool is in one way giving a child an immersive educational experience, but not giving them the social skills and cooperative skills they need throughout life, so should be banned.",
+      "children should be allowed to experience interactions with other children, as it helps them develope and grow to be independent adults",
+      "homeschooling should be banned because educational institutions still provide a better education."
+    ],
+    "retrieved_cons": [
+      "many children prosper from homeschooling.",
+      "parentz have a right to make educational choices for their kids.",
+      "homeschooling absolutely should not be banned because parents have the freedom to raise their kids as they see fit. if they think they can do a better job teaching their children, they have every right to.",
+      "home schooling is a good alternative for many. it is economical, safe and and a better environment for some children.  parents have a right to choose what is best for their child.",
+      "homeschooling should not be banned because it is the right of parents to decide which kind of school is best for their children."
+    ]
+  },
+  "We should prohibit school prayer": {
+    "fields": {
+      "STRONGEST_PRO": "School prayer violates the separation of church and state, which is a foundational constitutional principle.",
+      "STRONGEST_CON": "The First Amendment protects students' right to pray, ensuring religious freedom is not restricted in public schools.",
+      "KEY_TENSION": "PROs argue school prayer violates the separation of church and state; CONs claim the Constitution protects the right to pray in schools.",
+      "MISSING_PERSPECTIVES": "Impact on non-religious students' rights, potential for religious discrimination, and alternative ways to incorporate reflection without prayer.",
+      "OVERALL_BALANCE": "Tied, with legal arguments on both sides equally compelling but the PROs' emphasis on constitutional precedent giving slight edge."
+    },
+    "summary_text": "STRONGEST PRO: School prayer violates the separation of church and state, which is a foundational constitutional principle.\nSTRONGEST CON: The First Amendment protects students' right to pray, ensuring religious freedom is not restricted in public schools.\nKEY TENSION: PROs argue school prayer violates the separation of church and state; CONs claim the Constitution protects the right to pray in schools.\nMISSING PERSPECTIVES: Impact on non-religious students' rights, potential for religious discrimination, and alternative ways to incorporate reflection without prayer.\nOVERALL BALANCE: Tied, with legal arguments on both sides equally compelling but the PROs' emphasis on constitutional precedent giving slight edge.",
+    "retrieved_pros": [
+      "school prayer is wrong because the non religious are expected to participate.",
+      "prayer has no place in school because of the separation of church and state",
+      "prayer in school should be prohibited because it violates the separation of prayer and state",
+      "it is clear that their should be separation between church and state.",
+      "they have taken god out of schools anyway, so why not prayer?"
+    ],
+    "retrieved_cons": [
+      "school prayer maintains a structured belief system and allows students to express their belief.",
+      "the bible teaches you a lot about life",
+      "time for prayer and reflection is important in today's hectic society; it should be encouraged not prohibited.",
+      "prayer should be allowed in school because otherwise you are taking away rights of some religious groups",
+      "the constitution protects the tight for children to pray in schools"
+    ]
+  },
+  "We should subsidize stay-at-home dads": {
+    "fields": {
+      "STRONGEST_PRO": "Subsidizing stay-at-home dads enables workplace equality for women by reducing the fear of career disruption from childcare responsibilities.",
+      "STRONGEST_CON": "Subsidizing both parents would place unsustainable financial burdens on companies and governments, contradicting the principle that parenting is a personal responsibility.",
+      "KEY_TENSION": "PROs argue subsidizing dads promotes workplace equality; CONs claim subsidizing both parents is financially unsustainable and shifts responsibility from families to governments.",
+      "MISSING_PERSPECTIVES": "Economic impact of parental leave on workforce participation, long-term societal benefits of shared parenting, and potential disparities in parental income vs. childcare costs.",
+      "OVERALL_BALANCE": "The debate is closely balanced between social equity arguments (PROs) and fiscal responsibility concerns (CONs), with the financial feasibility of subsidies emerging as a critical unresolved tension."
+    },
+    "summary_text": "STRONGEST PRO: Subsidizing stay-at-home dads enables workplace equality for women by reducing the fear of career disruption from childcare responsibilities.\nSTRONGEST CON: Subsidizing both parents would place unsustainable financial burdens on companies and governments, contradicting the principle that parenting is a personal responsibility.\nKEY TENSION: PROs argue subsidizing dads promotes workplace equality; CONs claim subsidizing both parents is financially unsustainable and shifts responsibility from families to governments.\nMISSING PERSPECTIVES: Economic impact of parental leave on workforce participation, long-term societal benefits of shared parenting, and potential disparities in parental income vs. childcare costs.\nOVERALL BALANCE: The debate is closely balanced between social equity arguments (PROs) and fiscal responsibility concerns (CONs), with the financial feasibility of subsidies emerging as a critical unresolved tension.",
+    "retrieved_pros": [
+      "dads who stay home provide a great asset in the raising of future generations of children. therefore, subsidies should be given to them to help them continue in their family endeavors.",
+      "stay-at-home dads enable equality in the workplace, creating an environment where women are able to progress up the career ladder since employees will not fear losing them to years of child care.",
+      "stay-at-home dads can provide for a child just as well as stay-at-home moms.",
+      "stay-at-home dads should be treated the same as moms",
+      "subsidizing stay at home dads would help a family financially and not put a burden on them"
+    ],
+    "retrieved_cons": [
+      "who can afford to pay both for mom and dad parental leave? companies will go broke.",
+      "we should not subsidize stay-at-home dads because it is the parents(dad included) to be responsible for their kids.",
+      "this is ridiculous. don't have children if you can't afford to stay home or pay for childcare.",
+      "they usually earn more money so they should get an income",
+      "we shouldn't because the child might not get a chance to bond with their mother at the most important stage of their lives"
+    ]
+  },
+  "We should ban whaling": {
+    "fields": {
+      "STRONGEST_PRO": "Whaling is cruel, inhumane, and drives species to extinction, with a ban necessary to restore whale populations and protect ecosystems.",
+      "STRONGEST_CON": "Regulated whaling is sustainable and vital for the economies of certain nations, and cultural/food traditions justify its continuation.",
+      "KEY_TENSION": "PROs argue whaling causes irreversible ecological harm and species extinction; CONs claim regulated whaling is sustainable and economically/culturally necessary.",
+      "MISSING_PERSPECTIVES": "The role of international regulatory frameworks in balancing conservation and tradition, and the impact of industrial overfishing versus subsistence whaling.",
+      "OVERALL_BALANCE": "The PRO case holds stronger due to conclusive evidence of ecological damage and ethical concerns, but the CON arguments highlight complex socio-economic dependencies that require nuanced policy solutions."
+    },
+    "summary_text": "STRONGEST PRO: Whaling is cruel, inhumane, and drives species to extinction, with a ban necessary to restore whale populations and protect ecosystems.\nSTRONGEST CON: Regulated whaling is sustainable and vital for the economies of certain nations, and cultural/food traditions justify its continuation.\nKEY TENSION: PROs argue whaling causes irreversible ecological harm and species extinction; CONs claim regulated whaling is sustainable and economically/culturally necessary.\nMISSING PERSPECTIVES: The role of international regulatory frameworks in balancing conservation and tradition, and the impact of industrial overfishing versus subsistence whaling.\nOVERALL BALANCE: The PRO case holds stronger due to conclusive evidence of ecological damage and ethical concerns, but the CON arguments highlight complex socio-economic dependencies that require nuanced policy solutions.",
+    "retrieved_pros": [
+      "killing whales is cruel and inhumane and if we don't ban it now we risk losing the entire whale species.",
+      "whaling is carried out in an indiscrimate and inhumane manner, driving certain species to the brink of extinction.",
+      "whaling is bad for the environment and the ecosystem",
+      "whaling has led to a major decrease in whale populations over the years.",
+      "Whaling is decimating whales population in the oceans. A ban on whaling will restore a good number of them"
+    ],
+    "retrieved_cons": [
+      "some whaling is done in the name of beneficial research; therefore, all whaling should not be banned.",
+      "the hunting of food is natural for humans",
+      "Whaling is essential to the economic well-being of certain countries.",
+      "the whale is simply a source of food to many communities, no different from the meat of a pig or a cow - others have no rights to preach.",
+      "as long as it is regulated so it is sustainable, there is no reason for us not to harvest the bounty of the ocean."
+    ]
+  },
+  "We should ban fast food": {
+    "fields": {
+      "STRONGEST_PRO": "Fast food is a major contributor to the obesity crisis and uses harmful chemicals that directly cause health issues, making it a critical public health target.",
+      "STRONGEST_CON": "Banning fast food infringes on personal freedom and practicality, as it is a necessary option for time-constrained individuals and those without access to cooking facilities.",
+      "KEY_TENSION": "PROs argue fast food causes obesity through harmful chemicals and health risks; CONs counter that evidence linking fast food to obesity is weak and that it is a personal choice, not a public health threat.",
+      "MISSING_PERSPECTIVES": "Economic impacts of the fast food industry, potential for regulatory alternatives (e.g., taxes/sales restrictions) over bans, and the role of marketing in shaping dietary habits.",
+      "OVERALL_BALANCE": "The debate is tightly balanced, with PROs emphasizing preventable health crises and CONs prioritizing individual autonomy and socioeconomic realities, leaving room for nuanced policy solutions."
+    },
+    "summary_text": "STRONGEST PRO: Fast food is a major contributor to the obesity crisis and uses harmful chemicals that directly cause health issues, making it a critical public health target.\nSTRONGEST CON: Banning fast food infringes on personal freedom and practicality, as it is a necessary option for time-constrained individuals and those without access to cooking facilities.\nKEY TENSION: PROs argue fast food causes obesity through harmful chemicals and health risks; CONs counter that evidence linking fast food to obesity is weak and that it is a personal choice, not a public health threat.\nMISSING PERSPECTIVES: Economic impacts of the fast food industry, potential for regulatory alternatives (e.g., taxes/sales restrictions) over bans, and the role of marketing in shaping dietary habits.\nOVERALL BALANCE: The debate is tightly balanced, with PROs emphasizing preventable health crises and CONs prioritizing individual autonomy and socioeconomic realities, leaving room for nuanced policy solutions.",
+    "retrieved_pros": [
+      "it makes people fat and causes health issues.",
+      "we should ban fast food because it is mostly the reason why people are obese",
+      "fast food is provides unhealthy meal choices",
+      "we should ban fast food because all of the chemicals it is made with is unhealthy and makes you obese",
+      "fast food are a major contributor to the obesity crisis"
+    ],
+    "retrieved_cons": [
+      "fast food shouldn't be banned because it helps people save times",
+      "not everyone has access to a kitchen and can cook every night. some people are homeless, some live in hotels, some work long hours or travel frequently and can't cook every meal. fast food is their only option.",
+      "like drugs and alcohol, fast food is a choice, and we should not infringe on people's rights to make those choices.",
+      "fast food is a convenient solution for millions of time-pressed individuals - it is perfectly healthy as part of a more balanced, general diet.",
+      "we should not ban fast food because busy people need fast options to feed themselves on the go."
+    ]
+  },
+  "We should legalize sex selection": {
+    "fields": {
+      "STRONGEST_PRO": "Sex selection should be legalised for parents who wish to choose the sex of their child. It is no one else's business but their own.",
+      "STRONGEST_CON": "Sex selection will lead to a gender imbalance in the population, for example in countries like China where families would prefer to have boys rather than girls.",
+      "KEY_TENSION": "PROs argue parents have the right to choose their child's sex as a personal freedom; CONs argue this leads to societal harm through gender imbalance and discrimination",
+      "MISSING_PERSPECTIVES": "Economic impacts of gender imbalance, potential regulatory safeguards to prevent abuse, cultural variations in gender preferences, and ethical implications for reproductive autonomy",
+      "OVERALL_BALANCE": "The debate is closely balanced, but the CON arguments about gender imbalance and discriminatory consequences give them a slight edge over the PROs' emphasis on personal choice"
+    },
+    "summary_text": "STRONGEST PRO: Sex selection should be legalised for parents who wish to choose the sex of their child. It is no one else's business but their own.\nSTRONGEST CON: Sex selection will lead to a gender imbalance in the population, for example in countries like China where families would prefer to have boys rather than girls.\nKEY TENSION: PROs argue parents have the right to choose their child's sex as a personal freedom; CONs argue this leads to societal harm through gender imbalance and discrimination\nMISSING PERSPECTIVES: Economic impacts of gender imbalance, potential regulatory safeguards to prevent abuse, cultural variations in gender preferences, and ethical implications for reproductive autonomy\nOVERALL BALANCE: The debate is closely balanced, but the CON arguments about gender imbalance and discriminatory consequences give them a slight edge over the PROs' emphasis on personal choice",
+    "retrieved_pros": [
+      "sex selection should be a parent's choice.",
+      "legalization would end many problems and concerns in the community",
+      "it is not natural for parents to choose sex selection for their unborn baby.",
+      "sex selection should be legalised for parents who wish to choose the sex of their child. it is no one else's business but their own.",
+      "we should legalize sex selection. if i want to have a baby girl, who has the right to deny me my wish? what if i had two boys already and don't want a third?"
+    ],
+    "retrieved_cons": [
+      "sex selection may cause an imbalance in genders in the general population.",
+      "Behind the innocent phrase  of\"sex selection\" there's actually medical procedures that could be harmfull for the mother, and in other cases means abortions, which are very controversial.",
+      "it is immoral and creates bad consequences",
+      "sex selection will lead to a gender imbalance in the population, for example in countries like china where families would prefer to have boys rather than girls.",
+      "sex selection would obviously lead to an imbalance and discrimination of one sex, especially in societies that have traditionally viewed women as inferior or unwanted as children."
+    ]
+  },
+  "We should fight urbanization": {
+    "fields": {
+      "STRONGEST_PRO": "Urbanization leads to environmental destruction, land scarcity, and overpopulation, creating unsafe, polluted areas with high crime rates and homelessness.",
+      "STRONGEST_CON": "Urbanization drives economic growth, job creation, and convenience, making it an inevitable and beneficial process for society.",
+      "KEY_TENSION": "PROs argue urbanization causes irreversible environmental harm and social decay; CONs claim it is a natural, economically vital process that cannot be stopped.",
+      "MISSING_PERSPECTIVES": "Sustainable urban planning solutions, technological mitigation of pollution, and the role of rural-urban balance in addressing land use conflicts.",
+      "OVERALL_BALANCE": "The debate hinges on prioritizing environmental preservation and social welfare over economic growth, with unresolved tensions about whether urbanization's harms outweigh its benefits."
+    },
+    "summary_text": "STRONGEST PRO: Urbanization leads to environmental destruction, land scarcity, and overpopulation, creating unsafe, polluted areas with high crime rates and homelessness.\nSTRONGEST CON: Urbanization drives economic growth, job creation, and convenience, making it an inevitable and beneficial process for society.\nKEY TENSION: PROs argue urbanization causes irreversible environmental harm and social decay; CONs claim it is a natural, economically vital process that cannot be stopped.\nMISSING PERSPECTIVES: Sustainable urban planning solutions, technological mitigation of pollution, and the role of rural-urban balance in addressing land use conflicts.\nOVERALL BALANCE: The debate hinges on prioritizing environmental preservation and social welfare over economic growth, with unresolved tensions about whether urbanization's harms outweigh its benefits.",
+    "retrieved_pros": [
+      "urbanization means increased pollution.",
+      "urbanization destroys the enviroment, and mankind should be finding ways of utilising the space already occupied more efficiently instead.",
+      "urbanization is pushing too much people in little concentrated zones. pollution is much more concentrated and dense in those zones",
+      "we should fight urbanization because the amount of land we have is limited and once we expand cities further out into the open land, we can't get it back.",
+      "urban areas will become over populated and crime and homelessness will make those areas a lousy  and unsafe place to raise children."
+    ],
+    "retrieved_cons": [
+      "we shouldn't fight it because the world has changed and it will be convenient to have everything to hand and close by.",
+      "we should not fight urbanization because it gives people jobs and places to live",
+      "it creates jobs and supports business",
+      "urbanization is a good thing for societys.",
+      "urbanization is natural and there is no way to stop it."
+    ]
+  },
+  "We should subsidize vocational education": {
+    "fields": {
+      "STRONGEST_PRO": "Subsidizing vocational education addresses critical skills gaps and provides equitable access to non-academic learners, ensuring a diverse workforce capable of meeting regional labor demands.",
+      "STRONGEST_CON": "Vocational education should not be subsidized as it is a personal choice, not a public necessity, and employers—not taxpayers—should bear the cost of workforce training.",
+      "KEY_TENSION": "PROs argue subsidizing vocational education fills labor shortages and supports diverse skill development; CONs claim it unfairly shifts responsibility to taxpayers and duplicates existing employer-training models.",
+      "MISSING_PERSPECTIVES": "Economic ROI of a skilled workforce vs. fiscal responsibility, potential overlap with employer-training programs, and long-term societal benefits of vocational diversity.",
+      "OVERALL_BALANCE": "The debate balances practical labor-market needs against principles of fiscal fairness and responsibility, with neither side fully addressing the complexity of funding versus employer roles."
+    },
+    "summary_text": "STRONGEST PRO: Subsidizing vocational education addresses critical skills gaps and provides equitable access to non-academic learners, ensuring a diverse workforce capable of meeting regional labor demands.\nSTRONGEST CON: Vocational education should not be subsidized as it is a personal choice, not a public necessity, and employers—not taxpayers—should bear the cost of workforce training.\nKEY TENSION: PROs argue subsidizing vocational education fills labor shortages and supports diverse skill development; CONs claim it unfairly shifts responsibility to taxpayers and duplicates existing employer-training models.\nMISSING PERSPECTIVES: Economic ROI of a skilled workforce vs. fiscal responsibility, potential overlap with employer-training programs, and long-term societal benefits of vocational diversity.\nOVERALL BALANCE: The debate balances practical labor-market needs against principles of fiscal fairness and responsibility, with neither side fully addressing the complexity of funding versus employer roles.",
+    "retrieved_pros": [
+      "subsidizing vocational education will allow more people to pursue a vocation in a time when too few people are choosing that avenue.",
+      "subsidising vocation education would give a broader range of subjects open to those who may not be as academically well placed as others, to follow an equally useful educational path.",
+      "there is a shortage of tradesmen in our region; subsidising vocational education would mean that more tradesmen would fill this skills gap.",
+      "not everyone is academically gifted, many people have skills in a vocational field. society  needs people with all skill sets so it is important that people receive a good education in their vocation.",
+      "achieving high levels of education is positive for the nation"
+    ],
+    "retrieved_cons": [
+      "we don't subsidize education for office work and ceo's of companies so there's no reason we should single out voed learning specifically either. they can learn with on the job training.",
+      "vocational education should not be subsidized as it should be the responsibility of the employer to train the industries future",
+      "vocational education is a choice, there's no need to subsidize it anymore than there is general education.",
+      "the public should not fund other peoples life style choices",
+      "We should subsidize not vocational education because employers should be training their own employees, not the public."
+    ]
+  },
+  "We should abolish the Olympic Games": {
+    "fields": {
+      "STRONGEST_PRO": "The Olympic Games pose significant security risks due to their massive scale, making athletes vulnerable to terrorism, and impose unsustainable financial burdens on host nations.",
+      "STRONGEST_CON": "The Olympics foster global unity, promote peace, and provide unparalleled cultural and societal benefits that outweigh their costs.",
+      "KEY_TENSION": "PROs argue the Olympics' scale and cost make them inherently unsafe and wasteful; CONs counter that their societal unity and peace-promoting values justify their existence.",
+      "MISSING_PERSPECTIVES": "Economic long-term impacts on host cities, the role of sports in mental health, and the cultural significance of the Games beyond political symbolism.",
+      "OVERALL_BALANCE": "The debate is closely balanced, but PRO arguments about security risks and financial impracticality carry stronger empirical weight, while CON arguments about unity and societal value appeal to broader ethical considerations."
+    },
+    "summary_text": "STRONGEST PRO: The Olympic Games pose significant security risks due to their massive scale, making athletes vulnerable to terrorism, and impose unsustainable financial burdens on host nations.\nSTRONGEST CON: The Olympics foster global unity, promote peace, and provide unparalleled cultural and societal benefits that outweigh their costs.\nKEY TENSION: PROs argue the Olympics' scale and cost make them inherently unsafe and wasteful; CONs counter that their societal unity and peace-promoting values justify their existence.\nMISSING PERSPECTIVES: Economic long-term impacts on host cities, the role of sports in mental health, and the cultural significance of the Games beyond political symbolism.\nOVERALL BALANCE: The debate is closely balanced, but PRO arguments about security risks and financial impracticality carry stronger empirical weight, while CON arguments about unity and societal value appeal to broader ethical considerations.",
+    "retrieved_pros": [
+      "the olympic games has too large of a venue to totally protect the athletes leaving them open for terrorist attacks.  it also cause countries to spend too much money.",
+      "the olympics have taken on a different intention than what they were originally designed for",
+      "we should abolish the olympic games as there is too much controversy and cheating to make the games honorably worthwhile.",
+      "the olympic games leave the hosted cities in filth.",
+      "the olympic games should be abolished because it promotes nationalism and really serves no purpose."
+    ],
+    "retrieved_cons": [
+      "olympic games are one of the most beneficial events for society and the country in which it is organized because it helps countries to see how their people are potentially developing in each given discipline.",
+      "it is fun and it is good to see all the countries come together regardless of what else might be going on in the world.",
+      "everyone looks forward to sports you only get to see once every 4 years",
+      "i think that we shouldn't abolish the olympic games because is importat to the world peace",
+      "athleths working hard to prepare for the olympic games and that should be respected and followed."
+    ]
+  },
+  "Entrapment should be legalized": {
+    "fields": {
+      "STRONGEST_PRO": "Entrapment leads to more criminals being caught and removed from streets, directly addressing public safety.",
+      "STRONGEST_CON": "Entrapment is inherently immoral as it tricks individuals into committing crimes they would not otherwise commit.",
+      "KEY_TENSION": "PROs argue entrapment effectively targets criminals; CONs claim it violates moral boundaries and risks abuse by corrupt officers.",
+      "MISSING_PERSPECTIVES": "Legal safeguards to prevent abuse, psychological impact on entangled individuals, and distinction between entrapment and legitimate undercover tactics.",
+      "OVERALL_BALANCE": "Tightly balanced between practical crime reduction benefits and ethical risks, with the CONs' moral objections carrying significant weight."
+    },
+    "summary_text": "STRONGEST PRO: Entrapment leads to more criminals being caught and removed from streets, directly addressing public safety.\nSTRONGEST CON: Entrapment is inherently immoral as it tricks individuals into committing crimes they would not otherwise commit.\nKEY TENSION: PROs argue entrapment effectively targets criminals; CONs claim it violates moral boundaries and risks abuse by corrupt officers.\nMISSING PERSPECTIVES: Legal safeguards to prevent abuse, psychological impact on entangled individuals, and distinction between entrapment and legitimate undercover tactics.\nOVERALL BALANCE: Tightly balanced between practical crime reduction benefits and ethical risks, with the CONs' moral objections carrying significant weight.",
+    "retrieved_pros": [
+      "being able to entrap people would lead to more criminals getting caught",
+      "if entrapment can be used to get criminals off the streets, why should it be banned?",
+      "Entrapment causes more criminals to be caught and taken off the streets.",
+      "entrapment helps catch many criminals.",
+      "entrapment should be legalized because it is a way to catch potential criminals"
+    ],
+    "retrieved_cons": [
+      "entrapment shouldn't be legalized because it is immoral to trick someone into committing a crime",
+      "entrapment should not be legalized because there are crooked cops and they would use it unnecessarily",
+      "entrapment is a deceptive method of catching criminals and wastes time and resources that would be better put to use catching active criminals.",
+      "Even without entrapment, police are able to do things such as sting operations or undercover investigations, so long as they don't provoke the committing of a crime, which can target and bring down crime syndicates.",
+      "it can cause people to act in ways that they would not normally act and should not be legal."
+    ]
+  },
+  "We should ban factory farming": {
+    "fields": {
+      "STRONGEST_PRO": "Factory farming causes severe animal cruelty, environmental degradation, and undermines small businesses, making it a moral and economic threat.",
+      "STRONGEST_CON": "Factory farming is essential for feeding the global population efficiently and affordably, making it a critical component of food security.",
+      "KEY_TENSION": "PROs argue factory farming causes irreversible harm to animals, environment, and small businesses; CONs claim it is necessary for feeding populations at scale and maintaining affordable food prices.",
+      "MISSING_PERSPECTIVES": "Ethical considerations for human workers in factory farms, long-term environmental sustainability beyond land use, and potential for technological alternatives (e.g., lab-grown meat).",
+      "OVERALL_BALANCE": "The debate is closely balanced, but PRO arguments about ethical harm and environmental impact carry stronger moral weight, while CONs highlight practical necessities for global food security."
+    },
+    "summary_text": "STRONGEST PRO: Factory farming causes severe animal cruelty, environmental degradation, and undermines small businesses, making it a moral and economic threat.\nSTRONGEST CON: Factory farming is essential for feeding the global population efficiently and affordably, making it a critical component of food security.\nKEY TENSION: PROs argue factory farming causes irreversible harm to animals, environment, and small businesses; CONs claim it is necessary for feeding populations at scale and maintaining affordable food prices.\nMISSING PERSPECTIVES: Ethical considerations for human workers in factory farms, long-term environmental sustainability beyond land use, and potential for technological alternatives (e.g., lab-grown meat).\nOVERALL BALANCE: The debate is closely balanced, but PRO arguments about ethical harm and environmental impact carry stronger moral weight, while CONs highlight practical necessities for global food security.",
+    "retrieved_pros": [
+      "there is too much animal cruelty and the food isn't always healthy or pure",
+      "it ruins the land and pushes out small business.",
+      "animals are kept in cages and treated with cruelty",
+      "we should ban factory farming because it is trying to put other farmers out of business",
+      "factory farms are a violent and dehumanizing place to work"
+    ],
+    "retrieved_cons": [
+      "we should not ban factory farming because by having them a lot of people get fed",
+      "we want cheap food that is readily available at a reasonable price. these methods are cost cutters.",
+      "we need factory farming to feed the population.",
+      "factory farming is efficient, and the only way to keep people fed.",
+      "factory farming helps us keep up with the ever growing food demand."
+    ]
+  },
+  "We should legalize prostitution": {
+    "fields": {
+      "STRONGEST_PRO": "Legalizing prostitution upholds bodily autonomy and individual rights, arguing the government should not interfere with personal choices about one's body.",
+      "STRONGEST_CON": "Legalizing prostitution enables human trafficking and exploitation, as it obscures victim identification and perpetuates coercion under the guise of legality.",
+      "KEY_TENSION": "PROs argue bodily autonomy and safety benefits outweigh risks; CONs claim legalizing prostitution enables coercion, trafficking, and systemic exploitation.",
+      "MISSING_PERSPECTIVES": "Economic impacts on local communities, regulatory mechanisms to prevent exploitation, and the role of client demand in perpetuating harm.",
+      "OVERALL_BALANCE": "Tied: Both sides present compelling claims about rights vs. safety, with strong counterarguments undermining each perspective's validity."
+    },
+    "summary_text": "STRONGEST PRO: Legalizing prostitution upholds bodily autonomy and individual rights, arguing the government should not interfere with personal choices about one's body.\nSTRONGEST CON: Legalizing prostitution enables human trafficking and exploitation, as it obscures victim identification and perpetuates coercion under the guise of legality.\nKEY TENSION: PROs argue bodily autonomy and safety benefits outweigh risks; CONs claim legalizing prostitution enables coercion, trafficking, and systemic exploitation.\nMISSING PERSPECTIVES: Economic impacts on local communities, regulatory mechanisms to prevent exploitation, and the role of client demand in perpetuating harm.\nOVERALL BALANCE: Tied: Both sides present compelling claims about rights vs. safety, with strong counterarguments undermining each perspective's validity.",
+    "retrieved_pros": [
+      "a man or woman has the right to do what they wish with their body, and if they choose to sell it for sex, the government should not interfere.",
+      "legalizing prostitution would be beneficial for the government because will increase the tax money and will be helpful in resolving issues in society.",
+      "legalizing prostitution would allow for medical care for all involved.",
+      "legalizing prostitution would give medical care to those working in the industry",
+      "legalized prostitution is safer for both prostitutes and their customers"
+    ],
+    "retrieved_cons": [
+      "legalized prostitution would result in a massive increase in sex crime",
+      "it is disgusting and nothing good will come of it",
+      "legalizing prostitution promotes human trafficking. it makes it impossible to investigate traffickers and help victims if they appear to be operating in a legal profession, allowing trafficking to flourish.",
+      "Prostitution is a form of social coercion that forces individuals who don't have other options to sell their bodies. The state must keep it banned to protect people from being coerced.",
+      "sex workers are often exploited by pimps and clients and have little choice,many are trafficked and so this should be a crime."
+    ]
+  },
+  "We should abolish intellectual property rights": {
+    "fields": {
+      "STRONGEST_PRO": "Ideas should belong to everyone, not just individuals, and IP rights hinder innovation by preventing others from building on existing work.",
+      "STRONGEST_CON": "Companies invest billions in research, and without IP protection, they would lose incentives to innovate and develop new technologies.",
+      "KEY_TENSION": "PROs argue IP rights prevent others from using/improving existing work; CONs claim IP rights protect creators' ownership and incentivize innovation.",
+      "MISSING_PERSPECTIVES": "Economic impacts on developing countries, balance between corporate profits and public access to medicines/technologies, role of IP in open-source collaboration.",
+      "OVERALL_BALANCE": "The arguments are closely balanced, with compelling economic incentives for IP protection clashing with ethical concerns about equitable access to knowledge and innovation."
+    },
+    "summary_text": "STRONGEST PRO: Ideas should belong to everyone, not just individuals, and IP rights hinder innovation by preventing others from building on existing work.\nSTRONGEST CON: Companies invest billions in research, and without IP protection, they would lose incentives to innovate and develop new technologies.\nKEY TENSION: PROs argue IP rights prevent others from using/improving existing work; CONs claim IP rights protect creators' ownership and incentivize innovation.\nMISSING PERSPECTIVES: Economic impacts on developing countries, balance between corporate profits and public access to medicines/technologies, role of IP in open-source collaboration.\nOVERALL BALANCE: The arguments are closely balanced, with compelling economic incentives for IP protection clashing with ethical concerns about equitable access to knowledge and innovation.",
+    "retrieved_pros": [
+      "intellectual property rights are not possible to protect because of the many available methods to copy the property",
+      "We should abolish because it can be a very expensive process as well as being time consuming. There's also the issues of intellectual property rights being given to works that don't deserve it.",
+      "ideas should be everyones not just one persons",
+      "intellectual property rights prevent others from using and improving on what is already there.",
+      "they are sometimes abused for a company to claim work that their employee has done on their own time"
+    ],
+    "retrieved_cons": [
+      "people have the right to their ideas and therefore it shouldn’t be banned.",
+      "anything that has been invented should be all of our property.",
+      "companies invest billions into research, if there are no rights it would dissuade companies from conducting research in the first place.",
+      "i think that we shouldn't abolish intellectual property rights because the work the author",
+      "we should not abolish intellectual property rights because it protects that person's claim to their inventions and discoveries."
+    ]
+  },
+  "We should legalize polygamy": {
+    "fields": {
+      "STRONGEST_PRO": "Polygamy should be allowed as long as all participating parties consent",
+      "STRONGEST_CON": "Women in polygynous marriages are much more likely to experience abuse, depression and poverty",
+      "KEY_TENSION": "PROs argue consent ensures ethical polygamy; CONs claim polygamy inherently exploits women through systemic abuse and inequality",
+      "MISSING_PERSPECTIVES": "Cultural relativism in marital norms, legal mechanisms to enforce consent, economic disparities between genders, and psychological impacts on children in polygamous households",
+      "OVERALL_BALANCE": "Tightly contested with equal weight given to autonomy/rights claims and harm/inequality concerns, reflecting deep philosophical divides between individual freedom and collective welfare"
+    },
+    "summary_text": "STRONGEST PRO: Polygamy should be allowed as long as all participating parties consent\nSTRONGEST CON: Women in polygynous marriages are much more likely to experience abuse, depression and poverty\nKEY TENSION: PROs argue consent ensures ethical polygamy; CONs claim polygamy inherently exploits women through systemic abuse and inequality\nMISSING PERSPECTIVES: Cultural relativism in marital norms, legal mechanisms to enforce consent, economic disparities between genders, and psychological impacts on children in polygamous households\nOVERALL BALANCE: Tightly contested with equal weight given to autonomy/rights claims and harm/inequality concerns, reflecting deep philosophical divides between individual freedom and collective welfare",
+    "retrieved_pros": [
+      "many different species in nature are not mated for life with one other, and people should be no different; polygamy should be legal.",
+      "There are more adults in a household who can work and earn money, improving finances.",
+      "polygamy should be allowed as long as all participating parties consent",
+      "some of the country already legalized polygamy which is approved as positive, specially where there is much more females than males.",
+      "it creates a bigger family with better support"
+    ],
+    "retrieved_cons": [
+      "polygamy is an insult to the tradition of marriage.",
+      "polygamy is not a natural act.  it is against tradition to attempt to have multiple spouses and should not be supported.",
+      "it is not due to polygamy because it abuses the feelings of several people to see and is a profane and toxic act. all people lie together at the same time.",
+      "compared to monogamous women, women in polygynous marriages are much more likely to experience abuse, depression and poverty",
+      "polygamy is exploitative to women. it transforms women as trophy men will be collecting for just their pleasure"
+    ]
+  },
+  "We should stop the development of autonomous cars": {
+    "fields": {
+      "STRONGEST_PRO": "Autonomous cars can be easily hacked, creating significant safety risks and potential for widespread accidents.",
+      "STRONGEST_CON": "Autonomous cars will provide unprecedented freedom and independence for disabled and elderly populations, revolutionizing mobility and accessibility.",
+      "KEY_TENSION": "PROs argue autonomous cars cannot handle complex decision-making and are vulnerable to hacking, leading to safety risks; CONs claim they will eliminate human error, improve safety, and offer transformative benefits for accessibility.",
+      "MISSING_PERSPECTIVES": "Economic impacts on driving-related jobs, ethical decision-making algorithms in emergencies, and long-term cybersecurity evolution of autonomous systems.",
+      "OVERALL_BALANCE": "The arguments present a close balance between safety concerns and potential benefits, with the PROs emphasizing immediate risks and the CONs highlighting long-term advantages."
+    },
+    "summary_text": "STRONGEST PRO: Autonomous cars can be easily hacked, creating significant safety risks and potential for widespread accidents.\nSTRONGEST CON: Autonomous cars will provide unprecedented freedom and independence for disabled and elderly populations, revolutionizing mobility and accessibility.\nKEY TENSION: PROs argue autonomous cars cannot handle complex decision-making and are vulnerable to hacking, leading to safety risks; CONs claim they will eliminate human error, improve safety, and offer transformative benefits for accessibility.\nMISSING PERSPECTIVES: Economic impacts on driving-related jobs, ethical decision-making algorithms in emergencies, and long-term cybersecurity evolution of autonomous systems.\nOVERALL BALANCE: The arguments present a close balance between safety concerns and potential benefits, with the PROs emphasizing immediate risks and the CONs highlighting long-term advantages.",
+    "retrieved_pros": [
+      "autonomous cars can't make decisions the way that humans can, leading to dangerous situations on roadways",
+      "autonomous cars can not make complex decisions.",
+      "autonomous cars are not able to react to specific scenarios where decisions must be made.",
+      "autonomous cars can be easily hacked to cause widespread accidents.",
+      "self driving cars can be hacked. causing safety concerns"
+    ],
+    "retrieved_cons": [
+      "autonomous cars will become safer than regular cars.",
+      "autonomous cars could mean a whole new world in terms of freedom and independence for disabled people and the elderly who can no longer drive.",
+      "it is the future of car travel to allow for more efficient fuel use\nthey are much safer due to the lack of human error\nthe roads will have far less congestion due to planned smart a.i. driving",
+      "autonomous cars will be hugely beneficial for the elderly and disabled in our population who will no longer have to rely on other people to get them to and from appointments and stores and the like.",
+      "autonomous cars will allow people to do more instead of wasting time in traffic"
+    ]
+  },
+  "Blockade of the Gaza Strip should be ended": {
+    "fields": {
+      "STRONGEST_PRO": "The blockade causes severe economic hardship for civilians and fosters resentment, making it a harmful policy that undermines Israel's international standing.",
+      "STRONGEST_CON": "The blockade is essential for preventing weapon smuggling and protecting Israel from aggression, as ending it would risk escalating violence.",
+      "KEY_TENSION": "PROs argue the blockade causes civilian harm and resentment; CONs claim it is necessary to prevent aggression and weapon proliferation.",
+      "MISSING_PERSPECTIVES": "The security needs of Israel's population, the role of international law in conflict resolution, and the potential for alternative security measures to replace the blockade.",
+      "OVERALL_BALANCE": "The debate centers on balancing humanitarian concerns for Gaza's civilians against Israel's security interests, with both sides presenting compelling but conflicting justifications."
+    },
+    "summary_text": "STRONGEST PRO: The blockade causes severe economic hardship for civilians and fosters resentment, making it a harmful policy that undermines Israel's international standing.\nSTRONGEST CON: The blockade is essential for preventing weapon smuggling and protecting Israel from aggression, as ending it would risk escalating violence.\nKEY TENSION: PROs argue the blockade causes civilian harm and resentment; CONs claim it is necessary to prevent aggression and weapon proliferation.\nMISSING PERSPECTIVES: The security needs of Israel's population, the role of international law in conflict resolution, and the potential for alternative security measures to replace the blockade.\nOVERALL BALANCE: The debate centers on balancing humanitarian concerns for Gaza's civilians against Israel's security interests, with both sides presenting compelling but conflicting justifications.",
+    "retrieved_pros": [
+      "the blockade of the gaza strip causes much economic hardship for the largely blameless civilian population, has never achieved anything of note, and could actually be resposible for fostering more resentment.",
+      "the blockade of the gaza strip is doing more harm than good and it should be ended.",
+      "The blockade of Gaza worsens Israel's image as oppressor.",
+      "blockade of the gaza strip should be ended for people of israel",
+      "The blockade of the Gaza strip is unpopular in the international community and is likely to harm Israel's image."
+    ],
+    "retrieved_cons": [
+      "blockade of the gaza strip shouldn't be ended because war doesn't end at the click of a finger. it should be fought the way soldiers and government intended",
+      "the blockade is helping to protect a state from an aggressor",
+      "thanks to the scope of the human being this area will be blocked and thus end the palestinian conflicts",
+      "The blockade of the Gaza Strip should not be ended because Hamas has acted in bad faith in past negotiations and cannot be trusted.",
+      "the blockade helps to keep more weapons from entering the area by ship and lessen the ability for violence."
+    ]
+  },
+  "We should ban naturopathy": {
+    "fields": {
+      "STRONGEST_PRO": "Naturopathy is fraudulent and based on false science, posing risks to patient safety through harmful interactions with medications.",
+      "STRONGEST_CON": "Individuals have a right to choose naturopathy as a valid alternative, especially for marginalized groups excluded from conventional systems.",
+      "KEY_TENSION": "PROs argue naturopathy is fraudulent and harmful; CONs claim it is a legitimate patient choice and complementary care option.",
+      "MISSING_PERSPECTIVES": "Regulatory frameworks for naturopathy vs. conventional medicine, potential cultural or socioeconomic factors influencing treatment preferences, and evidence-based efficacy in specific patient populations.",
+      "OVERALL_BALANCE": "The debate is closely balanced, with strong safety concerns against robust arguments for patient autonomy and accessibility, requiring nuanced policy solutions rather than outright prohibition."
+    },
+    "summary_text": "STRONGEST PRO: Naturopathy is fraudulent and based on false science, posing risks to patient safety through harmful interactions with medications.\nSTRONGEST CON: Individuals have a right to choose naturopathy as a valid alternative, especially for marginalized groups excluded from conventional systems.\nKEY TENSION: PROs argue naturopathy is fraudulent and harmful; CONs claim it is a legitimate patient choice and complementary care option.\nMISSING PERSPECTIVES: Regulatory frameworks for naturopathy vs. conventional medicine, potential cultural or socioeconomic factors influencing treatment preferences, and evidence-based efficacy in specific patient populations.\nOVERALL BALANCE: The debate is closely balanced, with strong safety concerns against robust arguments for patient autonomy and accessibility, requiring nuanced policy solutions rather than outright prohibition.",
+    "retrieved_pros": [
+      "naturopathy is a form of treatment base on alternative medicine such as massages and diet to name just a few.  this type of treatment doesn't work so it should be banned.",
+      "Homeopathic medicine works no better than a placebo.",
+      "Naturopathy is based on false science and lies, making this  fraudulent business.",
+      "naturopathy treatments can cause conflicts and interactions with already prescribed medications.",
+      "alternative medicines dont bring enough money into the government"
+    ],
+    "retrieved_cons": [
+      "people have the right to chose their own medical care, naturopathy is a valid alternative to modern medicine.",
+      "naturopathy can be a complementary addition to traditional medicine",
+      "naturopathy is simply a natural alternative to typical medicine, and in some cases, is better tolerated than conventional medicine.",
+      "in a democratic society, people should be allowed to try treatments if they so choose.",
+      "Naturopathy provides an alternative for individuals who are victimized and unlistened to in conventional western medicine systems, like people of color and overweight people, which allows them to get some form of treatment instead of none."
+    ]
+  },
+  "Intelligence tests bring more harm than good": {
+    "fields": {
+      "STRONGEST_PRO": "Intelligence tests fail to capture non-cognitive intelligences (e.g., social, emotional) and risk damaging self-esteem through harmful labeling.",
+      "STRONGEST_CON": "IQ tests enable tailored educational placement, helping students thrive by matching challenges to their abilities.",
+      "KEY_TENSION": "PROs argue tests are inherently limited and harmful due to biased measurement and labeling effects; CONs claim tests provide actionable insights for educational optimization.",
+      "MISSING_PERSPECTIVES": "Cultural bias in test design, socioeconomic disparities affecting test performance, and long-term psychological impacts of standardized labeling.",
+      "OVERALL_BALANCE": "The debate is closely balanced, with PROs emphasizing fundamental limitations and ethical risks, while CONs highlight practical benefits for individualized learning."
+    },
+    "summary_text": "STRONGEST PRO: Intelligence tests fail to capture non-cognitive intelligences (e.g., social, emotional) and risk damaging self-esteem through harmful labeling.\nSTRONGEST CON: IQ tests enable tailored educational placement, helping students thrive by matching challenges to their abilities.\nKEY TENSION: PROs argue tests are inherently limited and harmful due to biased measurement and labeling effects; CONs claim tests provide actionable insights for educational optimization.\nMISSING PERSPECTIVES: Cultural bias in test design, socioeconomic disparities affecting test performance, and long-term psychological impacts of standardized labeling.\nOVERALL BALANCE: The debate is closely balanced, with PROs emphasizing fundamental limitations and ethical risks, while CONs highlight practical benefits for individualized learning.",
+    "retrieved_pros": [
+      "intelligence tests bring more harm than good since not all intelligence can be tested, for instance, one could be gifted socially and this cannot be tested.",
+      "intelligence text can be harmful as they don't include emotional intelligence and other types of intelligence",
+      "intelligence tests unfairly punish intelligent people who are not good test takers.",
+      "a gifted label can lead a child to not work as hard as they should",
+      "Labeling someone as \"gifted\" or \"learning disabled\" can have harmful effects on self-esteem. Those labeled \"gifted\" may think they're better than others, while those labeled \"learning disabled\" may have low self-esteem."
+    ],
+    "retrieved_cons": [
+      "it can help with educational placement, so students are challenged but not forced into something that is above their limit.",
+      "IQ tests allows students to understand and focus on their intellectual strengths.",
+      "iq tests provide a useful insight into a person's baseline abilities",
+      "intelligence tests provide data that can help the takers work on their weak points.",
+      "intelligence test ensure people are competent."
+    ]
+  },
+  "We should close Guantanamo Bay detention camp": {
+    "fields": {
+      "STRONGEST_PRO": "Indefinite detention without trial violates human rights and undermines America's legal and moral standing.",
+      "STRONGEST_CON": "Guantanamo Bay is essential for detaining the worst criminals and serves as a critical deterrent against future attacks.",
+      "KEY_TENSION": "PROs argue indefinite detention violates human rights; CONs argue it is necessary for national security and deterrence.",
+      "MISSING_PERSPECTIVES": "Ethical implications of indefinite detention, cost-benefit analysis of maintaining the camp, impact on international reputation, and alternatives to detention (e.g., rehabilitation programs).",
+      "OVERALL_BALANCE": "Tied—PROs emphasize rights and legality, while CONs prioritize security and deterrence, creating an even contest between ethical and practical concerns."
+    },
+    "summary_text": "STRONGEST PRO: Indefinite detention without trial violates human rights and undermines America's legal and moral standing.\nSTRONGEST CON: Guantanamo Bay is essential for detaining the worst criminals and serves as a critical deterrent against future attacks.\nKEY TENSION: PROs argue indefinite detention violates human rights; CONs argue it is necessary for national security and deterrence.\nMISSING PERSPECTIVES: Ethical implications of indefinite detention, cost-benefit analysis of maintaining the camp, impact on international reputation, and alternatives to detention (e.g., rehabilitation programs).\nOVERALL BALANCE: Tied—PROs emphasize rights and legality, while CONs prioritize security and deterrence, creating an even contest between ethical and practical concerns.",
+    "retrieved_pros": [
+      "guantanamo bay detection camp needs to be closed as this this prison is costing the united states millions of dollars for a prison that is no longer needed.",
+      "the camp is too expensive to run and should be closed",
+      "Guantanamo Bay undemocratically burdens US citizens in terms of both liberties and finances",
+      "Circumventing the law by building detention camps off of US soil makes a mockery of the very institutions America is trying to protect.",
+      "indefinite detention in guantanamo bay without putting detainees through the criminal justice process first is a violation of their human rights."
+    ],
+    "retrieved_cons": [
+      "helps us with the prisons the detection field of guantánamo bay",
+      "we need to keep it open , where else will these people that are there go?",
+      "closing guantanamo bay is not as easy as going in a shutting it down.  there's lot of political road blocks and costs involved.",
+      "guantanamo bay detection camp  needs to stay open to hold the worst criminals of the world.",
+      "guantanamo bay is a powerful deterrent for those contemplating crimes against america. the conditions and consequences need to be harsh in order for it to serve as a deterrent. it works."
+    ]
+  },
+  "We should abandon the use of school uniform": {
+    "fields": {
+      "STRONGEST_PRO": "School uniforms are too expensive and create financial burdens on families, particularly when siblings attend different schools, and they fail to address underlying issues like bullying and classroom distractions.",
+      "STRONGEST_CON": "Uniforms reduce distractions, promote focus on education, and mitigate bullying by minimizing appearance-based discrimination, while also serving as a symbol of academic commitment and school identity.",
+      "KEY_TENSION": "PROs argue uniforms fail to address bullying and distractions, while CONs claim they effectively reduce these issues by eliminating appearance-based targeting and fostering a focused learning environment.",
+      "MISSING_PERSPECTIVES": "The socioeconomic impact on low-income families, potential long-term effects on student self-esteem, and the role of uniforms in promoting equity versus reinforcing institutional control.",
+      "OVERALL_BALANCE": "The debate is closely balanced, with compelling arguments on both sides regarding cost, individuality, and effectiveness in addressing classroom challenges."
+    },
+    "summary_text": "STRONGEST PRO: School uniforms are too expensive and create financial burdens on families, particularly when siblings attend different schools, and they fail to address underlying issues like bullying and classroom distractions.\nSTRONGEST CON: Uniforms reduce distractions, promote focus on education, and mitigate bullying by minimizing appearance-based discrimination, while also serving as a symbol of academic commitment and school identity.\nKEY TENSION: PROs argue uniforms fail to address bullying and distractions, while CONs claim they effectively reduce these issues by eliminating appearance-based targeting and fostering a focused learning environment.\nMISSING PERSPECTIVES: The socioeconomic impact on low-income families, potential long-term effects on student self-esteem, and the role of uniforms in promoting equity versus reinforcing institutional control.\nOVERALL BALANCE: The debate is closely balanced, with compelling arguments on both sides regarding cost, individuality, and effectiveness in addressing classroom challenges.",
+    "retrieved_pros": [
+      "the use of school uniforms makes it hard for students to show their individuality and they are more expensive than clothes bought at the store",
+      "they are too expensive and if sibling attend different schools the cost is doubled",
+      "School uniforms create a more authoritarian atmosphere in schools.",
+      "School uniforms are too expensive and many parents can not afford the extra expense.",
+      "Uniforms don't solve the problems that exist in the classrooms; they don't stop kids from picking on each other for any number of reasons, so why bother with them?"
+    ],
+    "retrieved_cons": [
+      "uniforms could help a school promote its brand and serve as a symbol of commitment to academic achievement",
+      "School uniforms help take away clothes as a distraction. Instead of worrying about what to wear, they can have time to study.",
+      "having a school uniform can reduce bullying as students who have no style or cannot afford the latest trends do not stand out.",
+      "school uniforms have students focused on their education not their appearings",
+      "kids will always find ways to bully each other. uniforms don't solve that. even with uniforms there's still shoes that can signal being poor and appearance. it doesn't solve everything."
+    ]
+  },
+  "We should oppose collectivism": {
+    "fields": {
+      "STRONGEST_PRO": "Collectivism restrains innovation and incentives to pursue personal goals, stifling creativity and individual ambition.",
+      "STRONGEST_CON": "Collectivism unites societies, ensures basic needs for the vulnerable, and reduces disputes by prioritizing collective welfare over individual self-interest.",
+      "KEY_TENSION": "PROs argue collectivism stifles innovation by prioritizing group over individual; CONs counter that collectivism ensures social cohesion and protects the weakest members.",
+      "MISSING_PERSPECTIVES": "Cultural relativism (some societies thrive on collectivism), economic systems where collective resource allocation benefits all, and the role of government in mediating individual vs. group interests.",
+      "OVERALL_BALANCE": "Neutral; both sides present compelling claims about individual freedom vs. collective security, with no clear dominance of one perspective."
+    },
+    "summary_text": "STRONGEST PRO: Collectivism restrains innovation and incentives to pursue personal goals, stifling creativity and individual ambition.\nSTRONGEST CON: Collectivism unites societies, ensures basic needs for the vulnerable, and reduces disputes by prioritizing collective welfare over individual self-interest.\nKEY TENSION: PROs argue collectivism stifles innovation by prioritizing group over individual; CONs counter that collectivism ensures social cohesion and protects the weakest members.\nMISSING PERSPECTIVES: Cultural relativism (some societies thrive on collectivism), economic systems where collective resource allocation benefits all, and the role of government in mediating individual vs. group interests.\nOVERALL BALANCE: Neutral; both sides present compelling claims about individual freedom vs. collective security, with no clear dominance of one perspective.",
+    "retrieved_pros": [
+      "collectivism restrains innovation and incentives to pursue personal goals",
+      "people should be encouraged to individuals",
+      "collectivism is a cloak and dagger method of maintaining a controlled, poor population for the benefit of a select few.",
+      "collectivism disregards the individual, focusing on the group so it would be easy for an individual to lose out for the greater good of the group.",
+      "people could be less likely to play their part"
+    ],
+    "retrieved_cons": [
+      "collectivism may be able to unite societies. also it can create common ground among different people.",
+      "collectivism is a positive concept.",
+      "collectivism is a good way to keep consistency.",
+      "collectivism assures that the weakest members of society have access to basic needs.",
+      "collectivism would discourage disputes and would bring more peace."
+    ]
+  }
+}
