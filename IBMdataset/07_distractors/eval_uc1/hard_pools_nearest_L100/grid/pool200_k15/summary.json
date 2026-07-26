@@ -1,0 +1,75 @@
+{
+  "operating_point": "pool200_k15",
+  "per_system": {
+    "System A": {
+      "ndcg_mean": 0.2629268449193275,
+      "ndcg_lin_mean": 0.37946863502607453,
+      "prec_mean": 0.3944444444444445,
+      "recall_mean": 0.05123549479330384,
+      "srecall_mean": 0.08795264160198699,
+      "meanrel_mean": 1.14,
+      "ild_all": 0.5102185249328614,
+      "eild_all": 0.42759327391783397,
+      "distractor_rate_mean": 0.2877777777777778,
+      "conflict_density": 0.33605512787061104,
+      "match_exact_frac": 0.9477777777777777,
+      "n_policies": 30
+    },
+    "System B": {
+      "ndcg_mean": 0.33486528797853954,
+      "ndcg_lin_mean": 0.4940105007302542,
+      "prec_mean": 0.47,
+      "recall_mean": 0.06066883027377906,
+      "srecall_mean": 0.07153892696464045,
+      "meanrel_mean": 1.4455555555555555,
+      "ild_all": 0.3124493658542633,
+      "eild_all": 0.2569499671459198,
+      "distractor_rate_mean": 0.03888888888888889,
+      "conflict_density": 0.8331561942135493,
+      "match_exact_frac": 0.9299999999999999,
+      "n_policies": 30
+    },
+    "Baseline A": {
+      "ndcg_mean": 0.3105747435178827,
+      "ndcg_lin_mean": 0.4709285853449303,
+      "prec_mean": 0.42000000000000004,
+      "recall_mean": 0.046426283580968855,
+      "srecall_mean": 0.03232651399468624,
+      "meanrel_mean": 1.4344444444444444,
+      "ild_all": 0.15760181148846944,
+      "eild_all": 0.1489841341972351,
+      "distractor_rate_mean": 0.0,
+      "conflict_density": 0.9337615408987319,
+      "match_exact_frac": 0.8066666666666666,
+      "n_policies": 30
+    },
+    "Baseline B": {
+      "ndcg_mean": 0.27250666729426953,
+      "ndcg_lin_mean": 0.37881111105680687,
+      "prec_mean": 0.3944444444444445,
+      "recall_mean": 0.05114376720166941,
+      "srecall_mean": 0.0822956074992959,
+      "meanrel_mean": 1.1422222222222222,
+      "ild_all": 0.5162282794713974,
+      "eild_all": 0.38746951619784037,
+      "distractor_rate_mean": 0.3155555555555556,
+      "conflict_density": 0.36848940747237635,
+      "match_exact_frac": 0.9544444444444442,
+      "n_policies": 30
+    },
+    "SimpleRAG": {
+      "ndcg_mean": 0.2960254573365416,
+      "ndcg_lin_mean": 0.4532759687265294,
+      "prec_mean": 0.3966666666666667,
+      "recall_mean": 0.04151624465365224,
+      "srecall_mean": 0.027687258421352924,
+      "meanrel_mean": 1.3922222222222222,
+      "ild_all": 0.14196520646413166,
+      "eild_all": 0.13332801461219787,
+      "distractor_rate_mean": 0.0,
+      "conflict_density": 0.9457100616554864,
+      "match_exact_frac": 0.7877777777777778,
+      "n_policies": 30
+    }
+  }
+}

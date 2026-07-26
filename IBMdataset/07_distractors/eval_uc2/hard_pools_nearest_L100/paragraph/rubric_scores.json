@@ -1,0 +1,1106 @@
+{
+  "System A": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit women in combat": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Social media brings more harm than good": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize space exploration": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize student loans": {
+        "coverage": 4.0,
+        "balance": 4.0,
+        "insight": 3.0,
+        "specificity": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should adopt atheism": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should limit judicial activism": {
+        "coverage": 4.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Homeschooling should be banned": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit school prayer": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban whaling": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban fast food": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize sex selection": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should fight urbanization": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize vocational education": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should abolish the Olympic Games": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Entrapment should be legalized": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban factory farming": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize prostitution": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should abolish intellectual property rights": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize polygamy": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should stop the development of autonomous cars": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should ban naturopathy": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should oppose collectivism": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      }
+    }
+  },
+  "System B": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should prohibit women in combat": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Social media brings more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize space exploration": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize student loans": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should adopt atheism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should limit judicial activism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Homeschooling should be banned": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should prohibit school prayer": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban whaling": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban fast food": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize sex selection": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should fight urbanization": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize vocational education": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abolish the Olympic Games": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Entrapment should be legalized": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban factory farming": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize prostitution": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should abolish intellectual property rights": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize polygamy": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "coverage": 4.0,
+        "balance": 3.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban naturopathy": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should oppose collectivism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      }
+    }
+  },
+  "System C": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit women in combat": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Social media brings more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize space exploration": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize student loans": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should adopt atheism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should limit judicial activism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Homeschooling should be banned": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit school prayer": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "coverage": 4.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban whaling": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban fast food": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize sex selection": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should fight urbanization": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize vocational education": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abolish the Olympic Games": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Entrapment should be legalized": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban factory farming": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize prostitution": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should abolish intellectual property rights": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize polygamy": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "coverage": 4.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 3.0
+      },
+      "We should ban naturopathy": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should oppose collectivism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      }
+    }
+  },
+  "Baseline A": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should prohibit women in combat": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Social media brings more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize space exploration": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize student loans": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should adopt atheism": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should limit judicial activism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 3.0
+      },
+      "We should ban algorithmic trading": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Homeschooling should be banned": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit school prayer": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should ban whaling": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should ban fast food": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize sex selection": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should fight urbanization": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize vocational education": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abolish the Olympic Games": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Entrapment should be legalized": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban factory farming": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize prostitution": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should abolish intellectual property rights": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize polygamy": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban naturopathy": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should oppose collectivism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      }
+    }
+  },
+  "Baseline B": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should prohibit women in combat": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "Social media brings more harm than good": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize space exploration": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize student loans": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should subsidize Wikipedia": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should adopt atheism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should limit judicial activism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Homeschooling should be banned": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit school prayer": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban whaling": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban fast food": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize sex selection": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should fight urbanization": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize vocational education": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abolish the Olympic Games": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Entrapment should be legalized": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban factory farming": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize prostitution": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abolish intellectual property rights": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize polygamy": {
+        "coverage": 4.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban naturopathy": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "coverage": 4.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should oppose collectivism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      }
+    }
+  },
+  "SimpleRAG": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should prohibit women in combat": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Social media brings more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize space exploration": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize student loans": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should adopt atheism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should limit judicial activism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Homeschooling should be banned": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should prohibit school prayer": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban whaling": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should ban fast food": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize sex selection": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should fight urbanization": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should subsidize vocational education": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should abolish the Olympic Games": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "Entrapment should be legalized": {
+        "coverage": 4.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 3.0
+      },
+      "We should ban factory farming": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should legalize prostitution": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should abolish intellectual property rights": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should legalize polygamy": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should ban naturopathy": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 5.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "coverage": 5.0,
+        "balance": 4.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 4.0,
+        "specificity": 4.0
+      },
+      "We should oppose collectivism": {
+        "coverage": 5.0,
+        "balance": 5.0,
+        "insight": 5.0,
+        "specificity": 4.0
+      }
+    }
+  }
+}

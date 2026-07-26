@@ -1,0 +1,924 @@
+{
+  "System A": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "n_claims": 9,
+        "n_supported": 5,
+        "faithfulness": 0.5555555555555556
+      },
+      "We should prohibit women in combat": {
+        "n_claims": 22,
+        "n_supported": 19,
+        "faithfulness": 0.8636363636363636
+      },
+      "Social media brings more harm than good": {
+        "n_claims": 13,
+        "n_supported": 10,
+        "faithfulness": 0.7692307692307693
+      },
+      "We should subsidize space exploration": {
+        "n_claims": 12,
+        "n_supported": 7,
+        "faithfulness": 0.5833333333333334
+      },
+      "We should subsidize student loans": {
+        "n_claims": 16,
+        "n_supported": 16,
+        "faithfulness": 1.0
+      },
+      "We should subsidize Wikipedia": {
+        "n_claims": 11,
+        "n_supported": 8,
+        "faithfulness": 0.7272727272727273
+      },
+      "We should adopt atheism": {
+        "n_claims": 21,
+        "n_supported": 17,
+        "faithfulness": 0.8095238095238095
+      },
+      "We should limit judicial activism": {
+        "n_claims": 28,
+        "n_supported": 27,
+        "faithfulness": 0.9642857142857143
+      },
+      "We should ban algorithmic trading": {
+        "n_claims": 19,
+        "n_supported": 17,
+        "faithfulness": 0.8947368421052632
+      },
+      "Homeschooling should be banned": {
+        "n_claims": 14,
+        "n_supported": 7,
+        "faithfulness": 0.5
+      },
+      "We should prohibit school prayer": {
+        "n_claims": 15,
+        "n_supported": 10,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should subsidize stay-at-home dads": {
+        "n_claims": 9,
+        "n_supported": 6,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should ban whaling": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "We should ban fast food": {
+        "n_claims": 17,
+        "n_supported": 16,
+        "faithfulness": 0.9411764705882353
+      },
+      "We should legalize sex selection": {
+        "n_claims": 12,
+        "n_supported": 8,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should fight urbanization": {
+        "n_claims": 22,
+        "n_supported": 19,
+        "faithfulness": 0.8636363636363636
+      },
+      "We should subsidize vocational education": {
+        "n_claims": 36,
+        "n_supported": 33,
+        "faithfulness": 0.9166666666666666
+      },
+      "We should abolish the Olympic Games": {
+        "n_claims": 22,
+        "n_supported": 20,
+        "faithfulness": 0.9090909090909091
+      },
+      "Entrapment should be legalized": {
+        "n_claims": 19,
+        "n_supported": 17,
+        "faithfulness": 0.8947368421052632
+      },
+      "We should ban factory farming": {
+        "n_claims": 15,
+        "n_supported": 11,
+        "faithfulness": 0.7333333333333333
+      },
+      "We should legalize prostitution": {
+        "n_claims": 12,
+        "n_supported": 9,
+        "faithfulness": 0.75
+      },
+      "We should abolish intellectual property rights": {
+        "n_claims": 8,
+        "n_supported": 6,
+        "faithfulness": 0.75
+      },
+      "We should legalize polygamy": {
+        "n_claims": 16,
+        "n_supported": 12,
+        "faithfulness": 0.75
+      },
+      "We should stop the development of autonomous cars": {
+        "n_claims": 16,
+        "n_supported": 14,
+        "faithfulness": 0.875
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "n_claims": 27,
+        "n_supported": 24,
+        "faithfulness": 0.8888888888888888
+      },
+      "We should ban naturopathy": {
+        "n_claims": 13,
+        "n_supported": 9,
+        "faithfulness": 0.6923076923076923
+      },
+      "Intelligence tests bring more harm than good": {
+        "n_claims": 34,
+        "n_supported": 32,
+        "faithfulness": 0.9411764705882353
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "n_claims": 15,
+        "n_supported": 13,
+        "faithfulness": 0.8666666666666667
+      },
+      "We should abandon the use of school uniform": {
+        "n_claims": 10,
+        "n_supported": 5,
+        "faithfulness": 0.5
+      },
+      "We should oppose collectivism": {
+        "n_claims": 24,
+        "n_supported": 17,
+        "faithfulness": 0.7083333333333334
+      }
+    }
+  },
+  "System B": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "n_claims": 16,
+        "n_supported": 15,
+        "faithfulness": 0.9375
+      },
+      "We should prohibit women in combat": {
+        "n_claims": 15,
+        "n_supported": 10,
+        "faithfulness": 0.6666666666666666
+      },
+      "Social media brings more harm than good": {
+        "n_claims": 20,
+        "n_supported": 18,
+        "faithfulness": 0.9
+      },
+      "We should subsidize space exploration": {
+        "n_claims": 7,
+        "n_supported": 4,
+        "faithfulness": 0.5714285714285714
+      },
+      "We should subsidize student loans": {
+        "n_claims": 10,
+        "n_supported": 7,
+        "faithfulness": 0.7
+      },
+      "We should subsidize Wikipedia": {
+        "n_claims": 13,
+        "n_supported": 11,
+        "faithfulness": 0.8461538461538461
+      },
+      "We should adopt atheism": {
+        "n_claims": 18,
+        "n_supported": 15,
+        "faithfulness": 0.8333333333333334
+      },
+      "We should limit judicial activism": {
+        "n_claims": 14,
+        "n_supported": 7,
+        "faithfulness": 0.5
+      },
+      "We should ban algorithmic trading": {
+        "n_claims": 13,
+        "n_supported": 9,
+        "faithfulness": 0.6923076923076923
+      },
+      "Homeschooling should be banned": {
+        "n_claims": 9,
+        "n_supported": 6,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should prohibit school prayer": {
+        "n_claims": 9,
+        "n_supported": 5,
+        "faithfulness": 0.5555555555555556
+      },
+      "We should subsidize stay-at-home dads": {
+        "n_claims": 13,
+        "n_supported": 8,
+        "faithfulness": 0.6153846153846154
+      },
+      "We should ban whaling": {
+        "n_claims": 16,
+        "n_supported": 10,
+        "faithfulness": 0.625
+      },
+      "We should ban fast food": {
+        "n_claims": 27,
+        "n_supported": 23,
+        "faithfulness": 0.8518518518518519
+      },
+      "We should legalize sex selection": {
+        "n_claims": 18,
+        "n_supported": 9,
+        "faithfulness": 0.5
+      },
+      "We should fight urbanization": {
+        "n_claims": 13,
+        "n_supported": 8,
+        "faithfulness": 0.6153846153846154
+      },
+      "We should subsidize vocational education": {
+        "n_claims": 7,
+        "n_supported": 5,
+        "faithfulness": 0.7142857142857143
+      },
+      "We should abolish the Olympic Games": {
+        "n_claims": 18,
+        "n_supported": 14,
+        "faithfulness": 0.7777777777777778
+      },
+      "Entrapment should be legalized": {
+        "n_claims": 12,
+        "n_supported": 9,
+        "faithfulness": 0.75
+      },
+      "We should ban factory farming": {
+        "n_claims": 22,
+        "n_supported": 19,
+        "faithfulness": 0.8636363636363636
+      },
+      "We should legalize prostitution": {
+        "n_claims": 14,
+        "n_supported": 8,
+        "faithfulness": 0.5714285714285714
+      },
+      "We should abolish intellectual property rights": {
+        "n_claims": 12,
+        "n_supported": 6,
+        "faithfulness": 0.5
+      },
+      "We should legalize polygamy": {
+        "n_claims": 8,
+        "n_supported": 5,
+        "faithfulness": 0.625
+      },
+      "We should stop the development of autonomous cars": {
+        "n_claims": 10,
+        "n_supported": 8,
+        "faithfulness": 0.8
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "n_claims": 27,
+        "n_supported": 25,
+        "faithfulness": 0.9259259259259259
+      },
+      "We should ban naturopathy": {
+        "n_claims": 15,
+        "n_supported": 14,
+        "faithfulness": 0.9333333333333333
+      },
+      "Intelligence tests bring more harm than good": {
+        "n_claims": 10,
+        "n_supported": 6,
+        "faithfulness": 0.6
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "n_claims": 15,
+        "n_supported": 10,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should abandon the use of school uniform": {
+        "n_claims": 27,
+        "n_supported": 22,
+        "faithfulness": 0.8148148148148148
+      },
+      "We should oppose collectivism": {
+        "n_claims": 10,
+        "n_supported": 6,
+        "faithfulness": 0.6
+      }
+    }
+  },
+  "System C": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "n_claims": 9,
+        "n_supported": 7,
+        "faithfulness": 0.7777777777777778
+      },
+      "We should prohibit women in combat": {
+        "n_claims": 15,
+        "n_supported": 12,
+        "faithfulness": 0.8
+      },
+      "Social media brings more harm than good": {
+        "n_claims": 20,
+        "n_supported": 18,
+        "faithfulness": 0.9
+      },
+      "We should subsidize space exploration": {
+        "n_claims": 16,
+        "n_supported": 13,
+        "faithfulness": 0.8125
+      },
+      "We should subsidize student loans": {
+        "n_claims": 16,
+        "n_supported": 14,
+        "faithfulness": 0.875
+      },
+      "We should subsidize Wikipedia": {
+        "n_claims": 12,
+        "n_supported": 8,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should adopt atheism": {
+        "n_claims": 17,
+        "n_supported": 14,
+        "faithfulness": 0.8235294117647058
+      },
+      "We should limit judicial activism": {
+        "n_claims": 9,
+        "n_supported": 6,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should ban algorithmic trading": {
+        "n_claims": 13,
+        "n_supported": 9,
+        "faithfulness": 0.6923076923076923
+      },
+      "Homeschooling should be banned": {
+        "n_claims": 8,
+        "n_supported": 5,
+        "faithfulness": 0.625
+      },
+      "We should prohibit school prayer": {
+        "n_claims": 12,
+        "n_supported": 6,
+        "faithfulness": 0.5
+      },
+      "We should subsidize stay-at-home dads": {
+        "n_claims": 17,
+        "n_supported": 17,
+        "faithfulness": 1.0
+      },
+      "We should ban whaling": {
+        "n_claims": 17,
+        "n_supported": 15,
+        "faithfulness": 0.8823529411764706
+      },
+      "We should ban fast food": {
+        "n_claims": 24,
+        "n_supported": 18,
+        "faithfulness": 0.75
+      },
+      "We should legalize sex selection": {
+        "n_claims": 11,
+        "n_supported": 9,
+        "faithfulness": 0.8181818181818182
+      },
+      "We should fight urbanization": {
+        "n_claims": 13,
+        "n_supported": 8,
+        "faithfulness": 0.6153846153846154
+      },
+      "We should subsidize vocational education": {
+        "n_claims": 7,
+        "n_supported": 5,
+        "faithfulness": 0.7142857142857143
+      },
+      "We should abolish the Olympic Games": {
+        "n_claims": 13,
+        "n_supported": 11,
+        "faithfulness": 0.8461538461538461
+      },
+      "Entrapment should be legalized": {
+        "n_claims": 10,
+        "n_supported": 7,
+        "faithfulness": 0.7
+      },
+      "We should ban factory farming": {
+        "n_claims": 22,
+        "n_supported": 19,
+        "faithfulness": 0.8636363636363636
+      },
+      "We should legalize prostitution": {
+        "n_claims": 21,
+        "n_supported": 19,
+        "faithfulness": 0.9047619047619048
+      },
+      "We should abolish intellectual property rights": {
+        "n_claims": 21,
+        "n_supported": 20,
+        "faithfulness": 0.9523809523809523
+      },
+      "We should legalize polygamy": {
+        "n_claims": 24,
+        "n_supported": 22,
+        "faithfulness": 0.9166666666666666
+      },
+      "We should stop the development of autonomous cars": {
+        "n_claims": 10,
+        "n_supported": 5,
+        "faithfulness": 0.5
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "n_claims": 9,
+        "n_supported": 7,
+        "faithfulness": 0.7777777777777778
+      },
+      "We should ban naturopathy": {
+        "n_claims": 10,
+        "n_supported": 8,
+        "faithfulness": 0.8
+      },
+      "Intelligence tests bring more harm than good": {
+        "n_claims": 15,
+        "n_supported": 11,
+        "faithfulness": 0.7333333333333333
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "n_claims": 13,
+        "n_supported": 11,
+        "faithfulness": 0.8461538461538461
+      },
+      "We should abandon the use of school uniform": {
+        "n_claims": 12,
+        "n_supported": 7,
+        "faithfulness": 0.5833333333333334
+      },
+      "We should oppose collectivism": {
+        "n_claims": 10,
+        "n_supported": 6,
+        "faithfulness": 0.6
+      }
+    }
+  },
+  "Baseline A": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "n_claims": 17,
+        "n_supported": 8,
+        "faithfulness": 0.47058823529411764
+      },
+      "We should prohibit women in combat": {
+        "n_claims": 18,
+        "n_supported": 13,
+        "faithfulness": 0.7222222222222222
+      },
+      "Social media brings more harm than good": {
+        "n_claims": 14,
+        "n_supported": 9,
+        "faithfulness": 0.6428571428571429
+      },
+      "We should subsidize space exploration": {
+        "n_claims": 17,
+        "n_supported": 16,
+        "faithfulness": 0.9411764705882353
+      },
+      "We should subsidize student loans": {
+        "n_claims": 14,
+        "n_supported": 6,
+        "faithfulness": 0.42857142857142855
+      },
+      "We should subsidize Wikipedia": {
+        "n_claims": 14,
+        "n_supported": 9,
+        "faithfulness": 0.6428571428571429
+      },
+      "We should adopt atheism": {
+        "n_claims": 9,
+        "n_supported": 6,
+        "faithfulness": 0.6666666666666666
+      },
+      "We should limit judicial activism": {
+        "n_claims": 22,
+        "n_supported": 20,
+        "faithfulness": 0.9090909090909091
+      },
+      "We should ban algorithmic trading": {
+        "n_claims": 17,
+        "n_supported": 10,
+        "faithfulness": 0.5882352941176471
+      },
+      "Homeschooling should be banned": {
+        "n_claims": 11,
+        "n_supported": 9,
+        "faithfulness": 0.8181818181818182
+      },
+      "We should prohibit school prayer": {
+        "n_claims": 11,
+        "n_supported": 8,
+        "faithfulness": 0.7272727272727273
+      },
+      "We should subsidize stay-at-home dads": {
+        "n_claims": 15,
+        "n_supported": 12,
+        "faithfulness": 0.8
+      },
+      "We should ban whaling": {
+        "n_claims": 14,
+        "n_supported": 11,
+        "faithfulness": 0.7857142857142857
+      },
+      "We should ban fast food": {
+        "n_claims": 15,
+        "n_supported": 11,
+        "faithfulness": 0.7333333333333333
+      },
+      "We should legalize sex selection": {
+        "n_claims": 13,
+        "n_supported": 10,
+        "faithfulness": 0.7692307692307693
+      },
+      "We should fight urbanization": {
+        "n_claims": 13,
+        "n_supported": 10,
+        "faithfulness": 0.7692307692307693
+      },
+      "We should subsidize vocational education": {
+        "n_claims": 11,
+        "n_supported": 6,
+        "faithfulness": 0.5454545454545454
+      },
+      "We should abolish the Olympic Games": {
+        "n_claims": 26,
+        "n_supported": 25,
+        "faithfulness": 0.9615384615384616
+      },
+      "Entrapment should be legalized": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "We should ban factory farming": {
+        "n_claims": 14,
+        "n_supported": 11,
+        "faithfulness": 0.7857142857142857
+      },
+      "We should legalize prostitution": {
+        "n_claims": 16,
+        "n_supported": 13,
+        "faithfulness": 0.8125
+      },
+      "We should abolish intellectual property rights": {
+        "n_claims": 8,
+        "n_supported": 6,
+        "faithfulness": 0.75
+      },
+      "We should legalize polygamy": {
+        "n_claims": 12,
+        "n_supported": 9,
+        "faithfulness": 0.75
+      },
+      "We should stop the development of autonomous cars": {
+        "n_claims": 17,
+        "n_supported": 13,
+        "faithfulness": 0.7647058823529411
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "n_claims": 20,
+        "n_supported": 17,
+        "faithfulness": 0.85
+      },
+      "We should ban naturopathy": {
+        "n_claims": 13,
+        "n_supported": 9,
+        "faithfulness": 0.6923076923076923
+      },
+      "Intelligence tests bring more harm than good": {
+        "n_claims": 17,
+        "n_supported": 11,
+        "faithfulness": 0.6470588235294118
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "n_claims": 13,
+        "n_supported": 10,
+        "faithfulness": 0.7692307692307693
+      },
+      "We should abandon the use of school uniform": {
+        "n_claims": 16,
+        "n_supported": 13,
+        "faithfulness": 0.8125
+      },
+      "We should oppose collectivism": {
+        "n_claims": 12,
+        "n_supported": 7,
+        "faithfulness": 0.5833333333333334
+      }
+    }
+  },
+  "Baseline B": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "n_claims": 12,
+        "n_supported": 5,
+        "faithfulness": 0.4166666666666667
+      },
+      "We should prohibit women in combat": {
+        "n_claims": 9,
+        "n_supported": 6,
+        "faithfulness": 0.6666666666666666
+      },
+      "Social media brings more harm than good": {
+        "n_claims": 18,
+        "n_supported": 13,
+        "faithfulness": 0.7222222222222222
+      },
+      "We should subsidize space exploration": {
+        "n_claims": 15,
+        "n_supported": 8,
+        "faithfulness": 0.5333333333333333
+      },
+      "We should subsidize student loans": {
+        "n_claims": 27,
+        "n_supported": 25,
+        "faithfulness": 0.9259259259259259
+      },
+      "We should subsidize Wikipedia": {
+        "n_claims": 13,
+        "n_supported": 11,
+        "faithfulness": 0.8461538461538461
+      },
+      "We should adopt atheism": {
+        "n_claims": 15,
+        "n_supported": 9,
+        "faithfulness": 0.6
+      },
+      "We should limit judicial activism": {
+        "n_claims": 17,
+        "n_supported": 15,
+        "faithfulness": 0.8823529411764706
+      },
+      "We should ban algorithmic trading": {
+        "n_claims": 12,
+        "n_supported": 9,
+        "faithfulness": 0.75
+      },
+      "Homeschooling should be banned": {
+        "n_claims": 12,
+        "n_supported": 7,
+        "faithfulness": 0.5833333333333334
+      },
+      "We should prohibit school prayer": {
+        "n_claims": 14,
+        "n_supported": 11,
+        "faithfulness": 0.7857142857142857
+      },
+      "We should subsidize stay-at-home dads": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "We should ban whaling": {
+        "n_claims": 12,
+        "n_supported": 7,
+        "faithfulness": 0.5833333333333334
+      },
+      "We should ban fast food": {
+        "n_claims": 21,
+        "n_supported": 19,
+        "faithfulness": 0.9047619047619048
+      },
+      "We should legalize sex selection": {
+        "n_claims": 12,
+        "n_supported": 9,
+        "faithfulness": 0.75
+      },
+      "We should fight urbanization": {
+        "n_claims": 11,
+        "n_supported": 8,
+        "faithfulness": 0.7272727272727273
+      },
+      "We should subsidize vocational education": {
+        "n_claims": 11,
+        "n_supported": 10,
+        "faithfulness": 0.9090909090909091
+      },
+      "We should abolish the Olympic Games": {
+        "n_claims": 10,
+        "n_supported": 5,
+        "faithfulness": 0.5
+      },
+      "Entrapment should be legalized": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "We should ban factory farming": {
+        "n_claims": 7,
+        "n_supported": 4,
+        "faithfulness": 0.5714285714285714
+      },
+      "We should legalize prostitution": {
+        "error": "parse_failed"
+      },
+      "We should abolish intellectual property rights": {
+        "n_claims": 8,
+        "n_supported": 5,
+        "faithfulness": 0.625
+      },
+      "We should legalize polygamy": {
+        "n_claims": 10,
+        "n_supported": 8,
+        "faithfulness": 0.8
+      },
+      "We should stop the development of autonomous cars": {
+        "n_claims": 13,
+        "n_supported": 7,
+        "faithfulness": 0.5384615384615384
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "n_claims": 14,
+        "n_supported": 8,
+        "faithfulness": 0.5714285714285714
+      },
+      "We should ban naturopathy": {
+        "n_claims": 17,
+        "n_supported": 16,
+        "faithfulness": 0.9411764705882353
+      },
+      "Intelligence tests bring more harm than good": {
+        "n_claims": 8,
+        "n_supported": 7,
+        "faithfulness": 0.875
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "n_claims": 18,
+        "n_supported": 17,
+        "faithfulness": 0.9444444444444444
+      },
+      "We should abandon the use of school uniform": {
+        "n_claims": 10,
+        "n_supported": 6,
+        "faithfulness": 0.6
+      },
+      "We should oppose collectivism": {
+        "n_claims": 31,
+        "n_supported": 27,
+        "faithfulness": 0.8709677419354839
+      }
+    }
+  },
+  "SimpleRAG": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "n_claims": 12,
+        "n_supported": 7,
+        "faithfulness": 0.5833333333333334
+      },
+      "We should prohibit women in combat": {
+        "n_claims": 14,
+        "n_supported": 12,
+        "faithfulness": 0.8571428571428571
+      },
+      "Social media brings more harm than good": {
+        "n_claims": 13,
+        "n_supported": 10,
+        "faithfulness": 0.7692307692307693
+      },
+      "We should subsidize space exploration": {
+        "n_claims": 11,
+        "n_supported": 8,
+        "faithfulness": 0.7272727272727273
+      },
+      "We should subsidize student loans": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "We should subsidize Wikipedia": {
+        "n_claims": 19,
+        "n_supported": 15,
+        "faithfulness": 0.7894736842105263
+      },
+      "We should adopt atheism": {
+        "n_claims": 14,
+        "n_supported": 10,
+        "faithfulness": 0.7142857142857143
+      },
+      "We should limit judicial activism": {
+        "n_claims": 20,
+        "n_supported": 18,
+        "faithfulness": 0.9
+      },
+      "We should ban algorithmic trading": {
+        "n_claims": 13,
+        "n_supported": 8,
+        "faithfulness": 0.6153846153846154
+      },
+      "Homeschooling should be banned": {
+        "n_claims": 13,
+        "n_supported": 10,
+        "faithfulness": 0.7692307692307693
+      },
+      "We should prohibit school prayer": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "We should subsidize stay-at-home dads": {
+        "n_claims": 11,
+        "n_supported": 8,
+        "faithfulness": 0.7272727272727273
+      },
+      "We should ban whaling": {
+        "n_claims": 22,
+        "n_supported": 20,
+        "faithfulness": 0.9090909090909091
+      },
+      "We should ban fast food": {
+        "n_claims": 13,
+        "n_supported": 7,
+        "faithfulness": 0.5384615384615384
+      },
+      "We should legalize sex selection": {
+        "n_claims": 21,
+        "n_supported": 18,
+        "faithfulness": 0.8571428571428571
+      },
+      "We should fight urbanization": {
+        "n_claims": 24,
+        "n_supported": 20,
+        "faithfulness": 0.8333333333333334
+      },
+      "We should subsidize vocational education": {
+        "n_claims": 14,
+        "n_supported": 10,
+        "faithfulness": 0.7142857142857143
+      },
+      "We should abolish the Olympic Games": {
+        "n_claims": 11,
+        "n_supported": 7,
+        "faithfulness": 0.6363636363636364
+      },
+      "Entrapment should be legalized": {
+        "n_claims": 10,
+        "n_supported": 8,
+        "faithfulness": 0.8
+      },
+      "We should ban factory farming": {
+        "n_claims": 12,
+        "n_supported": 10,
+        "faithfulness": 0.8333333333333334
+      },
+      "We should legalize prostitution": {
+        "n_claims": 13,
+        "n_supported": 11,
+        "faithfulness": 0.8461538461538461
+      },
+      "We should abolish intellectual property rights": {
+        "n_claims": 23,
+        "n_supported": 20,
+        "faithfulness": 0.8695652173913043
+      },
+      "We should legalize polygamy": {
+        "n_claims": 17,
+        "n_supported": 16,
+        "faithfulness": 0.9411764705882353
+      },
+      "We should stop the development of autonomous cars": {
+        "n_claims": 23,
+        "n_supported": 21,
+        "faithfulness": 0.9130434782608695
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "n_claims": 15,
+        "n_supported": 11,
+        "faithfulness": 0.7333333333333333
+      },
+      "We should ban naturopathy": {
+        "n_claims": 11,
+        "n_supported": 9,
+        "faithfulness": 0.8181818181818182
+      },
+      "Intelligence tests bring more harm than good": {
+        "n_claims": 13,
+        "n_supported": 7,
+        "faithfulness": 0.5384615384615384
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "n_claims": 17,
+        "n_supported": 11,
+        "faithfulness": 0.6470588235294118
+      },
+      "We should abandon the use of school uniform": {
+        "n_claims": 22,
+        "n_supported": 21,
+        "faithfulness": 0.9545454545454546
+      },
+      "We should oppose collectivism": {
+        "n_claims": 14,
+        "n_supported": 8,
+        "faithfulness": 0.5714285714285714
+      }
+    }
+  }
+}

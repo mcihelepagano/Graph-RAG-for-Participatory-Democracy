@@ -1,0 +1,642 @@
+{
+  "System A": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should prohibit women in combat": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 2.0
+      },
+      "Social media brings more harm than good": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should subsidize space exploration": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should subsidize student loans": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should subsidize Wikipedia": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should adopt atheism": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should limit judicial activism": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "Homeschooling should be banned": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should prohibit school prayer": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should ban whaling": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should ban fast food": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should legalize sex selection": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should fight urbanization": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize vocational education": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should abolish the Olympic Games": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 1.0
+      },
+      "Entrapment should be legalized": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should ban factory farming": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should legalize prostitution": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should abolish intellectual property rights": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should legalize polygamy": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should stop the development of autonomous cars": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban naturopathy": {
+        "conflict_engagement": 4.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 5.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should oppose collectivism": {
+        "conflict_engagement": 4.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 5.0
+      }
+    },
+    "mean_conflict_engagement": 2.2333333333333334,
+    "std_conflict_engagement": 0.6155395104206463,
+    "mean_redundancy_avoidance": 3.2,
+    "std_redundancy_avoidance": 0.9092121131323903,
+    "mean_balanced_writing_aid": 3.2666666666666666,
+    "std_balanced_writing_aid": 0.9285592184789412
+  },
+  "System B": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should prohibit women in combat": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "Social media brings more harm than good": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should subsidize space exploration": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should subsidize student loans": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should adopt atheism": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should limit judicial activism": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should ban algorithmic trading": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 1.0
+      },
+      "Homeschooling should be banned": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should prohibit school prayer": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should ban whaling": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should ban fast food": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 1.0
+      },
+      "We should legalize sex selection": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should fight urbanization": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize vocational education": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should abolish the Olympic Games": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "Entrapment should be legalized": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban factory farming": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should legalize prostitution": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should abolish intellectual property rights": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should legalize polygamy": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban naturopathy": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should abandon the use of school uniform": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should oppose collectivism": {
+        "conflict_engagement": 4.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      }
+    },
+    "mean_conflict_engagement": 2.1,
+    "std_conflict_engagement": 0.5385164807134504,
+    "mean_redundancy_avoidance": 2.2666666666666666,
+    "std_redundancy_avoidance": 0.9285592184789412,
+    "mean_balanced_writing_aid": 2.7666666666666666,
+    "std_balanced_writing_aid": 1.054619467970425
+  },
+  "Baseline A": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should prohibit women in combat": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "Social media brings more harm than good": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize space exploration": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize student loans": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should adopt atheism": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should limit judicial activism": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "Homeschooling should be banned": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should prohibit school prayer": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban whaling": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should ban fast food": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should legalize sex selection": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should fight urbanization": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize vocational education": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should abolish the Olympic Games": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 3.0
+      },
+      "Entrapment should be legalized": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should ban factory farming": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should legalize prostitution": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should abolish intellectual property rights": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should legalize polygamy": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should stop the development of autonomous cars": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban naturopathy": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should oppose collectivism": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      }
+    },
+    "mean_conflict_engagement": 2.0,
+    "std_conflict_engagement": 0.0,
+    "mean_redundancy_avoidance": 2.1666666666666665,
+    "std_redundancy_avoidance": 0.93392838174146,
+    "mean_balanced_writing_aid": 3.3666666666666667,
+    "std_balanced_writing_aid": 0.7063206700139031
+  },
+  "Baseline B": {
+    "per_policy": {
+      "We should adopt a multi-party system": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should prohibit women in combat": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "Social media brings more harm than good": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 5.0
+      },
+      "We should subsidize space exploration": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize student loans": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize Wikipedia": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should adopt atheism": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should limit judicial activism": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban algorithmic trading": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "Homeschooling should be banned": {
+        "conflict_engagement": 4.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 5.0
+      },
+      "We should prohibit school prayer": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 4.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should subsidize stay-at-home dads": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should ban whaling": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 1.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should ban fast food": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 3.0
+      },
+      "We should legalize sex selection": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should fight urbanization": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should subsidize vocational education": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should abolish the Olympic Games": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 3.0
+      },
+      "Entrapment should be legalized": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban factory farming": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should legalize prostitution": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should abolish intellectual property rights": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should legalize polygamy": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should stop the development of autonomous cars": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 1.0
+      },
+      "Blockade of the Gaza Strip should be ended": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should ban naturopathy": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "Intelligence tests bring more harm than good": {
+        "conflict_engagement": 1.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 2.0
+      },
+      "We should close Guantanamo Bay detention camp": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should abandon the use of school uniform": {
+        "conflict_engagement": 2.0,
+        "redundancy_avoidance": 3.0,
+        "balanced_writing_aid": 4.0
+      },
+      "We should oppose collectivism": {
+        "conflict_engagement": 3.0,
+        "redundancy_avoidance": 2.0,
+        "balanced_writing_aid": 4.0
+      }
+    },
+    "mean_conflict_engagement": 1.9666666666666666,
+    "std_conflict_engagement": 0.6574360974438673,
+    "mean_redundancy_avoidance": 2.8333333333333335,
+    "std_redundancy_avoidance": 0.7781745019952501,
+    "mean_balanced_writing_aid": 3.3666666666666667,
+    "std_balanced_writing_aid": 0.9826268648655783
+  }
+}

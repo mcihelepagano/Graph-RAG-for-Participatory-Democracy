@@ -1,0 +1,1737 @@
+{
+  "config": {
+    "k": 5,
+    "relevant_grade": 2,
+    "gt_file": "data/ground_truth.json",
+    "n_policies": 30,
+    "ndcg_gain": "exponential 2^g-1 (primary) + linear g",
+    "expectations": "analytic, uniform random top-k draw from the judged pool; same metric defs as eval_uc1.py"
+  },
+  "grade_distribution_consensus": {
+    "counts": {
+      "0": 808,
+      "1": 4192,
+      "2": 4997,
+      "3": 1823
+    },
+    "fractions": {
+      "0": 0.0684,
+      "1": 0.3547,
+      "2": 0.4228,
+      "3": 0.1542
+    },
+    "total_graded_unique": 11820,
+    "relevant_share": 0.577
+  },
+  "relevance_density": {
+    "mean": 0.5767,
+    "std": 0.0711,
+    "min": 0.4379,
+    "max": 0.7443,
+    "n": 30
+  },
+  "expected_random_baseline": {
+    "ndcg": {
+      "mean": 0.3884,
+      "std": 0.0457,
+      "min": 0.2804,
+      "max": 0.5,
+      "n": 30
+    },
+    "precision": {
+      "mean": 0.5767,
+      "std": 0.0711,
+      "min": 0.4379,
+      "max": 0.7443,
+      "n": 30
+    },
+    "meanrel": {
+      "mean": 1.662,
+      "std": 0.1389,
+      "min": 1.3385,
+      "max": 1.9125,
+      "n": 30
+    },
+    "ndcg_headroom": {
+      "mean": 0.6116,
+      "std": 0.0456,
+      "min": 0.5,
+      "max": 0.7195,
+      "n": 30
+    },
+    "interpretation": "a high mean with LOW std is the saturation signature: little room for any system to separate from random on this pool"
+  },
+  "annotator_divergence": {
+    "kappa_ordinal_qwk": {
+      "mean": 0.5806,
+      "std": 0.0839,
+      "min": 0.4356,
+      "max": 0.7497,
+      "n": 30
+    },
+    "kappa_binary": {
+      "mean": 0.5312,
+      "std": 0.0784,
+      "min": 0.3477,
+      "max": 0.6779,
+      "n": 30
+    },
+    "alpha_ordinal": {
+      "mean": 0.5667,
+      "std": 0.0979,
+      "min": 0.3304,
+      "max": 0.7409,
+      "n": 27
+    },
+    "dual_granularity_note": "binary-cut kappa usually exceeds full-ordinal kappa; the binary cut is the granularity that drives the relevant set used by Precision@k",
+    "from_report_file": {
+      "kappa_ordinal_qwk": {
+        "mean": 0.5838,
+        "std": 0.0815,
+        "min": 0.4386,
+        "max": 0.7497
+      },
+      "kappa_binary": {
+        "mean": 0.5279,
+        "std": 0.0808,
+        "min": 0.3477,
+        "max": 0.6779
+      },
+      "alpha_ordinal": {
+        "mean": 0.5667,
+        "std": 0.0978,
+        "min": 0.3304,
+        "max": 0.7409
+      },
+      "n_policies": 30,
+      "n_HIGH": 13,
+      "n_MEDIUM": 14,
+      "n_LOW": 0,
+      "n_SINGLE": 3,
+      "mean_kappa": 0.5838,
+      "std_kappa": 0.0815,
+      "min_kappa": 0.4386,
+      "max_kappa": 0.7497
+    }
+  },
+  "density_vs_random_score": {
+    "pearson": 0.8421,
+    "spearman": 0.8851,
+    "note": "per-policy relevance density vs analytic expected random nDCG@k; strong positive => random's score tracks pool density, not retrieval skill"
+  },
+  "density_vs_measured_baseline_b": {
+    "pearson": 0.4649,
+    "spearman": 0.4534,
+    "n": 30,
+    "note": "per-policy relevance density vs MEASURED Baseline B nDCG from eval_uc1/per_policy.csv"
+  },
+  "by_tercile": {
+    "sparse": {
+      "n_policies": 10,
+      "relevance_density": {
+        "mean": 0.5601,
+        "std": 0.0763,
+        "min": 0.4379,
+        "max": 0.7443,
+        "n": 10
+      },
+      "E_random_ndcg": {
+        "mean": 0.3698,
+        "std": 0.0425,
+        "min": 0.2804,
+        "max": 0.4403,
+        "n": 10
+      },
+      "E_random_precision": {
+        "mean": 0.5601,
+        "std": 0.0763,
+        "min": 0.4379,
+        "max": 0.7443,
+        "n": 10
+      }
+    },
+    "medium": {
+      "n_policies": 10,
+      "relevance_density": {
+        "mean": 0.5609,
+        "std": 0.0565,
+        "min": 0.455,
+        "max": 0.63,
+        "n": 10
+      },
+      "E_random_ndcg": {
+        "mean": 0.3801,
+        "std": 0.0354,
+        "min": 0.3375,
+        "max": 0.4611,
+        "n": 10
+      },
+      "E_random_precision": {
+        "mean": 0.5609,
+        "std": 0.0565,
+        "min": 0.455,
+        "max": 0.63,
+        "n": 10
+      }
+    },
+    "dense": {
+      "n_policies": 10,
+      "relevance_density": {
+        "mean": 0.609,
+        "std": 0.0678,
+        "min": 0.4975,
+        "max": 0.705,
+        "n": 10
+      },
+      "E_random_ndcg": {
+        "mean": 0.4154,
+        "std": 0.0453,
+        "min": 0.3432,
+        "max": 0.5,
+        "n": 10
+      },
+      "E_random_precision": {
+        "mean": 0.609,
+        "std": 0.0678,
+        "min": 0.4975,
+        "max": 0.705,
+        "n": 10
+      }
+    }
+  },
+  "per_policy": [
+    {
+      "policy": "We should prohibit women in combat",
+      "tercile": "sparse",
+      "n_args_selected_meta": 375,
+      "pros": {
+        "n_judged": 184,
+        "n_relevant": 86,
+        "relevance_density": 0.4674,
+        "mean_grade": 1.3315,
+        "hist": {
+          "0": 29,
+          "1": 69,
+          "2": 82,
+          "3": 4
+        },
+        "E_random_ndcg": 0.2879,
+        "E_random_ndcg_lin": 0.4641,
+        "E_random_precision": 0.4674,
+        "E_random_recall": 0.0272,
+        "E_random_meanrel": 1.3315,
+        "random_ndcg_headroom": 0.7121
+      },
+      "cons": {
+        "n_judged": 191,
+        "n_relevant": 78,
+        "relevance_density": 0.4084,
+        "mean_grade": 1.3455,
+        "hist": {
+          "0": 22,
+          "1": 91,
+          "2": 68,
+          "3": 10
+        },
+        "E_random_ndcg": 0.273,
+        "E_random_ndcg_lin": 0.4485,
+        "E_random_precision": 0.4084,
+        "E_random_recall": 0.0262,
+        "E_random_meanrel": 1.3455,
+        "random_ndcg_headroom": 0.727
+      },
+      "relevance_density_mean": 0.4379,
+      "E_random_ndcg_mean": 0.2804,
+      "E_random_precision_mean": 0.4379,
+      "E_random_meanrel_mean": 1.3385,
+      "random_ndcg_headroom_mean": 0.7195,
+      "kappa_mean": 0.4519,
+      "kappa_binary_mean": 0.4182,
+      "alpha_ordinal_mean": 0.3974,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.3552
+    },
+    {
+      "policy": "We should legalize sex selection",
+      "tercile": "medium",
+      "n_args_selected_meta": 405,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 90,
+        "relevance_density": 0.45,
+        "mean_grade": 1.52,
+        "hist": {
+          "0": 15,
+          "1": 95,
+          "2": 61,
+          "3": 29
+        },
+        "E_random_ndcg": 0.3436,
+        "E_random_ndcg_lin": 0.5067,
+        "E_random_precision": 0.45,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.52,
+        "random_ndcg_headroom": 0.6564
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 92,
+        "relevance_density": 0.46,
+        "mean_grade": 1.365,
+        "hist": {
+          "0": 52,
+          "1": 56,
+          "2": 59,
+          "3": 33
+        },
+        "E_random_ndcg": 0.3314,
+        "E_random_ndcg_lin": 0.455,
+        "E_random_precision": 0.46,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.365,
+        "random_ndcg_headroom": 0.6686
+      },
+      "relevance_density_mean": 0.455,
+      "E_random_ndcg_mean": 0.3375,
+      "E_random_precision_mean": 0.455,
+      "E_random_meanrel_mean": 1.4425,
+      "random_ndcg_headroom_mean": 0.6625,
+      "kappa_mean": 0.7497,
+      "kappa_binary_mean": 0.6748,
+      "alpha_ordinal_mean": 0.7409,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.3964
+    },
+    {
+      "policy": "We should subsidize stay-at-home dads",
+      "tercile": "medium",
+      "n_args_selected_meta": 405,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 110,
+        "relevance_density": 0.55,
+        "mean_grade": 1.61,
+        "hist": {
+          "0": 10,
+          "1": 80,
+          "2": 88,
+          "3": 22
+        },
+        "E_random_ndcg": 0.3557,
+        "E_random_ndcg_lin": 0.5367,
+        "E_random_precision": 0.55,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.61,
+        "random_ndcg_headroom": 0.6443
+      },
+      "cons": {
+        "n_judged": 196,
+        "n_relevant": 81,
+        "relevance_density": 0.4133,
+        "mean_grade": 1.2194,
+        "hist": {
+          "0": 39,
+          "1": 76,
+          "2": 80,
+          "3": 1
+        },
+        "E_random_ndcg": 0.3783,
+        "E_random_ndcg_lin": 0.5213,
+        "E_random_precision": 0.4133,
+        "E_random_recall": 0.0255,
+        "E_random_meanrel": 1.2194,
+        "random_ndcg_headroom": 0.6217
+      },
+      "relevance_density_mean": 0.4817,
+      "E_random_ndcg_mean": 0.367,
+      "E_random_precision_mean": 0.4817,
+      "E_random_meanrel_mean": 1.4147,
+      "random_ndcg_headroom_mean": 0.633,
+      "kappa_mean": 0.4461,
+      "kappa_binary_mean": 0.3477,
+      "alpha_ordinal_mean": 0.3304,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4686
+    },
+    {
+      "policy": "We should oppose collectivism",
+      "tercile": "dense",
+      "n_args_selected_meta": 454,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 126,
+        "relevance_density": 0.63,
+        "mean_grade": 1.805,
+        "hist": {
+          "0": 7,
+          "1": 67,
+          "2": 84,
+          "3": 42
+        },
+        "E_random_ndcg": 0.4379,
+        "E_random_ndcg_lin": 0.6017,
+        "E_random_precision": 0.63,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.805,
+        "random_ndcg_headroom": 0.5621
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 73,
+        "relevance_density": 0.365,
+        "mean_grade": 1.225,
+        "hist": {
+          "0": 38,
+          "1": 89,
+          "2": 63,
+          "3": 10
+        },
+        "E_random_ndcg": 0.2486,
+        "E_random_ndcg_lin": 0.4083,
+        "E_random_precision": 0.365,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.225,
+        "random_ndcg_headroom": 0.7514
+      },
+      "relevance_density_mean": 0.4975,
+      "E_random_ndcg_mean": 0.3432,
+      "E_random_precision_mean": 0.4975,
+      "E_random_meanrel_mean": 1.515,
+      "random_ndcg_headroom_mean": 0.6567,
+      "kappa_mean": 0.5713,
+      "kappa_binary_mean": 0.5113,
+      "alpha_ordinal_mean": 0.5639,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4117
+    },
+    {
+      "policy": "We should ban algorithmic trading",
+      "tercile": "sparse",
+      "n_args_selected_meta": 390,
+      "pros": {
+        "n_judged": 193,
+        "n_relevant": 103,
+        "relevance_density": 0.5337,
+        "mean_grade": 1.5699,
+        "hist": {
+          "0": 14,
+          "1": 76,
+          "2": 82,
+          "3": 21
+        },
+        "E_random_ndcg": 0.3472,
+        "E_random_ndcg_lin": 0.5233,
+        "E_random_precision": 0.5337,
+        "E_random_recall": 0.0259,
+        "E_random_meanrel": 1.5699,
+        "random_ndcg_headroom": 0.6528
+      },
+      "cons": {
+        "n_judged": 197,
+        "n_relevant": 96,
+        "relevance_density": 0.4873,
+        "mean_grade": 1.467,
+        "hist": {
+          "0": 18,
+          "1": 83,
+          "2": 82,
+          "3": 14
+        },
+        "E_random_ndcg": 0.3096,
+        "E_random_ndcg_lin": 0.489,
+        "E_random_precision": 0.4873,
+        "E_random_recall": 0.0254,
+        "E_random_meanrel": 1.467,
+        "random_ndcg_headroom": 0.6904
+      },
+      "relevance_density_mean": 0.5105,
+      "E_random_ndcg_mean": 0.3284,
+      "E_random_precision_mean": 0.5105,
+      "E_random_meanrel_mean": 1.5185,
+      "random_ndcg_headroom_mean": 0.6716,
+      "kappa_mean": 0.6904,
+      "kappa_binary_mean": 0.6321,
+      "alpha_ordinal_mean": 0.6933,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.3572
+    },
+    {
+      "policy": "We should ban factory farming",
+      "tercile": "medium",
+      "n_args_selected_meta": 414,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 98,
+        "relevance_density": 0.49,
+        "mean_grade": 1.495,
+        "hist": {
+          "0": 14,
+          "1": 88,
+          "2": 83,
+          "3": 15
+        },
+        "E_random_ndcg": 0.3157,
+        "E_random_ndcg_lin": 0.4983,
+        "E_random_precision": 0.49,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.495,
+        "random_ndcg_headroom": 0.6843
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 109,
+        "relevance_density": 0.545,
+        "mean_grade": 1.655,
+        "hist": {
+          "0": 9,
+          "1": 82,
+          "2": 78,
+          "3": 31
+        },
+        "E_random_ndcg": 0.3807,
+        "E_random_ndcg_lin": 0.5517,
+        "E_random_precision": 0.545,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.655,
+        "random_ndcg_headroom": 0.6193
+      },
+      "relevance_density_mean": 0.5175,
+      "E_random_ndcg_mean": 0.3482,
+      "E_random_precision_mean": 0.5175,
+      "E_random_meanrel_mean": 1.575,
+      "random_ndcg_headroom_mean": 0.6518,
+      "kappa_mean": 0.5583,
+      "kappa_binary_mean": 0.4807,
+      "alpha_ordinal_mean": 0.5628,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.3393
+    },
+    {
+      "policy": "Blockade of the Gaza Strip should be ended",
+      "tercile": "dense",
+      "n_args_selected_meta": 521,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 111,
+        "relevance_density": 0.555,
+        "mean_grade": 1.7,
+        "hist": {
+          "0": 14,
+          "1": 75,
+          "2": 68,
+          "3": 43
+        },
+        "E_random_ndcg": 0.4143,
+        "E_random_ndcg_lin": 0.5667,
+        "E_random_precision": 0.555,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.7,
+        "random_ndcg_headroom": 0.5857
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 99,
+        "relevance_density": 0.495,
+        "mean_grade": 1.6,
+        "hist": {
+          "0": 10,
+          "1": 91,
+          "2": 68,
+          "3": 31
+        },
+        "E_random_ndcg": 0.3657,
+        "E_random_ndcg_lin": 0.5333,
+        "E_random_precision": 0.495,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.6,
+        "random_ndcg_headroom": 0.6343
+      },
+      "relevance_density_mean": 0.525,
+      "E_random_ndcg_mean": 0.39,
+      "E_random_precision_mean": 0.525,
+      "E_random_meanrel_mean": 1.65,
+      "random_ndcg_headroom_mean": 0.61,
+      "kappa_mean": 0.6676,
+      "kappa_binary_mean": 0.5753,
+      "alpha_ordinal_mean": 0.6608,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.489
+    },
+    {
+      "policy": "We should adopt a multi-party system",
+      "tercile": "sparse",
+      "n_args_selected_meta": 402,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 115,
+        "relevance_density": 0.575,
+        "mean_grade": 1.7,
+        "hist": {
+          "0": 12,
+          "1": 73,
+          "2": 78,
+          "3": 37
+        },
+        "E_random_ndcg": 0.4043,
+        "E_random_ndcg_lin": 0.5667,
+        "E_random_precision": 0.575,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.7,
+        "random_ndcg_headroom": 0.5957
+      },
+      "cons": {
+        "n_judged": 192,
+        "n_relevant": 92,
+        "relevance_density": 0.4792,
+        "mean_grade": 1.4948,
+        "hist": {
+          "0": 27,
+          "1": 73,
+          "2": 62,
+          "3": 30
+        },
+        "E_random_ndcg": 0.349,
+        "E_random_ndcg_lin": 0.4983,
+        "E_random_precision": 0.4792,
+        "E_random_recall": 0.026,
+        "E_random_meanrel": 1.4948,
+        "random_ndcg_headroom": 0.651
+      },
+      "relevance_density_mean": 0.5271,
+      "E_random_ndcg_mean": 0.3766,
+      "E_random_precision_mean": 0.5271,
+      "E_random_meanrel_mean": 1.5974,
+      "random_ndcg_headroom_mean": 0.6234,
+      "kappa_mean": 0.7102,
+      "kappa_binary_mean": 0.657,
+      "alpha_ordinal_mean": 0.7104,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4163
+    },
+    {
+      "policy": "We should subsidize Wikipedia",
+      "tercile": "sparse",
+      "n_args_selected_meta": 400,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 76,
+        "relevance_density": 0.38,
+        "mean_grade": 1.4,
+        "hist": {
+          "0": 5,
+          "1": 119,
+          "2": 67,
+          "3": 9
+        },
+        "E_random_ndcg": 0.2736,
+        "E_random_ndcg_lin": 0.4667,
+        "E_random_precision": 0.38,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.4,
+        "random_ndcg_headroom": 0.7264
+      },
+      "cons": {
+        "n_judged": 196,
+        "n_relevant": 133,
+        "relevance_density": 0.6786,
+        "mean_grade": 1.8367,
+        "hist": {
+          "0": 7,
+          "1": 56,
+          "2": 95,
+          "3": 38
+        },
+        "E_random_ndcg": 0.4424,
+        "E_random_ndcg_lin": 0.6122,
+        "E_random_precision": 0.6786,
+        "E_random_recall": 0.0255,
+        "E_random_meanrel": 1.8367,
+        "random_ndcg_headroom": 0.5576
+      },
+      "relevance_density_mean": 0.5293,
+      "E_random_ndcg_mean": 0.358,
+      "E_random_precision_mean": 0.5293,
+      "E_random_meanrel_mean": 1.6183,
+      "random_ndcg_headroom_mean": 0.642,
+      "kappa_mean": 0.6255,
+      "kappa_binary_mean": 0.5528,
+      "alpha_ordinal_mean": 0.6211,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4747
+    },
+    {
+      "policy": "We should subsidize student loans",
+      "tercile": "sparse",
+      "n_args_selected_meta": 386,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 127,
+        "relevance_density": 0.635,
+        "mean_grade": 1.78,
+        "hist": {
+          "0": 10,
+          "1": 63,
+          "2": 88,
+          "3": 39
+        },
+        "E_random_ndcg": 0.4286,
+        "E_random_ndcg_lin": 0.5933,
+        "E_random_precision": 0.635,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.78,
+        "random_ndcg_headroom": 0.5714
+      },
+      "cons": {
+        "n_judged": 179,
+        "n_relevant": 76,
+        "relevance_density": 0.4246,
+        "mean_grade": 1.3296,
+        "hist": {
+          "0": 25,
+          "1": 78,
+          "2": 68,
+          "3": 8
+        },
+        "E_random_ndcg": 0.2698,
+        "E_random_ndcg_lin": 0.4432,
+        "E_random_precision": 0.4246,
+        "E_random_recall": 0.0279,
+        "E_random_meanrel": 1.3296,
+        "random_ndcg_headroom": 0.7302
+      },
+      "relevance_density_mean": 0.5298,
+      "E_random_ndcg_mean": 0.3492,
+      "E_random_precision_mean": 0.5298,
+      "E_random_meanrel_mean": 1.5548,
+      "random_ndcg_headroom_mean": 0.6508,
+      "kappa_mean": 0.4794,
+      "kappa_binary_mean": 0.5009,
+      "alpha_ordinal_mean": 0.4549,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.3388
+    },
+    {
+      "policy": "We should legalize polygamy",
+      "tercile": "dense",
+      "n_args_selected_meta": 500,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 115,
+        "relevance_density": 0.575,
+        "mean_grade": 1.625,
+        "hist": {
+          "0": 13,
+          "1": 72,
+          "2": 92,
+          "3": 23
+        },
+        "E_random_ndcg": 0.3636,
+        "E_random_ndcg_lin": 0.5417,
+        "E_random_precision": 0.575,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.625,
+        "random_ndcg_headroom": 0.6364
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 98,
+        "relevance_density": 0.49,
+        "mean_grade": 1.48,
+        "hist": {
+          "0": 34,
+          "1": 68,
+          "2": 66,
+          "3": 32
+        },
+        "E_random_ndcg": 0.35,
+        "E_random_ndcg_lin": 0.4933,
+        "E_random_precision": 0.49,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.48,
+        "random_ndcg_headroom": 0.65
+      },
+      "relevance_density_mean": 0.5325,
+      "E_random_ndcg_mean": 0.3568,
+      "E_random_precision_mean": 0.5325,
+      "E_random_meanrel_mean": 1.5525,
+      "random_ndcg_headroom_mean": 0.6432,
+      "kappa_mean": 0.5446,
+      "kappa_binary_mean": 0.4471,
+      "alpha_ordinal_mean": 0.5423,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.3527
+    },
+    {
+      "policy": "We should ban fast food",
+      "tercile": "medium",
+      "n_args_selected_meta": 422,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 89,
+        "relevance_density": 0.445,
+        "mean_grade": 1.545,
+        "hist": {
+          "0": 3,
+          "1": 108,
+          "2": 66,
+          "3": 23
+        },
+        "E_random_ndcg": 0.3336,
+        "E_random_ndcg_lin": 0.515,
+        "E_random_precision": 0.445,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.545,
+        "random_ndcg_headroom": 0.6664
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 129,
+        "relevance_density": 0.645,
+        "mean_grade": 1.785,
+        "hist": {
+          "0": 10,
+          "1": 61,
+          "2": 91,
+          "3": 38
+        },
+        "E_random_ndcg": 0.4286,
+        "E_random_ndcg_lin": 0.595,
+        "E_random_precision": 0.645,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.785,
+        "random_ndcg_headroom": 0.5714
+      },
+      "relevance_density_mean": 0.545,
+      "E_random_ndcg_mean": 0.3811,
+      "E_random_precision_mean": 0.545,
+      "E_random_meanrel_mean": 1.665,
+      "random_ndcg_headroom_mean": 0.6189,
+      "kappa_mean": 0.5388,
+      "kappa_binary_mean": 0.486,
+      "alpha_ordinal_mean": 0.5308,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.371
+    },
+    {
+      "policy": "We should limit judicial activism",
+      "tercile": "sparse",
+      "n_args_selected_meta": 402,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 123,
+        "relevance_density": 0.615,
+        "mean_grade": 1.78,
+        "hist": {
+          "0": 12,
+          "1": 65,
+          "2": 78,
+          "3": 45
+        },
+        "E_random_ndcg": 0.4386,
+        "E_random_ndcg_lin": 0.5933,
+        "E_random_precision": 0.615,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.78,
+        "random_ndcg_headroom": 0.5614
+      },
+      "cons": {
+        "n_judged": 199,
+        "n_relevant": 100,
+        "relevance_density": 0.5025,
+        "mean_grade": 1.4874,
+        "hist": {
+          "0": 30,
+          "1": 69,
+          "2": 73,
+          "3": 27
+        },
+        "E_random_ndcg": 0.3424,
+        "E_random_ndcg_lin": 0.4958,
+        "E_random_precision": 0.5025,
+        "E_random_recall": 0.0251,
+        "E_random_meanrel": 1.4874,
+        "random_ndcg_headroom": 0.6576
+      },
+      "relevance_density_mean": 0.5587,
+      "E_random_ndcg_mean": 0.3905,
+      "E_random_precision_mean": 0.5587,
+      "E_random_meanrel_mean": 1.6337,
+      "random_ndcg_headroom_mean": 0.6095,
+      "kappa_mean": 0.6793,
+      "kappa_binary_mean": 0.6779,
+      "alpha_ordinal_mean": 0.6797,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.5103
+    },
+    {
+      "policy": "We should subsidize space exploration",
+      "tercile": "sparse",
+      "n_args_selected_meta": 388,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 116,
+        "relevance_density": 0.58,
+        "mean_grade": 1.775,
+        "hist": {
+          "0": 3,
+          "1": 81,
+          "2": 74,
+          "3": 42
+        },
+        "E_random_ndcg": 0.4264,
+        "E_random_ndcg_lin": 0.5917,
+        "E_random_precision": 0.58,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.775,
+        "random_ndcg_headroom": 0.5736
+      },
+      "cons": {
+        "n_judged": 188,
+        "n_relevant": 104,
+        "relevance_density": 0.5532,
+        "mean_grade": 1.516,
+        "hist": {
+          "0": 13,
+          "1": 71,
+          "2": 98,
+          "3": 6
+        },
+        "E_random_ndcg": 0.3093,
+        "E_random_ndcg_lin": 0.5053,
+        "E_random_precision": 0.5532,
+        "E_random_recall": 0.0266,
+        "E_random_meanrel": 1.516,
+        "random_ndcg_headroom": 0.6907
+      },
+      "relevance_density_mean": 0.5666,
+      "E_random_ndcg_mean": 0.3679,
+      "E_random_precision_mean": 0.5666,
+      "E_random_meanrel_mean": 1.6455,
+      "random_ndcg_headroom_mean": 0.6321,
+      "kappa_mean": 0.4646,
+      "kappa_binary_mean": 0.4254,
+      "alpha_ordinal_mean": 0.4626,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.5322
+    },
+    {
+      "policy": "Entrapment should be legalized",
+      "tercile": "medium",
+      "n_args_selected_meta": 406,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 102,
+        "relevance_density": 0.51,
+        "mean_grade": 1.5,
+        "hist": {
+          "0": 14,
+          "1": 84,
+          "2": 90,
+          "3": 12
+        },
+        "E_random_ndcg": 0.3129,
+        "E_random_ndcg_lin": 0.5,
+        "E_random_precision": 0.51,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.5,
+        "random_ndcg_headroom": 0.6871
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 125,
+        "relevance_density": 0.625,
+        "mean_grade": 1.71,
+        "hist": {
+          "0": 8,
+          "1": 67,
+          "2": 100,
+          "3": 25
+        },
+        "E_random_ndcg": 0.3871,
+        "E_random_ndcg_lin": 0.57,
+        "E_random_precision": 0.625,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.71,
+        "random_ndcg_headroom": 0.6129
+      },
+      "relevance_density_mean": 0.5675,
+      "E_random_ndcg_mean": 0.35,
+      "E_random_precision_mean": 0.5675,
+      "E_random_meanrel_mean": 1.605,
+      "random_ndcg_headroom_mean": 0.65,
+      "kappa_mean": 0.6241,
+      "kappa_binary_mean": 0.5788,
+      "alpha_ordinal_mean": 0.5996,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4946
+    },
+    {
+      "policy": "We should adopt atheism",
+      "tercile": "sparse",
+      "n_args_selected_meta": 379,
+      "pros": {
+        "n_judged": 180,
+        "n_relevant": 110,
+        "relevance_density": 0.6111,
+        "mean_grade": 1.7444,
+        "hist": {
+          "0": 7,
+          "1": 63,
+          "2": 79,
+          "3": 31
+        },
+        "E_random_ndcg": 0.4103,
+        "E_random_ndcg_lin": 0.5815,
+        "E_random_precision": 0.6111,
+        "E_random_recall": 0.0278,
+        "E_random_meanrel": 1.7444,
+        "random_ndcg_headroom": 0.5897
+      },
+      "cons": {
+        "n_judged": 199,
+        "n_relevant": 108,
+        "relevance_density": 0.5427,
+        "mean_grade": 1.6131,
+        "hist": {
+          "0": 21,
+          "1": 70,
+          "2": 73,
+          "3": 35
+        },
+        "E_random_ndcg": 0.3833,
+        "E_random_ndcg_lin": 0.5377,
+        "E_random_precision": 0.5427,
+        "E_random_recall": 0.0251,
+        "E_random_meanrel": 1.6131,
+        "random_ndcg_headroom": 0.6167
+      },
+      "relevance_density_mean": 0.5769,
+      "E_random_ndcg_mean": 0.3968,
+      "E_random_precision_mean": 0.5769,
+      "E_random_meanrel_mean": 1.6787,
+      "random_ndcg_headroom_mean": 0.6032,
+      "kappa_mean": 0.5802,
+      "kappa_binary_mean": 0.5124,
+      "alpha_ordinal_mean": 0.5545,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4188
+    },
+    {
+      "policy": "We should abolish intellectual property rights",
+      "tercile": "dense",
+      "n_args_selected_meta": 432,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 117,
+        "relevance_density": 0.585,
+        "mean_grade": 1.665,
+        "hist": {
+          "0": 16,
+          "1": 67,
+          "2": 85,
+          "3": 32
+        },
+        "E_random_ndcg": 0.39,
+        "E_random_ndcg_lin": 0.555,
+        "E_random_precision": 0.585,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.665,
+        "random_ndcg_headroom": 0.61
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 119,
+        "relevance_density": 0.595,
+        "mean_grade": 1.695,
+        "hist": {
+          "0": 11,
+          "1": 70,
+          "2": 88,
+          "3": 31
+        },
+        "E_random_ndcg": 0.3936,
+        "E_random_ndcg_lin": 0.565,
+        "E_random_precision": 0.595,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.695,
+        "random_ndcg_headroom": 0.6064
+      },
+      "relevance_density_mean": 0.59,
+      "E_random_ndcg_mean": 0.3918,
+      "E_random_precision_mean": 0.59,
+      "E_random_meanrel_mean": 1.68,
+      "random_ndcg_headroom_mean": 0.6082,
+      "kappa_mean": 0.6688,
+      "kappa_binary_mean": 0.5318,
+      "alpha_ordinal_mean": 0.6532,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.3793
+    },
+    {
+      "policy": "We should subsidize vocational education",
+      "tercile": "medium",
+      "n_args_selected_meta": 431,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 141,
+        "relevance_density": 0.705,
+        "mean_grade": 1.88,
+        "hist": {
+          "0": 13,
+          "1": 46,
+          "2": 93,
+          "3": 48
+        },
+        "E_random_ndcg": 0.4721,
+        "E_random_ndcg_lin": 0.6267,
+        "E_random_precision": 0.705,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.88,
+        "random_ndcg_headroom": 0.5279
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 96,
+        "relevance_density": 0.48,
+        "mean_grade": 1.37,
+        "hist": {
+          "0": 27,
+          "1": 77,
+          "2": 91,
+          "3": 5
+        },
+        "E_random_ndcg": 0.275,
+        "E_random_ndcg_lin": 0.4567,
+        "E_random_precision": 0.48,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.37,
+        "random_ndcg_headroom": 0.725
+      },
+      "relevance_density_mean": 0.5925,
+      "E_random_ndcg_mean": 0.3736,
+      "E_random_precision_mean": 0.5925,
+      "E_random_meanrel_mean": 1.625,
+      "random_ndcg_headroom_mean": 0.6264,
+      "kappa_mean": 0.5442,
+      "kappa_binary_mean": 0.5773,
+      "alpha_ordinal_mean": null,
+      "agreement_flag": "SINGLE_ANNOTATOR",
+      "_kappa_recomputed": true,
+      "measured_baseline_b_ndcg": 0.5552
+    },
+    {
+      "policy": "We should abolish the Olympic Games",
+      "tercile": "medium",
+      "n_args_selected_meta": 410,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 122,
+        "relevance_density": 0.61,
+        "mean_grade": 1.765,
+        "hist": {
+          "0": 4,
+          "1": 74,
+          "2": 87,
+          "3": 35
+        },
+        "E_random_ndcg": 0.4143,
+        "E_random_ndcg_lin": 0.5883,
+        "E_random_precision": 0.61,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.765,
+        "random_ndcg_headroom": 0.5857
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 116,
+        "relevance_density": 0.58,
+        "mean_grade": 1.555,
+        "hist": {
+          "0": 11,
+          "1": 73,
+          "2": 110,
+          "3": 6
+        },
+        "E_random_ndcg": 0.3179,
+        "E_random_ndcg_lin": 0.5183,
+        "E_random_precision": 0.58,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.555,
+        "random_ndcg_headroom": 0.6821
+      },
+      "relevance_density_mean": 0.595,
+      "E_random_ndcg_mean": 0.3661,
+      "E_random_precision_mean": 0.595,
+      "E_random_meanrel_mean": 1.66,
+      "random_ndcg_headroom_mean": 0.6339,
+      "kappa_mean": 0.5226,
+      "kappa_binary_mean": 0.4445,
+      "alpha_ordinal_mean": 0.5111,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4235
+    },
+    {
+      "policy": "We should prohibit school prayer",
+      "tercile": "medium",
+      "n_args_selected_meta": 427,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 129,
+        "relevance_density": 0.645,
+        "mean_grade": 1.92,
+        "hist": {
+          "0": 7,
+          "1": 64,
+          "2": 67,
+          "3": 62
+        },
+        "E_random_ndcg": 0.4993,
+        "E_random_ndcg_lin": 0.64,
+        "E_random_precision": 0.645,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.92,
+        "random_ndcg_headroom": 0.5007
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 116,
+        "relevance_density": 0.58,
+        "mean_grade": 1.54,
+        "hist": {
+          "0": 25,
+          "1": 59,
+          "2": 99,
+          "3": 17
+        },
+        "E_random_ndcg": 0.3393,
+        "E_random_ndcg_lin": 0.5133,
+        "E_random_precision": 0.58,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.54,
+        "random_ndcg_headroom": 0.6607
+      },
+      "relevance_density_mean": 0.6125,
+      "E_random_ndcg_mean": 0.4193,
+      "E_random_precision_mean": 0.6125,
+      "E_random_meanrel_mean": 1.73,
+      "random_ndcg_headroom_mean": 0.5807,
+      "kappa_mean": 0.5592,
+      "kappa_binary_mean": 0.5307,
+      "alpha_ordinal_mean": 0.5499,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.44
+    },
+    {
+      "policy": "We should fight urbanization",
+      "tercile": "medium",
+      "n_args_selected_meta": 405,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 128,
+        "relevance_density": 0.64,
+        "mean_grade": 1.785,
+        "hist": {
+          "0": 3,
+          "1": 69,
+          "2": 96,
+          "3": 32
+        },
+        "E_random_ndcg": 0.415,
+        "E_random_ndcg_lin": 0.595,
+        "E_random_precision": 0.64,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.785,
+        "random_ndcg_headroom": 0.585
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 117,
+        "relevance_density": 0.585,
+        "mean_grade": 1.655,
+        "hist": {
+          "0": 14,
+          "1": 69,
+          "2": 89,
+          "3": 28
+        },
+        "E_random_ndcg": 0.38,
+        "E_random_ndcg_lin": 0.5517,
+        "E_random_precision": 0.585,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.655,
+        "random_ndcg_headroom": 0.62
+      },
+      "relevance_density_mean": 0.6125,
+      "E_random_ndcg_mean": 0.3975,
+      "E_random_precision_mean": 0.6125,
+      "E_random_meanrel_mean": 1.72,
+      "random_ndcg_headroom_mean": 0.6025,
+      "kappa_mean": 0.5403,
+      "kappa_binary_mean": 0.4719,
+      "alpha_ordinal_mean": 0.527,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4695
+    },
+    {
+      "policy": "We should close Guantanamo Bay detention camp",
+      "tercile": "dense",
+      "n_args_selected_meta": 447,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 144,
+        "relevance_density": 0.72,
+        "mean_grade": 1.95,
+        "hist": {
+          "0": 9,
+          "1": 47,
+          "2": 89,
+          "3": 55
+        },
+        "E_random_ndcg": 0.4993,
+        "E_random_ndcg_lin": 0.65,
+        "E_random_precision": 0.72,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.95,
+        "random_ndcg_headroom": 0.5007
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 103,
+        "relevance_density": 0.515,
+        "mean_grade": 1.565,
+        "hist": {
+          "0": 14,
+          "1": 83,
+          "2": 79,
+          "3": 24
+        },
+        "E_random_ndcg": 0.3486,
+        "E_random_ndcg_lin": 0.5217,
+        "E_random_precision": 0.515,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.565,
+        "random_ndcg_headroom": 0.6514
+      },
+      "relevance_density_mean": 0.6175,
+      "E_random_ndcg_mean": 0.424,
+      "E_random_precision_mean": 0.6175,
+      "E_random_meanrel_mean": 1.7575,
+      "random_ndcg_headroom_mean": 0.576,
+      "kappa_mean": 0.6764,
+      "kappa_binary_mean": 0.601,
+      "alpha_ordinal_mean": null,
+      "agreement_flag": "SINGLE_ANNOTATOR",
+      "_kappa_recomputed": true,
+      "measured_baseline_b_ndcg": 0.4561
+    },
+    {
+      "policy": "Social media brings more harm than good",
+      "tercile": "sparse",
+      "n_args_selected_meta": 331,
+      "pros": {
+        "n_judged": 164,
+        "n_relevant": 120,
+        "relevance_density": 0.7317,
+        "mean_grade": 1.9634,
+        "hist": {
+          "0": 4,
+          "1": 40,
+          "2": 78,
+          "3": 42
+        },
+        "E_random_ndcg": 0.4948,
+        "E_random_ndcg_lin": 0.6545,
+        "E_random_precision": 0.7317,
+        "E_random_recall": 0.0305,
+        "E_random_meanrel": 1.9634,
+        "random_ndcg_headroom": 0.5052
+      },
+      "cons": {
+        "n_judged": 167,
+        "n_relevant": 85,
+        "relevance_density": 0.509,
+        "mean_grade": 1.5629,
+        "hist": {
+          "0": 2,
+          "1": 80,
+          "2": 74,
+          "3": 11
+        },
+        "E_random_ndcg": 0.3242,
+        "E_random_ndcg_lin": 0.521,
+        "E_random_precision": 0.509,
+        "E_random_recall": 0.0299,
+        "E_random_meanrel": 1.5629,
+        "random_ndcg_headroom": 0.6758
+      },
+      "relevance_density_mean": 0.6203,
+      "E_random_ndcg_mean": 0.4095,
+      "E_random_precision_mean": 0.6203,
+      "E_random_meanrel_mean": 1.7631,
+      "random_ndcg_headroom_mean": 0.5905,
+      "kappa_mean": 0.6083,
+      "kappa_binary_mean": 0.5451,
+      "alpha_ordinal_mean": 0.6046,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4443
+    },
+    {
+      "policy": "We should ban naturopathy",
+      "tercile": "dense",
+      "n_args_selected_meta": 540,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 138,
+        "relevance_density": 0.69,
+        "mean_grade": 1.89,
+        "hist": {
+          "0": 6,
+          "1": 56,
+          "2": 92,
+          "3": 46
+        },
+        "E_random_ndcg": 0.4671,
+        "E_random_ndcg_lin": 0.63,
+        "E_random_precision": 0.69,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.89,
+        "random_ndcg_headroom": 0.5329
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 113,
+        "relevance_density": 0.565,
+        "mean_grade": 1.63,
+        "hist": {
+          "0": 8,
+          "1": 79,
+          "2": 92,
+          "3": 21
+        },
+        "E_random_ndcg": 0.3586,
+        "E_random_ndcg_lin": 0.5433,
+        "E_random_precision": 0.565,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.63,
+        "random_ndcg_headroom": 0.6414
+      },
+      "relevance_density_mean": 0.6275,
+      "E_random_ndcg_mean": 0.4128,
+      "E_random_precision_mean": 0.6275,
+      "E_random_meanrel_mean": 1.76,
+      "random_ndcg_headroom_mean": 0.5872,
+      "kappa_mean": 0.6055,
+      "kappa_binary_mean": 0.5304,
+      "alpha_ordinal_mean": 0.5902,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4758
+    },
+    {
+      "policy": "We should ban whaling",
+      "tercile": "medium",
+      "n_args_selected_meta": 428,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 132,
+        "relevance_density": 0.66,
+        "mean_grade": 2.0,
+        "hist": {
+          "0": 4,
+          "1": 64,
+          "2": 60,
+          "3": 72
+        },
+        "E_random_ndcg": 0.5343,
+        "E_random_ndcg_lin": 0.6667,
+        "E_random_precision": 0.66,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 2.0,
+        "random_ndcg_headroom": 0.4657
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 120,
+        "relevance_density": 0.6,
+        "mean_grade": 1.68,
+        "hist": {
+          "0": 13,
+          "1": 67,
+          "2": 91,
+          "3": 29
+        },
+        "E_random_ndcg": 0.3879,
+        "E_random_ndcg_lin": 0.56,
+        "E_random_precision": 0.6,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.68,
+        "random_ndcg_headroom": 0.6121
+      },
+      "relevance_density_mean": 0.63,
+      "E_random_ndcg_mean": 0.4611,
+      "E_random_precision_mean": 0.63,
+      "E_random_meanrel_mean": 1.84,
+      "random_ndcg_headroom_mean": 0.5389,
+      "kappa_mean": 0.6311,
+      "kappa_binary_mean": 0.5789,
+      "alpha_ordinal_mean": 0.6203,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4689
+    },
+    {
+      "policy": "We should legalize prostitution",
+      "tercile": "dense",
+      "n_args_selected_meta": 504,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 142,
+        "relevance_density": 0.71,
+        "mean_grade": 1.985,
+        "hist": {
+          "0": 3,
+          "1": 55,
+          "2": 84,
+          "3": 58
+        },
+        "E_random_ndcg": 0.5093,
+        "E_random_ndcg_lin": 0.6617,
+        "E_random_precision": 0.71,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.985,
+        "random_ndcg_headroom": 0.4907
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 116,
+        "relevance_density": 0.58,
+        "mean_grade": 1.67,
+        "hist": {
+          "0": 19,
+          "1": 65,
+          "2": 79,
+          "3": 37
+        },
+        "E_random_ndcg": 0.4007,
+        "E_random_ndcg_lin": 0.5567,
+        "E_random_precision": 0.58,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.67,
+        "random_ndcg_headroom": 0.5993
+      },
+      "relevance_density_mean": 0.645,
+      "E_random_ndcg_mean": 0.455,
+      "E_random_precision_mean": 0.645,
+      "E_random_meanrel_mean": 1.8275,
+      "random_ndcg_headroom_mean": 0.545,
+      "kappa_mean": 0.5904,
+      "kappa_binary_mean": 0.5538,
+      "alpha_ordinal_mean": 0.5751,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4289
+    },
+    {
+      "policy": "We should stop the development of autonomous cars",
+      "tercile": "dense",
+      "n_args_selected_meta": 446,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 117,
+        "relevance_density": 0.585,
+        "mean_grade": 1.8,
+        "hist": {
+          "0": 7,
+          "1": 76,
+          "2": 67,
+          "3": 50
+        },
+        "E_random_ndcg": 0.4479,
+        "E_random_ndcg_lin": 0.6,
+        "E_random_precision": 0.585,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.8,
+        "random_ndcg_headroom": 0.5521
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 146,
+        "relevance_density": 0.73,
+        "mean_grade": 2.025,
+        "hist": {
+          "0": 15,
+          "1": 39,
+          "2": 72,
+          "3": 74
+        },
+        "E_random_ndcg": 0.5521,
+        "E_random_ndcg_lin": 0.675,
+        "E_random_precision": 0.73,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 2.025,
+        "random_ndcg_headroom": 0.4479
+      },
+      "relevance_density_mean": 0.6575,
+      "E_random_ndcg_mean": 0.5,
+      "E_random_precision_mean": 0.6575,
+      "E_random_meanrel_mean": 1.9125,
+      "random_ndcg_headroom_mean": 0.5,
+      "kappa_mean": 0.6024,
+      "kappa_binary_mean": 0.458,
+      "alpha_ordinal_mean": 0.6158,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.5218
+    },
+    {
+      "policy": "We should abandon the use of school uniform",
+      "tercile": "dense",
+      "n_args_selected_meta": 480,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 112,
+        "relevance_density": 0.56,
+        "mean_grade": 1.635,
+        "hist": {
+          "0": 4,
+          "1": 84,
+          "2": 93,
+          "3": 19
+        },
+        "E_random_ndcg": 0.3543,
+        "E_random_ndcg_lin": 0.545,
+        "E_random_precision": 0.56,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.635,
+        "random_ndcg_headroom": 0.6457
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 165,
+        "relevance_density": 0.825,
+        "mean_grade": 2.135,
+        "hist": {
+          "0": 3,
+          "1": 32,
+          "2": 100,
+          "3": 65
+        },
+        "E_random_ndcg": 0.5621,
+        "E_random_ndcg_lin": 0.7117,
+        "E_random_precision": 0.825,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 2.135,
+        "random_ndcg_headroom": 0.4379
+      },
+      "relevance_density_mean": 0.6925,
+      "E_random_ndcg_mean": 0.4582,
+      "E_random_precision_mean": 0.6925,
+      "E_random_meanrel_mean": 1.885,
+      "random_ndcg_headroom_mean": 0.5418,
+      "kappa_mean": 0.4356,
+      "kappa_binary_mean": 0.5034,
+      "alpha_ordinal_mean": null,
+      "agreement_flag": "SINGLE_ANNOTATOR",
+      "_kappa_recomputed": true,
+      "measured_baseline_b_ndcg": 0.497
+    },
+    {
+      "policy": "Intelligence tests bring more harm than good",
+      "tercile": "dense",
+      "n_args_selected_meta": 472,
+      "pros": {
+        "n_judged": 200,
+        "n_relevant": 152,
+        "relevance_density": 0.76,
+        "mean_grade": 1.935,
+        "hist": {
+          "0": 5,
+          "1": 43,
+          "2": 112,
+          "3": 40
+        },
+        "E_random_ndcg": 0.4707,
+        "E_random_ndcg_lin": 0.645,
+        "E_random_precision": 0.76,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.935,
+        "random_ndcg_headroom": 0.5293
+      },
+      "cons": {
+        "n_judged": 200,
+        "n_relevant": 130,
+        "relevance_density": 0.65,
+        "mean_grade": 1.69,
+        "hist": {
+          "0": 10,
+          "1": 60,
+          "2": 112,
+          "3": 18
+        },
+        "E_random_ndcg": 0.3729,
+        "E_random_ndcg_lin": 0.5633,
+        "E_random_precision": 0.65,
+        "E_random_recall": 0.025,
+        "E_random_meanrel": 1.69,
+        "random_ndcg_headroom": 0.6271
+      },
+      "relevance_density_mean": 0.705,
+      "E_random_ndcg_mean": 0.4218,
+      "E_random_precision_mean": 0.705,
+      "E_random_meanrel_mean": 1.8125,
+      "random_ndcg_headroom_mean": 0.5782,
+      "kappa_mean": 0.6129,
+      "kappa_binary_mean": 0.6397,
+      "alpha_ordinal_mean": 0.5713,
+      "agreement_flag": "HIGH",
+      "measured_baseline_b_ndcg": 0.4642
+    },
+    {
+      "policy": "Homeschooling should be banned",
+      "tercile": "sparse",
+      "n_args_selected_meta": 395,
+      "pros": {
+        "n_judged": 198,
+        "n_relevant": 144,
+        "relevance_density": 0.7273,
+        "mean_grade": 1.8081,
+        "hist": {
+          "0": 4,
+          "1": 50,
+          "2": 124,
+          "3": 20
+        },
+        "E_random_ndcg": 0.4055,
+        "E_random_ndcg_lin": 0.6027,
+        "E_random_precision": 0.7273,
+        "E_random_recall": 0.0253,
+        "E_random_meanrel": 1.8081,
+        "random_ndcg_headroom": 0.5945
+      },
+      "cons": {
+        "n_judged": 197,
+        "n_relevant": 150,
+        "relevance_density": 0.7614,
+        "mean_grade": 1.9543,
+        "hist": {
+          "0": 2,
+          "1": 45,
+          "2": 110,
+          "3": 40
+        },
+        "E_random_ndcg": 0.475,
+        "E_random_ndcg_lin": 0.6514,
+        "E_random_precision": 0.7614,
+        "E_random_recall": 0.0254,
+        "E_random_meanrel": 1.9543,
+        "random_ndcg_headroom": 0.525
+      },
+      "relevance_density_mean": 0.7443,
+      "E_random_ndcg_mean": 0.4403,
+      "E_random_precision_mean": 0.7443,
+      "E_random_meanrel_mean": 1.8812,
+      "random_ndcg_headroom_mean": 0.5597,
+      "kappa_mean": 0.4386,
+      "kappa_binary_mean": 0.4901,
+      "alpha_ordinal_mean": 0.3766,
+      "agreement_flag": "MEDIUM",
+      "measured_baseline_b_ndcg": 0.4606
+    }
+  ]
+}

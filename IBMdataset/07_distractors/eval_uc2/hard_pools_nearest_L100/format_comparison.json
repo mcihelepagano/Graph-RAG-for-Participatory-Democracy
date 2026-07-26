@@ -1,0 +1,55 @@
+{
+  "chosen_k": 15,
+  "per_challenger": {
+    "System A": {
+      "structured": {
+        "tie_rate": null,
+        "b_winrate": null
+      },
+      "paragraph": {
+        "tie_rate": null,
+        "b_winrate": null
+      }
+    },
+    "System C": {
+      "structured": {
+        "tie_rate": null,
+        "b_winrate": null
+      },
+      "paragraph": {
+        "tie_rate": null,
+        "b_winrate": null
+      }
+    },
+    "Baseline A": {
+      "structured": {
+        "tie_rate": null,
+        "b_winrate": null
+      },
+      "paragraph": {
+        "tie_rate": null,
+        "b_winrate": null
+      }
+    },
+    "Baseline B": {
+      "structured": {
+        "tie_rate": null,
+        "b_winrate": null
+      },
+      "paragraph": {
+        "tie_rate": null,
+        "b_winrate": null
+      }
+    },
+    "SimpleRAG": {
+      "structured": {
+        "tie_rate": null,
+        "b_winrate": null
+      },
+      "paragraph": {
+        "tie_rate": null,
+        "b_winrate": null
+      }
+    }
+  }
+}
