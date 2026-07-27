@@ -1,0 +1,380 @@
+{
+  "selection": "nearest",
+  "level": "100",
+  "native_gt_file": "data/ground_truth.json",
+  "level_export": "data/hard_pools/neo4j_export_distractors_nearest_L100.json",
+  "realised_base_rate_overall": 0.3836,
+  "total_pool": 17820,
+  "total_relevant": 6835,
+  "native_kappa_note": "native labels reused unchanged from data/ground_truth.json; see its report for native kappa",
+  "distractor_kappa_level": {
+    "kappa_quadratic": null,
+    "kappa_binary": null,
+    "n_pairs": 0
+  },
+  "consensus_rule": "min",
+  "annotator_primary": "llama3.3:70b",
+  "annotator_secondary": "gemma4:31b",
+  "per_policy": [
+    {
+      "policy": "We should prohibit women in combat",
+      "pool_size": 575,
+      "relevant": 164,
+      "base_rate": 0.2852,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should legalize sex selection",
+      "pool_size": 600,
+      "relevant": 182,
+      "base_rate": 0.3033,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should subsidize stay-at-home dads",
+      "pool_size": 596,
+      "relevant": 191,
+      "base_rate": 0.3205,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should oppose collectivism",
+      "pool_size": 600,
+      "relevant": 199,
+      "base_rate": 0.3317,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should ban algorithmic trading",
+      "pool_size": 590,
+      "relevant": 199,
+      "base_rate": 0.3373,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should ban factory farming",
+      "pool_size": 600,
+      "relevant": 207,
+      "base_rate": 0.345,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should adopt a multi-party system",
+      "pool_size": 592,
+      "relevant": 207,
+      "base_rate": 0.3497,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "Blockade of the Gaza Strip should be ended",
+      "pool_size": 600,
+      "relevant": 210,
+      "base_rate": 0.35,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should subsidize student loans",
+      "pool_size": 579,
+      "relevant": 203,
+      "base_rate": 0.3506,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should subsidize Wikipedia",
+      "pool_size": 596,
+      "relevant": 209,
+      "base_rate": 0.3507,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should legalize polygamy",
+      "pool_size": 600,
+      "relevant": 213,
+      "base_rate": 0.355,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should ban fast food",
+      "pool_size": 600,
+      "relevant": 218,
+      "base_rate": 0.3633,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should limit judicial activism",
+      "pool_size": 599,
+      "relevant": 223,
+      "base_rate": 0.3723,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should subsidize space exploration",
+      "pool_size": 588,
+      "relevant": 220,
+      "base_rate": 0.3741,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "Entrapment should be legalized",
+      "pool_size": 600,
+      "relevant": 227,
+      "base_rate": 0.3783,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "Social media brings more harm than good",
+      "pool_size": 531,
+      "relevant": 205,
+      "base_rate": 0.3861,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should abolish intellectual property rights",
+      "pool_size": 600,
+      "relevant": 236,
+      "base_rate": 0.3933,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should subsidize vocational education",
+      "pool_size": 600,
+      "relevant": 237,
+      "base_rate": 0.395,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should abolish the Olympic Games",
+      "pool_size": 600,
+      "relevant": 238,
+      "base_rate": 0.3967,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should adopt atheism",
+      "pool_size": 579,
+      "relevant": 233,
+      "base_rate": 0.4024,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should fight urbanization",
+      "pool_size": 600,
+      "relevant": 245,
+      "base_rate": 0.4083,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should prohibit school prayer",
+      "pool_size": 600,
+      "relevant": 245,
+      "base_rate": 0.4083,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should close Guantanamo Bay detention camp",
+      "pool_size": 600,
+      "relevant": 247,
+      "base_rate": 0.4117,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should ban naturopathy",
+      "pool_size": 600,
+      "relevant": 251,
+      "base_rate": 0.4183,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should ban whaling",
+      "pool_size": 600,
+      "relevant": 252,
+      "base_rate": 0.42,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should legalize prostitution",
+      "pool_size": 600,
+      "relevant": 258,
+      "base_rate": 0.43,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should stop the development of autonomous cars",
+      "pool_size": 600,
+      "relevant": 263,
+      "base_rate": 0.4383,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "We should abandon the use of school uniform",
+      "pool_size": 600,
+      "relevant": 277,
+      "base_rate": 0.4617,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "Intelligence tests bring more harm than good",
+      "pool_size": 600,
+      "relevant": 282,
+      "base_rate": 0.47,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    },
+    {
+      "policy": "Homeschooling should be banned",
+      "pool_size": 595,
+      "relevant": 294,
+      "base_rate": 0.4941,
+      "n_distractors_judged": 200,
+      "distractor_kappa": {
+        "kappa_quadratic": null,
+        "kappa_binary": null,
+        "n_pairs": 0
+      }
+    }
+  ]
+}

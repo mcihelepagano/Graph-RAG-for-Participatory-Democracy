@@ -1,0 +1,282 @@
+\chapter{Introduction}
+
+\section{Context and Motivation}\label{sec:context}
+Participatory democracy platforms such as Decidim~\cite{barandiaran2024decidim}, Cap
+Collectif~\cite{shin2024digitaltools}, and Consul~\cite{aranacatania2021consul} enable thousands
+of citizens to propose and debate public policy. Their adoption has been substantial: Decide
+Madrid, built on Consul, saw over 430{,}000 users submit more than 26{,}000 proposals and
+125{,}000 comments in its citizen-proposals process alone~\cite{aranacatania2021consul}. Similar
+platforms are now deployed by city and national governments across Europe and Latin America for
+participatory budgeting, collaborative law-making, and large-scale public consultations such as
+France's Grand D\'ebat National.
+
+Their success creates a problem of scale. As the number of contributions grows, no citizen can
+read the full debate, so they cannot tell which existing proposals resemble or oppose their own,
+and no organizer can manually review thousands of comments to determine where consensus or
+disagreement lies. This is precisely the difficulty documented on Consul-based platforms, where
+both citizens and administrators reported being unable to obtain an overview of the volume of
+proposals and comments generated~\cite{aranacatania2021consul}. The result is a form of
+information overload that risks undermining the very inclusiveness these platforms are meant to
+provide, since a citizen's contribution is only meaningfully heard if it can be situated within
+the broader debate, and a debate too large to read is, in practice, a debate too large to
+participate in.
+
+Prior work has shown that some of this structure can be recovered automatically. Natural language
+processing models can detect argumentative relations between citizen proposals, determining
+whether two proposals make the same point or whether they are in direct conflict, and these
+relations can be organized into an argumentative graph that makes the shape of the debate explicit
+rather than leaving it buried in unstructured text. Helping a user see this shape, meaning the
+relevant arguments on both sides of an issue without redundancy, is fundamentally a retrieval
+problem: given a policy under debate, which arguments should be surfaced, and how should they be
+organized so that the retrieval itself does not reintroduce the very redundancy and imbalance it
+is meant to resolve?
+
+\section{Problem Statement}
+\label{sec:problem}
+
+The preceding section motivates the need to make the structure of a large-scale civic debate
+explicit rather than leaving it as an unstructured collection of proposals. The remaining
+question is how a retrieval system should exploit that structure once it exists.
+
+The default approach, dense retrieval over text embeddings, treats each argument as an
+independent point in a vector space and retrieves the arguments closest to a query. This is
+effective at finding topical relevance, but it has no notion of two arguments being redundant
+restatements of the same point, nor of two arguments being in direct tension. A user asking to
+see the debate on a policy is not well served by five arguments that all reflect the same view
+in different words, nor by a set of pro and con arguments that never actually engage the same
+underlying claim. Recovering this structure, which arguments repeat each other and which
+arguments conflict, requires relations between arguments, not just positions in an embedding
+space.
+
+Graph-based retrieval methods (Graph-RAG) address this by building an explicit graph over the
+corpus and using its structure, rather than embedding distance alone, to guide retrieval. Whether
+this actually improves retrieval for argumentative content is, however, an open empirical
+question rather than an established result: the graph adds a strong inductive bias (that
+structurally connected arguments are the ones worth retrieving together), and inductive biases
+help only when they match the true structure of the task. This thesis investigates that question
+directly. Concretely, it builds an argument graph over a large debate corpus, with edges
+representing contradiction and equivalence between arguments, and compares retrieval that
+exploits this graph structure against retrieval that relies on embedding similarity alone, across
+two tasks: retrieving a balanced, non-redundant, and genuinely conflicting set of arguments for a
+policy (conflict-map retrieval), and producing a debate summary from the retrieved arguments
+(debate summarization).
+
+\section{Research Questions}
+\label{sec:rq}
+
+The problem statement above is investigated through three research questions, each targeting a
+distinct threat to the validity of a simple positive answer.
+
+\begin{description}
+\item[RQ1 (Does structure help).] For conflict-map retrieval (UC1), does a graph-structure-aware
+  retrieval system, one that expands its candidate pool through explicit \textsc{contradicts}
+  relations and ranks by graph centrality, achieve higher relevance and diversity than a system
+  that relies on embedding similarity alone, and does any such advantage survive into debate
+  summarization (UC2)?
+
+\item[RQ2 (Is the advantage genuine).] A relevance or diversity gap measured on a corpus's native
+  pool can reflect genuine retrieval quality, or it can reflect properties of the evaluation setup
+  itself, such as which candidates happen to populate the pool and how they were selected. Under
+  an evaluation protocol deliberately hardened with adversarial distractors, does any advantage
+  observed under RQ1 persist, and is it attributable to the retrieval method rather than to how
+  the pool was constructed?
+
+\item[RQ3 (Does the finding generalize).] The corpus used to answer RQ1 and RQ2 is a single
+  English-language, crowd-authored dataset. Does the same pattern of results hold on an
+  independently constructed corpus of real citizen contributions in a different language, namely
+  the French Grand D\'ebat National, or is it specific to the properties of the original corpus?
+\end{description}
+
+RQ1 is answered in Chapter~\ref{ch:results} through the UC1 and UC2 evaluations. RQ2 is answered
+by two robustness checks built into the same evaluation protocol: injecting distractor arguments
+with their own graph edges, and reconstructing the candidate pool under random rather than
+similarity-based selection. RQ3 is answered by repeating the UC1 pipeline on the Grand D\'ebat
+National corpus described in Chapter~\ref{ch:corpus}. Taken together, these three questions are
+designed so that a positive answer to RQ1 alone would not be sufficient to claim that graph
+structure improves retrieval: the claim is only supported if it also survives RQ2 and, ideally,
+RQ3.
+
+\section{Technical Background}
+\label{sec:background}
+
+This thesis draws on four strands of prior work, each contributing one layer of the system built
+here.
+
+\subsection{Natural language processing and argumentative relations.}
+\label{sec:background-nlp}
+
+Determining whether one piece of text supports, restates, or contradicts another is a core NLP
+problem, most commonly framed as natural language inference (NLI): given a premise and a
+hypothesis, predict whether the hypothesis is entailed, contradicted, or neutral with respect to
+the premise. Argument mining specializes this general machinery to argumentative text
+specifically, extracting claims, premises, and the relations between them from unstructured
+documents~\cite{lippi2016argumentation}. Prior work has shown that such relations, including
+direct attack and support between arguments, can be identified automatically using supervised
+learning over textual features~\cite{cocarascu2017}, and that entailment-style reasoning
+transfers naturally to the argumentative setting, where two arguments can be treated as
+equivalent, contradictory, or unrelated depending on their entailment relationship in each
+direction~\cite{cabrio2012}. This thesis relies on the same underlying idea, using NLI as the
+scoring mechanism that produces the \textsc{contradicts} and \textsc{equivalent} relations
+described in Chapter~\ref{ch:methodology}.
+
+\subsection{Knowledge graphs.}
+A knowledge graph represents entities as nodes and their relations as typed edges, making
+relational structure explicit and queryable rather than leaving it implicit in text or buried in
+independent embeddings~\cite{hogan2021knowledgegraphs}. The corpus used in this thesis is
+organized exactly this way: arguments are nodes, and \textsc{contradicts}/\textsc{equivalent}
+relations are typed edges between them, forming an argumentative knowledge graph. Graph
+structure of this kind supports operations that are awkward or impossible with a flat set of
+embeddings alone, such as measuring how central an argument is within the debate through
+graph centrality, or finding the community of arguments that all restate the same underlying
+point through community detection.
+
+\subsection{Retrieval-augmented generation.}
+Retrieval-augmented generation (RAG) combines a retriever, which selects relevant items from a
+corpus given a query, with a generator, typically a large language model, that conditions its
+output on the retrieved items~\cite{lewis2020rag}. RAG was originally motivated by knowledge
+grounding, letting a generator produce answers backed by retrieved evidence rather than relying
+solely on parametric memory, and standard RAG retrieves items independently by embedding
+similarity: each candidate is scored against the query in isolation, with no notion of how
+candidates relate to one another.
+
+\subsection{Graph-RAG.}
+Graph-RAG extends this paradigm by making the retriever graph-aware: rather than treating
+candidates as independent points in an embedding space, it exploits explicit relations between
+them, using graph traversal, centrality, or community structure to decide what to retrieve and how
+to diversify it~\cite{edge2024graphrag}. This matters directly for the retrieval problem posed in
+Section~\ref{sec:problem}: standard RAG can retrieve five arguments that are all close to a query
+in embedding space without ever detecting that they restate the same point, since embedding
+similarity alone does not distinguish topical closeness from redundancy or conflict. A
+graph-aware retriever can use \textsc{equivalent} edges to avoid retrieving restatements of the
+same argument, and \textsc{contradicts} edges to actively seek out arguments in genuine tension,
+which is precisely the conflict-map retrieval task (UC1) this thesis evaluates. Whether this
+theoretical advantage translates into a measurable empirical improvement over standard RAG, on a
+real argumentative corpus rather than the general-domain Wikipedia-style corpora typically used
+to evaluate Graph-RAG, is the question this thesis investigates.
+
+
+\subsection{A Brief History: Why These Techniques Became Prominent}
+\label{sec:background-history}
+
+RAG and Graph-RAG are recent enough that understanding why they became prominent, rather than
+only what they do, is useful context for the design choices made later in this thesis.
+
+The RAG architecture itself was proposed in 2020 as an academic technique for knowledge-intensive
+question answering~\cite{lewis2020rag}, but it remained a comparatively specialized topic for
+roughly three years. Its move from a research technique to a widely adopted engineering practice
+followed the public release of general-purpose conversational LLMs in late 2022, whose fluency
+made a specific weakness visible at scale: these models generate confident, well-formed answers
+that can nonetheless be factually wrong, a failure mode generally termed hallucination. A model's
+parametric knowledge is also frozen at training time and cannot easily incorporate new or
+private information without retraining. RAG addresses both problems at once: conditioning
+generation on retrieved passages gives the model something to ground its answer in, and updating
+the corpus updates the model's effective knowledge without touching its parameters at all. By
+2023, retrieval had become a standard component of production LLM systems, and RAG in particular
+had gone from a specialized technique to one of the most widely deployed patterns for building
+LLM applications~\cite{gao2023ragsurvey}.
+
+Graph-RAG emerged as a response to a specific limitation of this now-standard RAG pattern: flat
+vector retrieval struggles with questions that require synthesizing information spread across
+many documents, rather than answerable from any single retrieved passage, since similarity
+search surfaces individually relevant items without any notion of how those items relate to each
+other collectively. Microsoft Research's Graph-RAG system, which builds a knowledge graph over a
+corpus and summarizes at the level of detected communities to answer such
+global, corpus-spanning questions, was an influential proposal in 2024 for addressing this
+gap~\cite{edge2024graphrag} and popularized the term ``Graph-RAG'' for the broader family of
+graph-structured retrieval approaches that has since grown around it.
+
+For this thesis, the significant part of this history is what it implies about maturity. RAG is
+well-established, with a large literature on retriever design, chunking, and evaluation, so
+System~A in this thesis builds on settled practice. Graph-RAG is comparatively young, its
+empirical evaluations concentrate on general-domain, entity-centric corpora such as
+Wikipedia-derived text, and rather less is established about how it performs on argumentative
+text, where the relations that matter (contradiction and equivalence between claims) are not the
+entity co-occurrence relations that most existing Graph-RAG systems are built around. This is the
+specific gap this thesis addresses.
+
+\subsection{How RAG Works}
+\label{sec:background-rag-howitworks}
+
+A RAG system has two components. The \emph{retriever} takes a query and returns the $k$ items
+from a corpus most relevant to it, typically by embedding the query and every corpus item into a
+shared vector space and ranking candidates by cosine similarity~\cite{lewis2020rag}. The
+\emph{generator}, usually a large language model, then conditions its output on both the original
+query and the retrieved items, rather than relying only on knowledge stored in its parameters.
+This separation is the central idea: retrieval supplies up-to-date, specific, and verifiable
+content, while generation supplies fluent, task-adapted language production. Because retrieval and
+generation are decoupled, the corpus can be updated without retraining the generator, and the
+system's outputs can, in principle, be traced back to the specific items retrieved.
+
+A well-known limitation of naive top-$k$ retrieval is redundancy: the $k$ most similar items to a
+query are often near-duplicates of each other, since text that is highly similar to the query
+tends also to be highly similar to other similarly-relevant text. Maximal marginal relevance
+(MMR) addresses this by re-ranking candidates to jointly maximize relevance to the query and
+dissimilarity to items already selected~\cite{carbonell1998mmr}, trading off some relevance for
+broader coverage of the retrieved set. This diversity/relevance tradeoff, and the metrics used to
+quantify it, recur throughout this thesis's evaluation methodology (Chapter~\ref{ch:evaluation}).
+
+\subsection{How Graph-RAG Works}
+\label{sec:background-graphrag-howitworks}
+
+Graph-RAG replaces or augments the flat vector index with an explicit graph over the corpus,
+where nodes are corpus items and edges encode a relation between them, such as citation,
+co-reference, shared entities, or, in this thesis, argumentative agreement and disagreement.
+Retrieval then exploits this structure directly. Two broad strategies are common in the
+literature. The first constructs communities of densely connected nodes and, at query time,
+retrieves or summarizes at the level of communities rather than individual items, letting the
+system answer questions that require synthesizing information spread across many related items
+rather than any single one~\cite{edge2024graphrag}. The second, closer to the approach used in
+this thesis, expands a candidate set by traversing edges from an initial seed, so that items
+connected to a highly relevant node are considered even if they are not themselves close to the
+query in embedding space, and ranks the resulting candidates using graph-centrality measures such
+as PageRank in addition to, or instead of, embedding similarity.
+
+The practical payoff is that Graph-RAG can retrieve based on \emph{relationships} that embedding
+similarity does not capture. Two arguments that directly contradict each other are not
+necessarily close in embedding space, since surface wording can differ substantially even when
+the underlying claims are in direct tension; conversely, two arguments can be embedding-close
+while being logically unrelated, simply because they discuss the same topic. A graph edge encodes
+the relationship explicitly, rather than leaving the retriever to infer it indirectly from
+distance in a vector space.
+
+\subsection{Advantages and Limitations}
+\label{sec:background-tradeoffs}
+
+Both paradigms have genuine strengths and corresponding weaknesses, summarized in
+Table~\ref{tab:rag-vs-graphrag}.
+
+Standard RAG is simple to build and maintain: it requires only an embedding model and a vector
+index, degrades gracefully as the corpus grows, and needs no relation-extraction step. Its
+weakness is exactly what motivates Graph-RAG: it has no mechanism for reasoning about how
+candidates relate to one another, so redundancy and conflict must be inferred indirectly, if at
+all, from embedding geometry.
+
+Graph-RAG's strength mirrors this weakness: with a well-constructed graph, it can retrieve based
+on explicit relational signal that embedding similarity structurally cannot represent. Its cost is
+that this strength is entirely conditional on graph quality. Building the graph requires a
+relation-extraction step (Section~\ref{sec:background-nlp}) that can introduce its own errors, an
+under-connected or noisy graph provides little advantage over standard RAG, and the additional
+machinery, edge construction, graph traversal, centrality computation, adds engineering and
+computational cost that standard RAG does not incur. Whether this cost is worth paying is an
+empirical question that depends on the corpus and the task, not a foregone conclusion in
+Graph-RAG's favor, which is precisely the question this thesis investigates for argumentative
+retrieval.
+
+\begin{table}[ht]
+\centering
+\caption{RAG versus Graph-RAG: general properties.}
+\label{tab:rag-vs-graphrag}
+\begin{tabularx}{\linewidth}{@{}l X X@{}}
+\toprule
+\textbf{Property} & \textbf{Standard RAG} & \textbf{Graph-RAG} \\
+\midrule
+Candidate comparison & Each candidate scored against the query independently & Candidates can be scored relative to one another via graph structure \\
+Redundancy handling & Indirect, via embedding-distance heuristics (e.g.\ MMR) & Direct, via explicit relation edges (e.g.\ equivalence) \\
+Relational reasoning & None; relationships must be inferred from geometry & Explicit; relationships are given as typed edges \\
+Setup cost & Low: embedding model and vector index & Higher: requires a relation-extraction pipeline \\
+Failure mode & Redundant or topically narrow results & Degrades to no better than standard RAG if the graph is sparse or noisy \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Thesis Structure}

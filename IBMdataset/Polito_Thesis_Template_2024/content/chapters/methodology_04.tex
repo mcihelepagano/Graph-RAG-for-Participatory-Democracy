@@ -1,0 +1,984 @@
+\chapter{Methodology}
+\label{ch:methodology}
+
+\section{Graph Construction}
+\label{sec:methodology-graph}
+
+The retrieval systems compared in this thesis operate over an explicit graph built on top of the
+IBM Project Debater corpus described in Chapter~\ref{ch:corpus}, rather than over a flat
+collection of embedded arguments. At its core, the graph has two node types, policies and
+arguments, connected by edges of four types. \textsc{Supports} and \textsc{attacks} edges connect
+an argument to the policy it addresses, following directly from the corpus's crowd-annotated
+stance label: a PRO argument receives a \textsc{supports} edge to its policy and a CON argument an
+\textsc{attacks} edge, each carrying the annotation's stance confidence as an edge weight.
+\textsc{Contradicts} and \textsc{equivalent} edges connect pairs of arguments to each other, and,
+unlike the stance edges, are not present in the corpus and have to be recovered.
+\textsc{Contradicts} edges are the backbone of the graph-aware retrieval system's multi-hop
+expansion (Section~\ref{sec:methodology-systems}); \textsc{equivalent} edges are constructed for
+the same argument pairs but play a smaller role in this thesis's retrieval systems, and are
+retained chiefly as a resource for identifying near-duplicate arguments in the corpus. Above the
+policy level, two further node types, MetaPolicy and Topic, group policies hierarchically rather
+than argument by argument; this grouping is described next and is used later in the hardened pool
+construction (Section~\ref{sec:methodology-hardened-pool}) to identify topically-adjacent sibling
+policies for a target policy.
+
+% Suggested figure placement: a small schema diagram here showing all four node types
+% (Topic, MetaPolicy, Policy, Argument) and the edge types (BELONGS_TO, SUPPORTS, ATTACKS,
+% CONTRADICTS, EQUIVALENT), with stance edges drawn from arguments to their policy and
+% CONTRADICTS/EQUIVALENT edges drawn between arguments. This mirrors the "entities and
+% relationships" figure in the underlying conference paper and gives the reader a single
+% reference point before the NLI recovery pipeline is described below.
+
+\subsection{Policy Grouping: MetaPolicy and Topic}
+\label{sec:methodology-metapolicy}
+
+The 71 policies in the corpus are not treated as a flat, unordered list. Two coarser grouping
+levels sit above them: a \textsc{belongs\_to} edge connects each Policy node to one of 10
+hand-labeled MetaPolicy nodes, and each MetaPolicy node in turn connects via its own
+\textsc{belongs\_to} edge to one of 5 Topic nodes. This hierarchy was introduced because several
+downstream steps need a principled notion of which policies are topically close to a given
+target policy without being the same policy, most directly the sibling-policy selection used to
+construct hardened, distractor-injected evaluation pools (Section~\ref{sec:methodology-hardened-pool}):
+a distractor argument drawn from a policy in the same MetaPolicy as the target (for example,
+drawing a hard negative for ``We should ban cosmetic surgery'' from the sibling policy ``We should
+legalize organ trade'', both under Bioethics \& Personal Autonomy) shares vocabulary and framing
+with the target policy without answering it, which is precisely what makes it a useful adversarial
+test rather than a trivially off-topic one.
+
+Grouping the 71 policies was attempted first as an unsupervised clustering problem, before
+falling back to manual assignment, following four steps:
+
+\begin{enumerate}
+\item \textbf{Centroid computation.} Each policy was represented by a single centroid vector, the
+mean of the \textsc{sentence-transformers/all-mpnet-base-v2} embeddings
+\cite{reimers2019sbert,song2020mpnet} of that policy's own PRO and CON arguments, re-normalized to
+unit length after averaging since the mean of several unit vectors does not itself have unit norm.
+This gives a $71 \times 768$ centroid matrix, one row per policy.
+
+\item \textbf{Dimensionality reduction.} The centroid matrix was reduced to 20 dimensions with
+PCA to denoise it before clustering, rather than clustering directly in the full 768-dimensional
+space.
+
+\item \textbf{$k$-means sweep.} $k$-means was run on the reduced space for every $k$ from 5 to 15,
+each run scored by silhouette coefficient.
+
+\item \textbf{HDBSCAN sweep.} HDBSCAN \cite{campello2013hdbscan} was run on the same reduced space
+with its minimum cluster size ranging from 3 to 6, each run scored by silhouette coefficient over
+the non-noise points.
+\end{enumerate}
+
+Neither method produced a clean, well-separated partition:
+
+\begin{itemize}
+\item \textbf{$k$-means} silhouette scores stayed in a narrow and modest band across the entire
+swept range, peaking around $k=9$--$10$ at a score of roughly 0.14, well below the 0.5-plus range
+conventionally read as indicating real cluster structure.
+
+\item \textbf{HDBSCAN} was, if anything, less decisive: at a minimum cluster size of 6 it labeled
+every one of the 71 policies as noise and returned no clusters at all, and even at the smaller
+minimum cluster sizes that did return clusters it found only 2--4 of them, with 55--79\% of
+policies left unclustered as noise.
+
+\item \textbf{Agreement between the two.} The two methods broadly agreed on the order of magnitude
+of a defensible cluster count, roughly single digits to the low teens, but neither converged on a
+specific partition. The weak silhouette scores throughout indicate that the 71 policies do not
+separate into discrete regions of embedding space so much as blend into one another, which is
+unsurprising given that many crowd-authored debate topics share vocabulary or framing across what
+are, substantively, different policy questions.
+\end{itemize}
+
+Given the absence of a numerically decisive clustering solution, the final MetaPolicy grouping
+was assigned manually: the candidate $k$-means and HDBSCAN partitions were used as a reference
+point, but each of the 71 policies was ultimately placed into one of 10 hand-labeled MetaPolicy
+categories (Table~\ref{tab:metapolicies}) by inspecting the policy texts directly for substantive
+thematic overlap, rather than by taking either algorithm's output as final. Scored on the same
+reduced embedding space, this manual assignment obtains a silhouette score of 0.09, lower than
+$k$-means' best automatic partition; this is expected rather than a failure of the manual step,
+since the manual assignment optimizes for a human-legible, substantively coherent category
+scheme rather than for geometric separation in embedding space, and the two criteria need not
+agree given how weakly separated the policies are to begin with. The 10 MetaPolicies were then
+grouped, again manually, under 5 broader Topic categories (Politics \& Governance, Law \& Justice,
+Health \& Ethics, Economy \& Society, and Social \& Cultural Issues), giving the three-level
+Topic~/~MetaPolicy~/~Policy hierarchy used throughout the rest of this thesis.
+
+\begin{table}[htbp]
+\centering
+\caption{The 10 manually assigned MetaPolicy categories grouping the corpus's 71 policies.}
+\label{tab:metapolicies}
+\begin{tabular}{ll}
+\toprule
+\textbf{ID} & \textbf{MetaPolicy} \\
+\midrule
+1 & Political Governance \\
+2 & Criminal Justice \& Law \\
+3 & Civil Liberties \& Rights \\
+4 & Bioethics \& Personal Autonomy \\
+5 & Economic \& Labor Policy \\
+6 & Religion \& Secularism \\
+7 & Gender, Family \& Social Norms \\
+8 & Education, Media \& Technology \\
+9 & Animal Welfare \& Environment \\
+10 & Child \& Family Welfare \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Calibrating the \textsc{Contradicts} Threshold}
+\label{sec:methodology-edges-calibration}
+
+Recovering \textsc{contradicts} and \textsc{equivalent} edges is framed as a natural language
+inference (NLI) problem, following the argumentation literature reviewed in
+Section~\ref{sec:background-nlp}: two arguments contradict each other if each entails the
+other's negation, and are equivalent if each entails the other directly. An initial attempt at
+this idea accepted any candidate pair whose forward contradiction probability alone exceeded a
+fixed threshold, and produced a graph in which roughly a third of all possible cross-stance pairs
+within a policy were connected by a \textsc{contradicts} edge. Inspecting this result showed the
+underlying problem: single-direction contradiction probability is close to 1.0 for nearly any
+pair of opposing-stance arguments on the same topic, since an NLI model reads mere stance
+opposition as contradiction even when the two arguments do not actually engage the same
+underlying claim. This yields a stance-opposition graph rather than a rebuttal graph, and at that
+density PageRank centrality and multi-hop traversal would reflect little more than how many
+opposing arguments a policy happens to have, not genuine argumentative structure.
+
+Since neither extreme, a near-universally connected stance-opposition graph nor an overly sparse
+one that discards genuine rebuttals, is usable, calibration targets a middle band, informally set
+at roughly 5--15\% saturation: wide enough to retain a meaningfully connected rebuttal structure
+per policy, but far below the 33\% observed under the single-direction rule. Two changes were
+available to reach this target: replacing the single-direction acceptance rule with a
+\emph{bidirectional} one, requiring the \emph{minimum} of a pair's forward and backward
+contradiction probabilities to clear a threshold $\tau_{\text{contra}}$ rather than either
+direction alone; and simply raising the cosine floor used to block candidate pairs before NLI is
+run at all. It was not obvious in advance which of the two would do the actual work of thinning
+the graph, so a dedicated calibration script was run on a small sample of policies, chosen to span
+the most-, median-, and least-saturated ends of the original single-direction graph, before
+committing to a full 71-policy regeneration. The script reblocks candidate pairs at a deliberately
+low cosine floor of 0.40, low enough to expose the full score distribution rather than one already
+truncated by the floor being calibrated, scores every candidate pair bidirectionally, and reports
+two diagnostics per pair beyond the raw forward and backward contradiction probabilities:
+
+\begin{itemize}
+\item \textbf{\emph{contra\_min}}, the minimum of the forward and backward contradiction
+probabilities, $\min(P_{\text{fwd}}, P_{\text{bwd}})$: the quantity ultimately thresholded by the
+bidirectional acceptance rule.
+
+\item \textbf{Gap}, the absolute difference between the two directions,
+$|P_{\text{fwd}} - P_{\text{bwd}}|$: a diagnostic for whether bidirectionality is doing anything
+\emph{beyond} what the blocking floor already does. If the gap is consistently close to zero, the
+two directions agree with each other almost everywhere, contradiction behaves as a symmetric
+property of the pair, and the bidirectional-minimum rule cannot thin the graph beyond what raising
+the cosine floor alone would already do. A gap that is often large would instead mean the two
+directions frequently disagree, and bidirectional-minimum is doing real, direction-sensitive
+filtering of its own.
+\end{itemize}
+
+On this corpus, contradiction probability turned out to be a close to binary quantity in each
+direction, clustering near 0 or 1 rather than spreading continuously between them, so the gap was
+small for the large majority of pairs: the cosine floor, not the bidirectional-minimum rule, is
+the dominant lever controlling saturation. The bidirectional rule was kept regardless of this
+finding, since it costs nothing to apply and still removes the minority of pairs where the two
+directions genuinely disagree.
+
+With this evidence in hand, the calibration script sweeps a small grid of candidate operating
+points and reports the resulting saturation at each one:
+
+\begin{itemize}
+\item four candidate cosine floors: $0.50$, $0.60$, $0.70$, $0.80$;
+\item five candidate \emph{contra\_min} thresholds $\tau_{\text{contra}}$: $0.60$, $0.80$, $0.90$,
+$0.95$, $0.99$;
+\item for each of the resulting 20 (floor, threshold) pairs, the saturation, edges kept over all
+possible cross-stance pairs, in the calibration sample.
+\end{itemize}
+
+A floor of 0.70 together with $\tau_{\text{contra}} = 0.90$ was the combination selected, landing
+at approximately 11\% saturation on the calibration sample, inside the targeted 5--15\% band.
+Table~\ref{tab:edge-calibration} reports the effect of applying this operating point to the full
+71-policy graph: the \textsc{contradicts} edge count falls from approximately 1.06 million (33\%
+of possible cross-stance pairs, the single-direction rule) to 344,000 (9\%, the bidirectional rule
+at this operating point), consistent with the saturation observed on the smaller calibration
+sample. This operating point, together with an analogous bidirectional threshold
+$\tau_{\text{entail}} = 0.60$ for \textsc{equivalent} edges, is used throughout the four-stage
+recovery pipeline described next; paraphrase relations do not exhibit the same saturation problem
+that motivated the calibration above, since two arguments rarely entail each other bidirectionally
+by accident, but the same bidirectional discipline is applied to them regardless.
+
+\begin{table}[htbp]
+\centering
+\caption{Effect of the bidirectional-minimum criterion on \textsc{contradicts} edge count,
+computed over the full 71-policy graph at a blocking floor of 0.70 and threshold of 0.90.}
+\label{tab:edge-calibration}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Acceptance rule} & \textbf{\textsc{Contradicts} edges} & \textbf{Saturation} \\
+\midrule
+Single-direction threshold & $\approx$1.06M & 33\% \\
+Bidirectional minimum & 344{,}000 & 9\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Argument-Level Edge Recovery}
+\label{sec:methodology-edges}
+
+Applying an NLI model to every pair of arguments within a policy is computationally wasteful,
+since the overwhelming majority of pairs are unrelated, so edge recovery is not a single
+classification step but a pipeline that narrows the full space of possible argument pairs down to
+a small, high-confidence edge set. With the operating point fixed by the calibration in
+Section~\ref{sec:methodology-edges-calibration}, a blocking floor of 0.70 and a bidirectional
+threshold $\tau_{\text{contra}} = 0.90$ for \textsc{contradicts}, this proceeds in four stages:
+
+\begin{enumerate}
+\item \textbf{Blocking.} A cheap embedding-cosine filter, computed over
+\textsc{sentence-transformers/all-mpnet-base-v2} embeddings \cite{reimers2019sbert,song2020mpnet},
+restricts the pairs that will ever be scored by the far more expensive NLI model. Cross-stance
+(PRO/CON) pairs with cosine similarity of at least 0.70 become candidates for
+\textsc{contradicts}; within-stance (PRO/PRO or CON/CON) pairs with cosine similarity of at least
+0.75 become candidates for \textsc{equivalent}. This step alone discards the large majority of the
+$\binom{n}{2}$ possible pairs within a policy, since most arguments on a given policy are neither
+close paraphrases nor topically close enough to plausibly stand in either relation.
+
+\item \textbf{Bidirectional NLI classification.} Every surviving candidate pair is scored twice by
+the \textsc{cross-encoder/nli-deberta-v3-base} cross-encoder \cite{he2023debertav3}, trained on
+SNLI and MultiNLI \cite{bowman2015snli,williams2018mnli}: once with the first argument as premise
+and the second as hypothesis, and once with the roles reversed. NLI is a directional task, so a
+single scoring direction cannot be assumed to represent the pair as a whole; scoring both
+directions is what makes the bidirectional acceptance rule below possible.
+
+\item \textbf{Bidirectional thresholding.} A candidate is accepted as \textsc{contradicts} only if
+the \emph{minimum} of its forward and backward contradiction probabilities clears
+$\tau_{\text{contra}} = 0.90$, and, symmetrically, as \textsc{equivalent} only if both directions
+of entailment probability clear $\tau_{\text{entail}} = 0.60$. An optional third-stage LLM
+adjudicator can additionally re-score pairs whose NLI confidence falls in an uncertain middle
+band, but this option was left disabled for the edges used throughout this thesis, so that every
+reported edge is decided by NLI alone.
+
+\item \textbf{Conflict resolution.} Because \textsc{contradicts} and \textsc{equivalent} are each
+symmetric relations, an unordered pair is stored once rather than twice. A small number of pairs
+clear both the \textsc{contradicts} and the \textsc{equivalent} threshold simultaneously; for
+these, only the higher-confidence verdict is kept, so no argument pair is ever tagged with both
+relations at once.
+\end{enumerate}
+
+\subsection{PageRank Centrality}
+\label{sec:methodology-pagerank}
+
+Once the \textsc{contradicts} edge set is finalized, PageRank \cite{page1999pagerank} is computed
+over it to supply the centrality signal used by the graph-aware retrieval system
+(Section~\ref{sec:methodology-systems}). PageRank was originally formulated for the directed graph
+of hyperlinks between web pages, where the score of a page $p_i$ is defined recursively as
+
+\begin{equation}
+\mathrm{PR}(p_i) = \frac{1-d}{N} + d \sum_{p_j \in M(p_i)} \frac{\mathrm{PR}(p_j)}{L(p_j)},
+\label{eq:pagerank-classic}
+\end{equation}
+
+\noindent where $N$ is the total number of nodes, $M(p_i)$ is the set of nodes linking to $p_i$,
+$L(p_j)$ is the out-degree of $p_j$, and $d \in [0,1]$ is a damping factor that mixes the
+link-following term against a uniform teleport probability, $\frac{1-d}{N}$, of jumping to any
+node at random. In matrix form, writing $\mathbf{v}$ for the uniform teleport vector
+($v_i = 1/N$) and $\mathbf{A}$ for the row-normalized transition matrix of the graph, this is the
+stationary distribution of
+
+\begin{equation}
+\mathbf{PR} = d \, \mathbf{A}^\top \mathbf{PR} + (1-d)\, \mathbf{v},
+\label{eq:pagerank-matrix}
+\end{equation}
+
+\noindent solved in practice by power iteration rather than direct linear solution, since the
+graphs involved are far too large to invert directly.
+
+Two adaptations are made to apply Equations~\ref{eq:pagerank-classic}--\ref{eq:pagerank-matrix} to
+the \textsc{contradicts} graph built in Section~\ref{sec:methodology-edges}. First, because
+\textsc{contradicts} edges are symmetric by construction (an edge is accepted only if contradiction
+holds in both directions, Section~\ref{sec:methodology-edges}), the graph is treated as undirected,
+so $M(p_i)$ and $L(p_j)$ in Equation~\ref{eq:pagerank-classic} reduce to a node's neighbors and
+degree in the symmetrized \textsc{contradicts} graph rather than to directed in-links and
+out-links. Second, alongside a single global PageRank computed with the standard uniform teleport
+vector $\mathbf{v}$, a \emph{personalized} PageRank is computed separately for each policy,
+replacing $\mathbf{v}$ with a teleport vector $\mathbf{v}_p$ restricted to that policy's own PRO
+and CON arguments,
+
+\begin{equation}
+v_{p,i} =
+\begin{cases}
+1 / |A_p| & \text{if } i \in A_p, \\
+0 & \text{otherwise},
+\end{cases}
+\label{eq:pagerank-personalized}
+\end{equation}
+
+\noindent where $A_p$ is the set of arguments attached to policy $p$ by a \textsc{supports} or
+\textsc{attacks} edge. Restarting the random walk only at policy $p$'s own arguments measures
+centrality relative to that single policy's rebuttal structure, rather than to the corpus as a
+whole; an argument that is central within a small, tightly contested policy is not penalized for
+the fact that a much larger policy elsewhere in the corpus has more \textsc{contradicts} edges in
+absolute terms, since the global variant of Equation~\ref{eq:pagerank-classic} would conflate the
+two. Both variants use a damping factor of $d=0.85$, the standard choice inherited from the
+original formulation, and are computed by power iteration to an L1 residual tolerance of
+$10^{-10}$ or a maximum of 200 iterations, whichever comes first. It is the personalized,
+per-policy PageRank score, $\mathrm{PR}_p(a) \triangleq \mathrm{PR}(a; \mathbf{v}_p)$, that the
+graph-aware retrieval system in Section~\ref{sec:methodology-systems} uses as its relevance
+signal.
+
+\section{Retrieval Framework}
+\label{sec:methodology-retrieval-framework}
+
+Every retrieval system compared in this thesis, whether it uses the graph built in
+Section~\ref{sec:methodology-graph} or not, retrieves stance-aware: given a policy, it returns a
+top-$k$ list of PRO arguments and a separate top-$k$ list of CON arguments, so that a single
+policy query always yields two independent retrieved lists rather than one undifferentiated one.
+Both lists, for every system, are constructed the same way: by selecting $k$ items from a
+candidate pool using Maximal Marginal Relevance (MMR) \cite{carbonell1998mmr}, introduced in
+Section~\ref{sec:background-rag-howitworks} as the standard mechanism for balancing relevance
+against redundancy in a retrieved set. This section fixes the shared MMR mechanics that every
+system uses identically; what actually distinguishes one system from another, the candidate pool
+each one searches and the relevance signal each one ranks by, is deferred to
+Section~\ref{sec:methodology-systems}.
+
+\subsection{Maximal Marginal Relevance}
+\label{sec:methodology-mmr}
+
+MMR builds a retrieved list greedily, one item at a time, rather than taking the $k$ most relevant
+candidates outright: at each step it adds whichever remaining candidate maximizes a weighted
+combination of relevance to the query and dissimilarity to everything already selected. Writing
+$R$ for the full candidate pool and $S \subseteq R$ for the set of items already selected
+(initially empty), the next item added to $S$ is
+
+\begin{equation}
+\operatorname*{arg\,max}_{d_i \in R \setminus S}
+\left[ \lambda \cdot \mathrm{rel}(d_i) - (1-\lambda) \max_{d_j \in S} \mathrm{sim}(d_i, d_j) \right],
+\label{eq:mmr}
+\end{equation}
+
+\noindent where $\mathrm{rel}(d_i)$ is candidate $d_i$'s relevance score, defined per system in
+Section~\ref{sec:methodology-systems}; $\mathrm{sim}(d_i, d_j)$ is embedding cosine similarity
+between two candidates, computed over the same
+\textsc{sentence-transformers/all-mpnet-base-v2} embeddings \cite{reimers2019sbert,song2020mpnet}
+used throughout this thesis; and $\max_{d_j \in S} \mathrm{sim}(d_i, d_j)$ is therefore the
+similarity between $d_i$ and whichever already-selected item is closest to it, the redundancy
+penalty. The weight $\lambda \in [0,1]$ controls the relevance/diversity tradeoff directly:
+$\lambda = 1$ reduces Equation~\ref{eq:mmr} to plain top-$k$ ranking by relevance alone, with no
+diversification, while $\lambda = 0$ ignores relevance entirely and greedily maximizes spread
+against what has already been picked. Every system and every experiment in this thesis fixes
+$\lambda = 0.5$, giving relevance and diversity equal weight; because this value never changes
+across systems, any diversity difference observed in the results (Chapter~\ref{ch:results}) is
+attributable to differences in the candidate pool $R$ or the relevance signal $\mathrm{rel}(\cdot)$
+between systems, not to one system having been handed a more favorable relevance/diversity
+tradeoff than another.
+
+The first item MMR selects is a useful special case for making Equation~\ref{eq:mmr} concrete: with
+$S = \emptyset$, the redundancy term vanishes, and the first pick reduces to
+$\operatorname*{arg\,max}_{d_i \in R} \mathrm{rel}(d_i)$, plain top-1 relevance ranking. Every
+subsequent pick then balances that same relevance signal against dissimilarity to whatever has
+been selected so far, so a system's relevance signal alone determines where retrieval starts, and
+the interaction between that signal and the pool's own similarity structure determines everywhere
+it goes after that.
+
+Two design choices are deliberately left open by Equation~\ref{eq:mmr}, and it is exactly these
+two that distinguish one retrieval system from another in this thesis:
+
+\begin{itemize}
+\item how the candidate pool $R$ is generated, that is, which arguments are even eligible to be
+retrieved before MMR is run at all; and
+
+\item what relevance signal $\mathrm{rel}(\cdot)$ ranks the pool by.
+\end{itemize}
+
+Holding the corpus, the embedding model, the MMR mechanism, and $k$ fixed across every system, and
+varying only these two choices, is what makes it possible to attribute an observed difference in
+retrieval quality to a specific design decision, candidate generation or relevance ranking, rather
+than to a confounded bundle of implementation differences. Section~\ref{sec:methodology-systems}
+defines each system compared in this thesis exactly by how it answers these two questions.
+
+\section{Retrieval Systems Compared}
+\label{sec:methodology-systems}
+
+Four retrieval systems are compared throughout this thesis, all built on the shared MMR mechanism
+of Section~\ref{sec:methodology-retrieval-framework} and differing in exactly one component at a
+time, the candidate pool $R$, the relevance signal $\mathrm{rel}(\cdot)$, or the diversification
+step itself, holding the corpus, the embedding model, and $k$ fixed across all four. This
+single-variable design is what licenses attributing an observed difference between two systems to
+the one component that actually differs between them, rather than to a confounded bundle of
+implementation choices.
+
+\subsection{StandardRAG: the Embedding-Only Baseline}
+\label{sec:methodology-standardrag}
+
+StandardRAG is the embedding-only baseline against which the graph-aware system is compared, and
+uses no graph signal at any stage.
+
+\begin{itemize}
+\item \textbf{Candidate pool.} The pool $R$ is the policy's own native argument set, every
+argument already carrying a \textsc{supports} or \textsc{attacks} edge to the policy
+(Section~\ref{sec:methodology-graph}), capped at 200 per stance. No query is embedded and no
+corpus-wide search is performed to build this pool: construction is a direct lookup of the
+policy's own tagged arguments, truncated to 200 in the order they are stored rather than ranked
+by similarity to anything. Cosine similarity enters only at the relevance-signal stage below, not
+at candidate-generation time.
+
+\item \textbf{Relevance signal.} Once the pool is fixed, candidates are ranked by cosine
+similarity, over \textsc{sentence-transformers/all-mpnet-base-v2} embeddings
+\cite{reimers2019sbert,song2020mpnet}, to $\bar{d}$, the centroid of that same pool:
+$\mathrm{rel}(d_i) = \mathrm{sim}(d_i, \bar{d})$. This is a form of pseudo-relevance feedback,
+ranking candidates by centrality to an already-assembled candidate set rather than by similarity
+to an explicit query, and it is the only point at which embedding similarity plays any role in
+StandardRAG's pipeline.
+\end{itemize}
+
+Because StandardRAG's candidate pool is built directly from the \textsc{supports}/\textsc{attacks}
+edges already present in the graph (Section~\ref{sec:methodology-graph}), rather than from a
+separate corpus-wide embedding search, it is graph-\emph{adjacent} in its pool construction even
+though it consults no \textsc{contradicts} structure and computes no centrality score; ``no graph
+signal'' refers specifically to the relevance signal and to the absence of any multi-hop
+expansion, not to the origin of the pool itself. This matters for how StandardRAG compares to
+PR-GraphRAG below: under the native pool, the two systems' candidate pools share the same
+direct-attachment seed, and differ only in whether that seed is expanded by one
+\textsc{contradicts} hop; the axis that separates them most consequentially under this condition
+is therefore the relevance signal, cosine-to-centroid versus personalized PageRank, with the pool
+itself diverging only at the margin, for policies whose native argument count for a stance exceeds
+the 200 cap.
+
+\subsection{PR-GraphRAG: the Graph-Aware System}
+\label{sec:methodology-prgraphrag}
+
+PR-GraphRAG is this thesis's proposed system, and is the only one of the four that consults the
+\textsc{contradicts} structure of the graph built in Section~\ref{sec:methodology-graph}. Its
+candidate pool starts from the identical direct-attachment seed as StandardRAG's
+(Section~\ref{sec:methodology-standardrag}), so, under the native pool, the two systems are not
+distinguished by one having access to a wider or more permissive net over the corpus than the
+other; both are structurally confined to a single policy's own tagged arguments at the outset.
+What PR-GraphRAG adds is a further expansion of that same seed along \textsc{contradicts} edges,
+and a relevance signal, personalized PageRank, that reflects the rebuttal structure connecting
+those arguments to one another rather than their raw similarity to a pool centroid. The
+motivation this is built to address, an embedding-only signal conflating \emph{an argument that
+addresses this policy} with \emph{an argument that merely uses this policy's vocabulary}, becomes
+directly relevant once the hardened, distractor-injected pools of
+Section~\ref{sec:methodology-hardened-pool} deliberately introduce arguments from topically
+adjacent sibling policies (for instance, several policies on cosmetic surgery, organ trade, and
+human cloning all sharing a Bioethics \& Personal Autonomy MetaPolicy,
+Section~\ref{sec:methodology-metapolicy}) into a policy's own candidate pool: at that point, an
+embedding-only relevance signal has no basis for distinguishing a genuine argument from a
+vocabulary-sharing distractor, whereas an argument's position, or absence, in the
+\textsc{contradicts} structure surrounding the policy's genuine arguments does.
+
+\begin{itemize}
+\item \textbf{Candidate pool.} The pool is seeded by the arguments holding a direct
+\textsc{supports} or \textsc{attacks} edge to the target policy, then expanded one hop along
+\textsc{contradicts} edges: a CON argument that contradicts a directly-attached PRO argument is
+added to the PRO candidate pool, and symmetrically, a PRO argument that contradicts a
+directly-attached CON argument is added to the CON pool. Because \textsc{contradicts} edges are
+recovered only within a policy (Section~\ref{sec:methodology-edges}), this hop cannot itself reach
+outside the target policy on the native pool; its effect there is to recover same-policy arguments
+that the 200-item truncation of the direct seed may have dropped, not to widen the search to other
+policies. The hop's exclusionary role, arguments with no path into the target policy's own
+\textsc{contradicts} neighborhood are never added at all, becomes consequential once the pool
+itself is allowed to contain material from outside the policy, as it deliberately does under the
+hardened-pool construction of Section~\ref{sec:methodology-hardened-pool}.
+
+\item \textbf{Relevance signal.} Candidates are ranked by their personalized, per-policy PageRank
+score (Section~\ref{sec:methodology-pagerank}), min--max normalized within the pool, so
+$\mathrm{rel}(d_i) = \widehat{\mathrm{PR}}_p(d_i)$.
+\end{itemize}
+
+Under Equation~\ref{eq:mmr}, the first item PR-GraphRAG selects is therefore the most central
+argument in the policy's rebuttal structure, the argument the largest weight of other arguments
+engages with, rather than the argument closest to a pool centroid.
+
+\subsection{RAG-no-MMR: a Diversification Ablation}
+\label{sec:methodology-ragnommr}
+
+RAG-no-MMR isolates the contribution of MMR's diversification step in isolation from every other
+design choice. It uses the identical candidate pool and the identical relevance signal as
+StandardRAG (Section~\ref{sec:methodology-standardrag}), the policy's native argument set capped
+at 200, ranked by cosine similarity to the pool centroid, but selects its final top-$k$ list by
+plain ranking on $\mathrm{rel}(\cdot)$ alone rather than by running MMR (Equation~\ref{eq:mmr})
+over the pool. Formally, this is the $\lambda = 1$ boundary
+case of Equation~\ref{eq:mmr} applied specifically to StandardRAG's pool and relevance signal,
+rather than a separately-tuned system. Because pool and relevance signal are held fixed and only
+the diversification step is removed, any difference between StandardRAG and RAG-no-MMR in
+Chapter~\ref{ch:results} isolates exactly what MMR's redundancy penalty buys, or costs, on this
+corpus.
+
+\subsection{Random: a Sanity Floor}
+\label{sec:methodology-random}
+
+Random selects its top-$k$ list uniformly at random from the same native, policy-restricted pool
+that StandardRAG and RAG-no-MMR draw from, using no relevance signal and no diversification step
+at all. It serves two purposes in this thesis's evaluation: a sanity floor that any system using a
+genuine relevance signal ought to outperform, and, as Chapter~\ref{ch:results} returns to, a
+diagnostic for whether a given evaluation pool is discriminative enough to separate a real
+retrieval system from one making no retrieval decision whatsoever.
+
+\subsection{Summary}
+\label{sec:methodology-systems-summary}
+
+Table~\ref{tab:systems-summary} summarizes all four systems along the two axes fixed in
+Section~\ref{sec:methodology-retrieval-framework}, candidate pool and relevance signal, plus
+whether MMR diversification is applied. StandardRAG and RAG-no-MMR share an identical pool and
+relevance signal, differing only in the last column, isolating MMR's contribution alone.
+StandardRAG and PR-GraphRAG share the same direct-attachment seed for their pool (both start from
+a policy's own \textsc{supports}/\textsc{attacks} arguments) and differ in whether that seed is
+expanded by a \textsc{contradicts} hop and in which relevance signal ranks it, so that any
+observed difference between the two is attributable to the graph-derived expansion and ranking
+specifically, not to a pool built by an unrelated mechanism. This table is, in effect, a compact
+statement of the single-variable design that Chapter~\ref{ch:results} exploits to attribute
+observed differences to specific components rather than to confounded implementation choices.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{The four retrieval systems compared in this thesis, defined along the two axes MMR
+leaves open (candidate pool, relevance signal) plus whether diversification is applied.}
+\label{tab:systems-summary}
+\begin{tabular}{@{}p{2.1cm}p{3.6cm}p{2.9cm}p{1.7cm}@{}}
+\toprule
+\textbf{System} & \textbf{Candidate pool $R$} & \textbf{Relevance signal $\mathrm{rel}(\cdot)$} & \textbf{MMR} \\
+\midrule
+StandardRAG & Native pool (\textsc{supports}/\textsc{attacks} seed), capped at 200 & Cosine to pool centroid & Yes ($\lambda=0.5$) \\
+PR-GraphRAG & Same seed $+$ 1-hop \textsc{contradicts} expansion & Personalized PageRank & Yes ($\lambda=0.5$) \\
+RAG-no-MMR & Native pool (\textsc{supports}/\textsc{attacks} seed), capped at 200 & Cosine to pool centroid & No (plain top-$k$) \\
+Random & Native pool (\textsc{supports}/\textsc{attacks} seed), capped at 200 & None (uniform) & No (random sample) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Use Cases}
+\label{sec:methodology-usecases}
+
+Retrieval quality is evaluated through two downstream use cases rather than one, chosen to
+reflect two genuinely different ways a moderator or citizen consumes retrieved arguments: scanning
+a short, high-precision list in full, and reading a longer synthesized account grounded in a wider
+set of retrieved material. The two use cases share every retrieval system, the corpus, and the
+candidate-pool construction described in Sections~\ref{sec:methodology-graph}--\ref{sec:methodology-systems};
+they differ only in $k$, in whether the retrieved set is read directly or first summarized, and in
+the downstream metrics each one is scored on (Chapter~\ref{ch:evaluation}).
+
+\subsection{UC1: Conflict-Map Retrieval}
+\label{sec:methodology-uc1}
+
+Given a policy, UC1 asks a retrieval system to return a short, stance-balanced set of PRO and CON
+arguments that a moderator can scan directly to see where a debate's genuine points of
+disagreement lie, without having to read the corpus itself. This is a \emph{precision-first} task:
+because the retrieved set is read in full rather than filtered further by a human or a downstream
+model, every irrelevant or redundant item carries a direct cost, and diversity, avoiding
+near-duplicate arguments that restate the same point, matters as much as raw relevance. UC1 is
+evaluated over the candidate pool of 200 fixed in Section~\ref{sec:methodology-systems}, and
+reported primarily at $k=5$, the operating point at which a human moderator would realistically
+read every retrieved item rather than skimming a long list; Chapter~\ref{ch:results} additionally
+reports a sweep across pool sizes and $k$ values to check whether conclusions drawn at this single
+operating point generalize.
+
+\subsection{UC2: Debate Summarization}
+\label{sec:methodology-uc2}
+
+Given a policy, UC2 asks a system to generate a short natural-language summary of the debate,
+covering the main PRO and CON positions in balance, grounded in that system's retrieved arguments
+rather than in the corpus at large. Unlike UC1, this is a \emph{recall-oriented},
+generation-downstream task: retrieval quality matters here not because a person reads the
+retrieved list directly, but because it bounds what the summarizer can faithfully say about the
+debate. A summarizer cannot surface a position it was never given, so UC2 evaluates whether a
+retrieval system's choices survive an additional generation step rather than being read off the
+retrieved list itself. UC2 is evaluated at $k=15$, a wider retrieval budget than UC1's, appropriate
+for feeding a summarization prompt with enough material to synthesize from rather than for direct
+human reading.
+
+Summaries are generated with a structured prompt, issued to Qwen3:8b at temperature 0, that
+requires the model to return a JSON object with exactly five fields, rather than free-form prose:
+the strongest PRO argument, the strongest CON argument, the key tension between them stated as
+specific contradicting claims rather than a restatement of the policy topic, any missing
+perspectives, and an overall assessment of how balanced the retrieved debate is. Constraining the
+summarizer's output to this fixed schema keeps the four downstream UC2 metrics
+(Chapter~\ref{ch:evaluation}) computable consistently across systems and policies, since every
+summary decomposes into the same five comparable fields regardless of which retrieval system fed
+it.
+
+\section{Policy Selection}
+\label{sec:methodology-policy-selection}
+
+Every result reported in this thesis is computed over a fixed sample of 30 policies out of the
+corpus's 71, selected once and reused unchanged across every system, pool condition, and metric,
+so that no later comparison is confounded by different systems having been evaluated on different
+policies.
+
+The obvious selection rule, simply taking the 30 policies with the most arguments, was rejected
+because it would bias the sample toward corpus outliers and foreclose any later analysis of how
+retrieval performance varies with graph density: Section~\ref{sec:corpus-ibm-stats} already
+established a roughly 1.7-fold spread in argument count across the corpus's 71 policies (331 to
+554), and a large-policies-only sample would systematically discard the sparse end of that range,
+the exact regime in which a graph-aware system's one-hop expansion has the least material to work
+with. A tercile-stratified sample was used instead:
+
+\begin{enumerate}
+\item The 71 policies are sorted by total argument count and split into three bins of equal size,
+sparse, medium, and dense, 23, 23, and 25 policies respectively (71 does not divide evenly by
+three).
+
+\item 10 policies are drawn uniformly at random from each bin, with a fixed random seed
+($\text{seed}=42$, the same seed used throughout this thesis's other randomized steps, for
+consistency) for reproducibility, giving $10 \times 3 = 30$ policies in total.
+\end{enumerate}
+
+This produces three evenly-sized groups spanning the corpus's full density range by construction:
+
+\begin{itemize}
+\item \textbf{Dense tercile} (432--554 arguments per policy): 10 policies drawn from the 25
+policies with the most native argument volume.
+
+\item \textbf{Medium tercile} (405--432 arguments per policy): 10 policies drawn from the 23
+policies in the middle of the distribution.
+
+\item \textbf{Sparse tercile} (331--404 arguments per policy): 10 policies drawn from the 23
+policies with the least native argument volume, the regime in which a graph-aware system's
+one-hop \textsc{contradicts} expansion has the least material to work with.
+\end{itemize}
+
+Because the sample is balanced across these three groups by design, any relationship later
+observed between graph density and retrieval quality can be attributed to density itself rather
+than to an artifact of oversampling one density regime over another; this is what licenses the
+density-versus-performance analysis in Chapter~\ref{ch:discussion}.
+
+\section{Hardened Pool Construction}
+\label{sec:methodology-hardened-pool}
+
+\subsection{Why the Native Pool Is Not a Sufficient Test}
+\label{sec:methodology-hardened-motivation}
+
+Every candidate pool discussed so far, whether used by StandardRAG, PR-GraphRAG, RAG-no-MMR, or
+Random, is drawn from a policy's own native argument set (Section~\ref{sec:methodology-systems}).
+Inspecting the ground-truth relevance judgments over this native pool (the same judgments
+described in Section~\ref{sec:methodology-groundtruth} below) reveals that it is, by construction,
+largely relevant already: averaged over the stratified 30-policy sample
+(Section~\ref{sec:methodology-policy-selection}), 57.7\% of judged arguments in a native pool
+receive a relevance grade of 2 or higher, only 6.8\% receive a grade of 0, and this relevance
+density varies almost not at all from one policy's pool to another, a standard deviation of just
+0.071 across the 30 sampled policies. The problem this creates is not specific to any one policy,
+it is systemic: because most arguments in a native pool are at least somewhat relevant simply by
+virtue of having been authored for that policy, a ranking metric has little room to separate a
+genuinely good retrieval system from a poor one, or, in the most extreme case, from Random
+(Section~\ref{sec:methodology-random}) itself. A relevance signal that does essentially nothing
+can still score respectably on a pool where most of what it could possibly return already clears
+the relevance bar.
+
+This motivates deliberately constructing a \emph{harder} evaluation pool rather than relying on
+the native one, following the broader argument-retrieval literature's recognition that the
+specific distractors present in a retrieval context materially affect how discriminating an
+evaluation is, and that a retrieval evaluation should therefore construct adversarial candidate
+pools rather than rely on native, largely-relevant ones.\footnote{This methodological point
+follows Cuconasu et al.'s work on the effect of distractors in retrieval-augmented generation
+contexts (SIGIR 2024); a full citation for this source still needs to be added to the thesis
+bibliography.} Concretely, the aim is to inject arguments that are topically adjacent to a
+policy, close enough in subject matter that an embedding-only signal cannot trivially reject them,
+but that do not actually address the policy in question, so that a system's relevance signal is
+genuinely tested on its ability to discriminate rather than credited for a pool that is easy by
+construction.
+
+\subsection{Constructing the Distractor Pool}
+\label{sec:methodology-hardened-pipeline}
+
+For a given target policy $P$ and stance $s \in \{\text{PRO}, \text{CON}\}$, distractors are
+constructed in four steps:
+
+\begin{enumerate}
+\item \textbf{Identify sibling policies.} Siblings of $P$ are the other policies sharing $P$'s
+MetaPolicy (Section~\ref{sec:methodology-metapolicy}), for instance ``We should legalize organ
+trade'' and ``We should ban human cloning'' as siblings of ``We should ban cosmetic surgery''
+under Bioethics \& Personal Autonomy. Where a policy's MetaPolicy grouping is unavailable, a
+fallback identifies siblings instead as the four policies whose centroid
+(Section~\ref{sec:methodology-metapolicy}) is nearest by cosine similarity to $P$'s own centroid.
+
+\item \textbf{Gather candidates.} All same-stance arguments belonging to $P$'s sibling policies are
+pooled as candidate distractors: sibling PRO arguments feed $P$'s PRO distractor pool, sibling CON
+arguments feed $P$'s CON distractor pool. Any candidate duplicating, by text, an argument $P$
+already owns is discarded.
+
+\item \textbf{Rank and select.} Candidates are ranked nearest-first by cosine similarity to $P$'s
+own centroid, the hardest and most topically confusable distractors, and the top $D$ are kept for
+each injection level $D$ (Section~\ref{sec:methodology-hardened-levels}). A random-selection
+variant, drawing uniformly from the sibling candidate pool instead of nearest-first, is also
+available as a system-agnostic control, to check that any robustness result is not an artifact of
+the specific nearest-first selection strategy.
+
+\item \textbf{Naturalize into the target policy.} Each selected distractor is not moved but
+\emph{copied}: a fresh argument record is created with a new identifier, re-stamped to belong to
+$P$ (\texttt{policy}~$=P$) and to carry stance $s$, and flagged \texttt{is\_distractor}~$=$~true,
+with the original policy and argument id retained as provenance fields. Re-stamping is what makes
+the distractor copy visible to every retrieval system on equal footing: every candidate-pool
+lookup in Section~\ref{sec:methodology-systems} keys off the target policy's own tagged arguments,
+so an argument that still carried its original policy label would never enter any system's
+candidate pool at all, defeating the purpose of injecting it.
+\end{enumerate}
+
+An early version of this pipeline appended distractor copies to the end of each policy's native
+argument list, after the (up to 200) native arguments already occupying the first positions. Since
+every candidate-pool lookup in Section~\ref{sec:methodology-systems} truncates that list to 200,
+the appended distractors, sitting at position 200 and beyond, were silently sliced off before any
+system ever saw them: a sanity check that had the Random baseline (Section~\ref{sec:methodology-random})
+retrieve zero distractors from a pool that was supposed to be roughly one-third distractors by
+construction, a result close enough to statistically impossible that it exposed the bug rather
+than confirming robustness. The fix interleaves the native and distractor identifiers with a
+deterministic, per-(policy, stance, level) seeded shuffle before any truncation happens, so a
+downstream $[:200]$ slice draws a representative native/distractor mixture at the intended
+injected rate. This interleaving step is applied only when distractors have actually been
+injected, so the zero-distractor control condition below remains byte-identical to the native
+pool.
+
+\subsection{Injection Levels}
+\label{sec:methodology-hardened-levels}
+
+Distractors are injected at five levels per stance, $D \in \{0, 50, 100, 200, \text{full}\}$, where
+\emph{full} takes every available sibling candidate rather than capping at a fixed count. $D=0$ is
+a byte-identical control, reproducing the native pool exactly, since no injection and no
+interleaving shuffle occur at this level. The results reported in Chapter~\ref{ch:results} focus
+primarily on $D=100$ (denoted L100), chosen as a middle setting large enough to meaningfully
+stress-test a pool of up to 200 native arguments without the distractor share overwhelming it
+entirely, with the full $D$ sweep reported separately to check that conclusions drawn at L100
+generalize across injection levels.
+
+\subsection{Four Edge-Connectivity Scenarios}
+\label{sec:methodology-hardened-scenarios}
+
+Injecting distractor arguments raises a further question that is easy to overlook: once a
+distractor copy exists inside the target policy's argument set, should it participate in the
+\textsc{contradicts}/\textsc{equivalent} edge-recovery pipeline of Section~\ref{sec:methodology-edges}
+the same way a native argument does? Answering this only one way would conflate two separate
+questions, whether graph-aware retrieval resists distractors at all, and specifically whether that
+resistance depends on distractors being graph-\emph{isolated}. Four scenarios are therefore
+compared below, distinguished by whether, and how, distractor arguments are connected into the
+\textsc{contradicts} graph.
+
+The first scenario, \textbf{no distractors}, is the native pool of
+Section~\ref{sec:methodology-hardened-motivation}, unmodified.
+
+The second, \textbf{isolated distractors}, is the primary hardened condition used throughout
+Chapter~\ref{ch:results}: distractor copies are injected exactly as described in
+Section~\ref{sec:methodology-hardened-pipeline}, but the edge-recovery pipeline of
+Section~\ref{sec:methodology-edges} is never re-run over them, so they carry no
+\textsc{contradicts} or \textsc{equivalent} edge to anything, native argument or fellow distractor
+alike. Under this scenario, a distractor can still enter a system's candidate pool directly, since
+candidate-pool lookups key off the \textsc{supports}/\textsc{attacks} re-stamping from
+Section~\ref{sec:methodology-hardened-pipeline} rather than off \textsc{contradicts} connectivity,
+but it can never be reached by PR-GraphRAG's one-hop expansion, and its personalized PageRank
+score is that of an isolated node.
+
+The third and fourth scenarios both re-run the full three-stage edge-recovery pipeline of
+Section~\ref{sec:methodology-edges} over the merged native-plus-distractor argument set, at the
+same calibrated thresholds (Section~\ref{sec:methodology-edges-calibration}), but differ in one
+blocking-stage rule. In \textbf{distractors with edges}, every pair is eligible for
+\textsc{contradicts}/\textsc{equivalent} scoring exactly as in the native pipeline, so two
+distractor copies, both drawn from sibling policies that may genuinely discuss related claims, can
+end up connected to each other as readily as two native arguments can. In \textbf{distractors, no
+distractor--distractor edges}, the blocking stage additionally skips any candidate pair where both
+endpoints are distractor copies, before NLI is ever run on that pair, while leaving
+native--distractor pairs to be scored normally; native--native pairs are unaffected in either
+scenario, so the two are directly comparable and differ only in whether distractors can connect to
+each other.
+
+Table~\ref{tab:hardened-scenarios} summarizes the resulting connectivity of all four scenarios;
+Table~\ref{tab:distractor-edge-breakdown} just below it reports the actual edge counts this
+produced at L100.
+
+\begin{table}[htbp]
+\centering
+\caption{The four pool-construction scenarios compared in this thesis, by whether injected
+distractor arguments participate in the \textsc{contradicts} graph.}
+\label{tab:hardened-scenarios}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Scenario} & \textbf{Distractor--distractor edges} & \textbf{Native--distractor edges} \\
+\midrule
+No distractors (native) & N/A & N/A \\
+Isolated distractors & None & None \\
+Distractors with edges & Unrestricted & Yes \\
+No distractor--distractor edges & None & Yes \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Run over the full merged native-plus-distractor argument set at L100, the unrestricted pipeline
+(\textbf{distractors with edges}) accepts 385,872 \textsc{contradicts} edges in total. Re-running
+the identical pipeline with the additional both-endpoints-distractor exclusion
+(\textbf{distractors, no distractor--distractor edges}) accepts 345,109 \textsc{contradicts} edges
+and 13,302 \textsc{equivalent} edges, with zero pairs triggering the Stage 4 conflict-resolution
+rule (Section~\ref{sec:methodology-edges}) in this run. The 385,872-edge unrestricted total
+decomposes into 344,556 native--native edges, matching the native-corpus count already established
+in Table~\ref{tab:edge-calibration}; 553 native--distractor edges; and 40,763
+distractor--distractor edges, the difference removed by the no-distractor--distractor-edges rule.
+
+\begin{table}[htbp]
+\centering
+\caption{Decomposition of the 385,872 \textsc{contradicts} edges generated over the merged
+native-plus-distractor argument set at L100, by pair type.}
+\label{tab:distractor-edge-breakdown}
+\begin{tabular}{lr}
+\toprule
+\textbf{Pair type} & \textbf{\textsc{Contradicts} edges} \\
+\midrule
+Native--native & 344,556 \\
+Native--distractor & 553 \\
+Distractor--distractor & 40,763 \\
+\midrule
+Total (unrestricted) & 385,872 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This breakdown is itself informative beyond justifying the four-scenario design: distractor
+arguments contradict \emph{one another} at nearly two orders of magnitude the rate at which they
+contradict the target policy's own genuine arguments, 40,763 distractor--distractor edges against
+only 553 native--distractor edges. Sibling-policy distractors, drawn from topically adjacent
+policies under the same MetaPolicy (Section~\ref{sec:methodology-metapolicy}), evidently argue
+with each other far more often than they engage the specific arguments already native to the
+target policy. This matters for interpreting the difference between scenarios 3 and 4 in
+Chapter~\ref{ch:results}: whatever connectivity the unrestricted scenario adds over the
+no-distractor--distractor-edges scenario is overwhelmingly internal to the injected distractor set
+itself, not a new pathway connecting distractors into the target policy's own argumentative
+structure.
+
+Of the 72,349 distractor--distractor candidate pairs that survived blocking but were excluded from
+NLI scoring entirely under the no-distractor--distractor-edges rule, roughly 56\% (40,763 of
+72,349) would have cleared the bidirectional \textsc{contradicts} threshold had they been scored,
+confirming that sibling-policy distractors frequently stand in a genuine contradiction relation to
+\emph{each other}, exactly the connectivity that scenario 4 exists to exclude and that scenario 3
+exists to test the consequences of. As a validation step before this edge set was used to
+recompute PageRank, the edge-count refresh script was run with the expected \textsc{contradicts}
+total passed explicitly as a guard (\texttt{--expected-contradicts 345109}), so any mismatch
+between the freshly generated edge file and the count reported by Stage 3 would halt the pipeline
+rather than silently propagate into the centrality scores PR-GraphRAG depends on.
+
+Comparing all four scenarios makes it possible to attribute any observed robustness specifically:
+whether graph-aware retrieval resists distractors at all (scenario 2 versus scenario 1), whether
+that resistance is contingent on distractors remaining graph-isolated (scenario 3 versus scenario
+2), and, if resistance degrades under scenario 3, whether the cause is distractor--distractor
+connectivity specifically rather than distractor connectivity in general (scenario 4 as the
+isolating comparison against scenario 3).
+
+\section{Ground Truth Generation}
+\label{sec:methodology-groundtruth}
+
+Every metric reported in Chapters~\ref{ch:evaluation}--\ref{ch:results} that depends on a notion
+of relevance, most directly UC1's nDCG, is only as trustworthy as the relevance judgments it is
+computed against. This section describes how those judgments were produced: an exhaustive,
+dual-annotator grading protocol applied to every candidate pool, native and hardened alike.
+
+\subsection{Grading Protocol}
+\label{sec:methodology-groundtruth-protocol}
+
+Each (policy, stance) candidate pool is graded on a four-point ordinal relevance scale, 0
+(irrelevant) to 3 (essential), by two large language models from different model families, Llama
+3.3 70B \cite{grattafiori2024llama3} as the primary annotator and Gemma 31B
+\cite{gemma2026gemma4} as the secondary. Two design choices in this protocol depart from a more
+convenient alternative, and both are deliberate rather than incidental:
+
+\begin{itemize}
+\item \textbf{The full pool is judged, not a shortlist.} Every candidate in a policy's pool, up to
+the same 200-argument cap used by the retrieval systems themselves
+(Section~\ref{sec:methodology-systems}), receives a grade, rather than only the first $n$
+arguments encountered or only the union of what the compared systems happen to retrieve. Judging
+a shortlist instead would silently make relevance a positional artifact, an argument sitting past
+the shortlist boundary can never be credited as relevant no matter how strong it is, and would
+under-judge exactly the tail region a system's own retrieved list might reach into. Grading the
+full pool removes that bias, at the cost of a long tail of grade-0 judgments and a real risk of
+annotator drift across the several batches a 200-argument pool requires; the per-policy grade
+distribution is retained in the full grading report specifically so that such drift remains
+visible rather than silently absorbed into an aggregate statistic.
+
+\item \textbf{Two annotators, not one.} A single LLM annotator's grades cannot be distinguished
+from that model's idiosyncratic biases. Using two annotators from different model families, and
+reporting their agreement (Section~\ref{sec:methodology-groundtruth-agreement}), makes any such
+bias visible rather than silently baked into the ground truth. This follows established results
+showing that LLM assessors can approach trained human judges' agreement on graded relevance
+judgments \cite{thomas2024llmjudge,upadhyay2024umbrela,upadhyay2025largescale}, while a
+single-annotator design carries a documented risk of systematic, model-specific judging bias
+\cite{panickssery2024selfpref}.
+\end{itemize}
+
+\subsection{Consensus Resolution}
+\label{sec:methodology-groundtruth-consensus}
+
+With two annotators graded independently, a single ground-truth grade per argument is derived by a
+documented consensus rule rather than by an arbitrary tie-break. The rule adopted is
+\emph{minimum}: when the two annotators disagree, the lower of the two grades is kept, following
+the disagreement heuristic used by the TripJudge collection \cite{althammer2022tripjudge}, on the
+reasoning that relevance the two annotators could not agree on should not be treated as though it
+were confidently established. An argument's relevance grade, the primary annotator's grade, and
+the secondary annotator's grade are all retained in the stored ground truth, so the consensus
+resolution is transparent and reversible rather than discarding the individual judgments once
+resolved. A binary relevant set, used wherever a metric needs a relevant/non-relevant cut rather
+than a graded score, is defined as grade $\geq 2$.
+
+\subsection{Inter-Annotator Agreement}
+\label{sec:methodology-groundtruth-agreement}
+
+Agreement between the two annotators is reported at two granularities, following FiRA
+\cite{hofstatter2020fira} and TripJudge's \cite{althammer2022tripjudge} observation that
+agreement on the full ordinal scale and agreement on the binary relevant/non-relevant cut can
+diverge substantially, and that the binary cut is the granularity that actually determines the
+relevant set most metrics are computed against:
+
+\begin{itemize}
+\item \textbf{Ordinal agreement}, quadratic-weighted Cohen's kappa \cite{cohen1968kappa} over the
+full 0--3 grade scale, penalizing a disagreement of, for instance, grade 0 versus grade 3 far more
+than a disagreement of grade 1 versus grade 2. Computed per policy and averaged over the
+stratified 30-policy sample (Section~\ref{sec:methodology-policy-selection}), this reaches a mean
+of 0.584 (std 0.082, range 0.439--0.750 across policies), which the conventional bands of Landis
+and Koch \cite{landis1977kappa} place in the \emph{moderate} agreement range on average, with
+individual policies ranging as high as the \emph{substantial} band.
+
+\item \textbf{Binary agreement}, unweighted Cohen's kappa over the collapsed relevant ($\geq 2$)
+versus non-relevant ($< 2$) cut, reported separately since a metric like nDCG's underlying
+relevant set is defined at this granularity rather than the full ordinal one. This reaches a mean
+of 0.528 (std 0.081, range 0.348--0.678), somewhat lower and more variable than the ordinal
+figure, consistent with a binary cut discarding some of the ordinal scale's partial-credit
+structure.
+\end{itemize}
+
+Applying the annotation pipeline's own operational thresholds (kappa $\geq 0.6$ = HIGH, $0.4$--$0.6$
+= MEDIUM, $<0.4$ = LOW) to the ordinal figure, 13 of the 30 sampled policies fall in the HIGH band
+and the remaining 17 in MEDIUM, with none falling into LOW. For 3 of the 30 policies (``We should
+subsidize vocational education,'' ``We should close Guantanamo Bay detention camp,'' and ``We
+should abandon the use of school uniform''), the secondary annotator's grades were unavailable for
+that policy, so no kappa could be computed at all; the single available annotator's grades were
+still used for the consensus grade in these cases, but they are excluded from the agreement
+statistics above rather than silently treated as perfect agreement.
+
+One limitation of this agreement analysis should be stated plainly: it measures agreement
+\emph{between two LLM annotators}, not agreement between an LLM annotator and a human judge. It is
+therefore an inter-model consistency check, evidence that the two annotators are not grading
+idiosyncratically relative to each other, rather than direct evidence that either annotator's
+grades track genuine human relevance judgments. This thesis does not include a human-annotated
+validation sample to anchor the LLM grades against; doing so would strengthen the ground truth's
+claim to validity beyond inter-annotator consistency.
+
+\subsection{Grading the Hardened Pools}
+\label{sec:methodology-groundtruth-distractors}
+
+The native ground truth is not re-generated for the hardened pools of
+Section~\ref{sec:methodology-hardened-pool}. Instead, grading proceeds incrementally: every native
+argument's grade is carried over unchanged from Section~\ref{sec:methodology-groundtruth-protocol},
+and only the injected distractor arguments, which by definition were never judged against the
+target policy, are graded fresh, by the identical dual-annotator, MIN-consensus protocol used for
+native arguments. Reusing native grades verbatim rather than re-running the annotators over them
+is deliberate: because LLM annotators are not perfectly deterministic across calls, re-grading the
+native arguments would perturb their existing labels for no benefit and would break the
+zero-distractor condition's status as a byte-identical control
+(Section~\ref{sec:methodology-hardened-levels}).
+
+A distractor argument is graded on its merits rather than assumed irrelevant by construction.
+Although a distractor is, by design, an argument that does not belong to the target policy
+(Section~\ref{sec:methodology-hardened-pipeline}), a sibling-policy argument drawn for its
+topical closeness to the target is not guaranteed to be irrelevant to it: stamping every
+distractor grade 0 outright would not measure the hardened pool's actual relevance composition, it
+would simply assert it. Grading distractors independently is therefore what makes it possible to
+report, rather than assume, what fraction of an injected distractor pool a system could
+legitimately have retrieved.
+
+What the L100 grading report does establish directly is whether distractor injection achieved its
+purpose: making the evaluation pool harder, in the specific sense of lowering its relevance
+density below the 57.7\% figure that motivated hardening in the first place
+(Section~\ref{sec:methodology-hardened-motivation}). Computed over the stratified 30-policy sample
+at $D=100$, the merged native-plus-distractor pool's realized relevance base rate, 6,835 relevant
+arguments (grade $\geq 2$) out of 17,820 graded pool entries, is 38.4\%, a substantial drop from
+the native pool's 57.7\%. This is not uniform across policies: per-policy base rates in this
+sample range from 28.5\% (``We should prohibit women in combat'') to 49.4\% (``Homeschooling
+should be banned''), but every one of the 30 sampled policies falls below the native pool's
+57.7\% figure, confirming that the hardening construction lowers relevance density consistently
+across the sample rather than only on average.

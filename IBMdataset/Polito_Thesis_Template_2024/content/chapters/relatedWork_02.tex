@@ -1,0 +1,109 @@
+\chapter{Related Work}
+\label{ch:relatedWork}
+
+\section{Argument Mining on Deliberation Platforms}
+\label{sec:rw-am-deliberation}
+
+\textcite{elguendouze2025am4dsp} present AM4DSP, a system that performs argumentation mining
+directly on structured decentralized discussion platforms built for deliberative democracy,
+classifying statements into position and evidence roles and identifying relations between them,
+evaluated on the BCause platform. This is close precedent for the relation-extraction stage of
+this thesis: both projects mine argumentative structure from real or realistic civic discussion
+data rather than curated debate corpora. The key divergence is scope. AM4DSP targets
+\emph{discussion-level} analysis within a single deliberation thread, structuring the argumentation
+inside one conversation; this thesis instead asks a \emph{retrieval} question across an entire
+corpus of thousands of independent arguments spanning many policies, where the challenge is
+selecting and organizing a relevant, non-redundant, conflicting subset rather than parsing the
+structure of one discussion. AM4DSP's mined relations are consumed by human moderators for
+sense-making; the relations extracted in this thesis are consumed by an automated retrieval and
+summarization pipeline evaluated against graded relevance judgments, a different downstream use
+that motivates a different evaluation protocol entirely (Chapter~\ref{ch:evaluation}).
+
+\textcite{anastasiou2025bcause} describe BCause, a human-AI collaboration tool that supports hybrid
+mapping and ideation in argumentation-grounded deliberation, funded under the EU ORBIS programme
+on augmenting trust and transparency in deliberative democracy. Like this thesis, BCause is
+built on the premise that making argumentative structure explicit improves a deliberation
+process; unlike this thesis, BCause is fundamentally a human-in-the-loop authoring and mapping
+tool, where a facilitator or participant actively builds and edits the argument map. This thesis
+instead evaluates a fully automated retrieval pipeline with no human curation step at query time,
+trading the higher precision a human curator could provide for the ability to operate at the
+scale of a 30{,}500-argument corpus, where manual mapping is not feasible.
+
+\textcite{behrendt2025survey} survey the broader landscape of machine-learning methods for
+enhancing deliberation in online political discussions, cataloguing which tasks current AI
+methods address and identifying open challenges. Their survey confirms that argument-relation
+detection and redundancy/conflict identification, the two relation types this thesis constructs,
+are recognized open problems in the deliberation-technology literature rather than a solved
+prerequisite; this motivates treating the calibration of these relations (Chapter~\ref{ch:methodology})
+as a contribution in its own right, not a routine preprocessing step.
+
+\section{Knowledge Graphs for Argumentative and Deliberative Data}
+\label{sec:rw-kg-deliberation}
+
+\textcite{plenz2024pakt} construct PAKT, a perspectivized argumentation knowledge graph built
+directly for deliberation analysis, encoding not only argumentative relations but the
+perspective, or stance, from which each argument is made. PAKT's graph construction is close in
+spirit to this thesis's own \textsc{contradicts}/\textsc{equivalent} edges, and its explicit
+handling of perspective anticipates a challenge this thesis meets independently on the Grand
+D\'ebat National corpus, where stance and topic are shown to be entangled in embedding space
+(Section~\ref{sec:gdn-stance}). The divergence is again one of downstream purpose: PAKT is
+positioned as an analysis and visualization tool for researchers studying deliberation, not as
+the retrieval backend for a conflict-mapping or summarization system, and its evaluation is
+correspondingly framed around graph quality and analytical utility rather than retrieval metrics
+such as nDCG or diversity.
+
+\textcite{vagnoni2025delibkg} introduce the Deliberation Knowledge Graph, integrating deliberation
+data from European Parliament proceedings, civic participation platforms, and public forums under
+a shared ontology, and demonstrate its use for examining argument quality and tracing the
+evolution of policy positions across institutional and civic spheres. This work shares this
+thesis's premise that an explicit graph over argumentative data supports analysis that flat text
+cannot, but it is oriented toward \emph{integration} across heterogeneous, multi-source
+institutional data under a common ontology, whereas this thesis constructs a single-source,
+within-corpus graph and asks a comparative retrieval question (graph-aware versus
+embedding-only retrieval) that the Deliberation Knowledge Graph's descriptive, ontology-integration
+framing does not address.
+
+\textcite{debatekg2023} build argumentative semantic knowledge graphs over a large policy-debate
+corpus and construct debate cases via constrained shortest-path traversal over the resulting
+graph, evaluated on an extension of the DebateSum dataset, a close relative of the IBM Project
+Debater corpus used in this thesis. DebateKG is the closest existing work to this thesis in terms
+of \emph{data domain}: both operate on competitive or crowd-authored policy-debate text at
+comparable scale. The divergence is in task and evaluation. DebateKG's shortest-path traversal
+is optimized to construct a single coherent debate case (a chain of connected arguments serving
+one side), not to retrieve a balanced, graded-relevant, non-redundant set spanning both PRO and
+CON stances for a conflict map, and DebateKG reports no comparison against an embedding-only
+baseline, leaving open exactly the empirical question, whether graph traversal outperforms dense
+retrieval on this class of corpus, that this thesis investigates directly (RQ1,
+Section~\ref{sec:rq}).
+
+\section{RAG and Graph-RAG in Civic and Governmental Applications}
+\label{sec:rw-graphrag-civic}
+
+\textcite{papageorgiou2025egovgraphrag} propose a multi-agent GraphRAG framework for e-government,
+motivated explicitly by the observation that flat, unstructured RAG retrieval limits multi-hop
+reasoning and interpretability on structured government data, and demonstrate the framework on a
+policy-focused question-answering case study. This is the closest existing work to this thesis's
+core empirical question, a direct application of the RAG-versus-Graph-RAG comparison to policy
+text. It differs from this thesis in three respects that matter for what can be concluded from
+it. First, its graph is built over policy \emph{documents} (structured e-government datasets,
+press releases), not over individual \emph{citizen arguments}, so its edges represent document or
+entity relations rather than the contradiction and equivalence relations between argumentative
+claims that this thesis's retrieval systems exploit. Second, its evaluation is a single case
+study demonstrating the framework's operation, not a controlled comparison against a matched
+embedding-only baseline under a shared evaluation protocol, so no quantitative claim is made
+about whether the graph-aware component actually outperforms flat retrieval on this data, the
+precise gap this thesis's UC1 evaluation is designed to close. Third, it does not evaluate a
+diversity or redundancy criterion, whereas avoiding redundant retrieval is central to this
+thesis's conflict-map task (UC1). Taken together, this thesis can be read as supplying the
+controlled, quantitative retrieval evaluation that this line of applied GraphRAG work motivates
+but does not itself provide.
+
+\textcite{tessler2024science} present the Habermas Machine, an LLM-based system that generates
+group statements intended to represent common ground across a set of citizen opinions, evaluated
+in large-scale deliberation experiments. While not a retrieval system and not graph-based, this
+work establishes that LLM-mediated systems can measurably improve deliberative outcomes at scale,
+which motivates this thesis's underlying premise that the retrieval stage feeding such a
+generation system is worth optimizing carefully; a summarization or common-ground system is only
+as good as the arguments it is given to work with, a claim this thesis tests directly in UC2,
+where retrieval-quality differences are evaluated for whether they survive the summarization
+bottleneck (Section~\ref{sec:uc2-methodology}).

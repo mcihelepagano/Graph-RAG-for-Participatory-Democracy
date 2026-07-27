@@ -1,0 +1,2443 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.27)  27 JUL 2026 17:48
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/miche/Desktop/tesi/Polito_Thesis_Template_2024/thesis.tex
+(c:/Users/miche/Desktop/tesi/Polito_Thesis_Template_2024/thesis.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Program Files\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (common/packages.tex (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count284
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2101.
+\U@D=\dimen149
+\l@unhyphenated=\language79
+ (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count285
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex)
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 4320.
+ (C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+)) (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Program Files\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+ (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count286
+) (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count287
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count290
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count291
+ (C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen151
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count292
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip51
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count298
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count299
+\c@listtotal=\count300
+\c@listcount=\count301
+\c@liststart=\count302
+\c@liststop=\count303
+\c@citecount=\count304
+\c@citetotal=\count305
+\c@multicitecount=\count306
+\c@multicitetotal=\count307
+\c@instcount=\count308
+\c@maxnames=\count309
+\c@minnames=\count310
+\c@maxitems=\count311
+\c@minitems=\count312
+\c@citecounter=\count313
+\c@maxcitecounter=\count314
+\c@savedcitecounter=\count315
+\c@uniquelist=\count316
+\c@uniquename=\count317
+\c@refsection=\count318
+\c@refsegment=\count319
+\c@maxextratitle=\count320
+\c@maxextratitleyear=\count321
+\c@maxextraname=\count322
+\c@maxextradate=\count323
+\c@maxextraalpha=\count324
+\c@abbrvpenalty=\count325
+\c@highnamepenalty=\count326
+\c@lownamepenalty=\count327
+\c@maxparens=\count328
+\c@parenlevel=\count329
+\blx@tempcnta=\count330
+\blx@tempcntb=\count331
+\blx@tempcntc=\count332
+\c@blx@maxsection=\count333
+\blx@maxsegment@0=\count334
+\blx@notetype=\count335
+\blx@parenlevel@text=\count336
+\blx@parenlevel@foot=\count337
+\blx@sectionciteorder@0=\count338
+\blx@sectionciteorderinternal@0=\count339
+\blx@entrysetcounter=\count340
+\blx@biblioinstance=\count341
+\labelnumberwidth=\skip52
+\labelalphawidth=\skip53
+\biblabelsep=\skip54
+\bibitemsep=\skip55
+\bibnamesep=\skip56
+\bibinitsep=\skip57
+\bibparsep=\skip58
+\bibhang=\skip59
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language80
+\c@mincomprange=\count342
+\c@maxcomprange=\count343
+\c@mincompwidth=\count344
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count345
+\c@savedafterword=\count346
+\c@annotator=\count347
+\c@savedannotator=\count348
+\c@author=\count349
+\c@savedauthor=\count350
+\c@bookauthor=\count351
+\c@savedbookauthor=\count352
+\c@commentator=\count353
+\c@savedcommentator=\count354
+\c@editor=\count355
+\c@savededitor=\count356
+\c@editora=\count357
+\c@savededitora=\count358
+\c@editorb=\count359
+\c@savededitorb=\count360
+\c@editorc=\count361
+\c@savededitorc=\count362
+\c@foreword=\count363
+\c@savedforeword=\count364
+\c@holder=\count365
+\c@savedholder=\count366
+\c@introduction=\count367
+\c@savedintroduction=\count368
+\c@namea=\count369
+\c@savednamea=\count370
+\c@nameb=\count371
+\c@savednameb=\count372
+\c@namec=\count373
+\c@savednamec=\count374
+\c@translator=\count375
+\c@savedtranslator=\count376
+\c@shortauthor=\count377
+\c@savedshortauthor=\count378
+\c@shorteditor=\count379
+\c@savedshorteditor=\count380
+\c@labelname=\count381
+\c@savedlabelname=\count382
+\c@institution=\count383
+\c@savedinstitution=\count384
+\c@lista=\count385
+\c@savedlista=\count386
+\c@listb=\count387
+\c@savedlistb=\count388
+\c@listc=\count389
+\c@savedlistc=\count390
+\c@listd=\count391
+\c@savedlistd=\count392
+\c@liste=\count393
+\c@savedliste=\count394
+\c@listf=\count395
+\c@savedlistf=\count396
+\c@location=\count397
+\c@savedlocation=\count398
+\c@organization=\count399
+\c@savedorganization=\count400
+\c@origlocation=\count401
+\c@savedoriglocation=\count402
+\c@origpublisher=\count403
+\c@savedorigpublisher=\count404
+\c@publisher=\count405
+\c@savedpublisher=\count406
+\c@language=\count407
+\c@savedlanguage=\count408
+\c@origlanguage=\count409
+\c@savedoriglanguage=\count410
+\c@pageref=\count411
+\c@savedpageref=\count412
+\shorthandwidth=\skip60
+\shortjournalwidth=\skip61
+\shortserieswidth=\skip62
+\shorttitlewidth=\skip63
+\shortauthorwidth=\skip64
+\shorteditorwidth=\skip65
+\locallabelnumberwidth=\skip66
+\locallabelalphawidth=\skip67
+\localshorthandwidth=\skip68
+\localshortjournalwidth=\skip69
+\localshortserieswidth=\skip70
+\localshorttitlewidth=\skip71
+\localshortauthorwidth=\skip72
+\localshorteditorwidth=\skip73
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count413
+\c@textcitetotal=\count414
+\c@textcitemaxnames=\count415
+\c@biburlbigbreakpenalty=\count416
+\c@biburlbreakpenalty=\count417
+\c@biburlnumpenalty=\count418
+\c@biburlucpenalty=\count419
+\c@biburllcpenalty=\count420
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count421
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count422
+\c@bbx:relatedtotal=\count423
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+ (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count424
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-12-24 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+ (C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+)
+\XKV@depth=\count425
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+ (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box53
+)
+\tc@llx=\dimen156
+\tc@lly=\dimen157
+\tc@urx=\dimen158
+\tc@ury=\dimen159
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen160
+\adjbox@Height=\dimen161
+\adjbox@Depth=\dimen162
+\adjbox@Totalheight=\dimen163
+\adjbox@pwidth=\dimen164
+\adjbox@pheight=\dimen165
+\adjbox@pdepth=\dimen166
+\adjbox@ptotalheight=\dimen167
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count426
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box54
+\sift@deathcycles=\count427
+\@vwid@loff=\dimen168
+\@vwid@roff=\dimen169
+)
+==> First Aid for varwidth.sty applied!
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count428
+\float@exts=\toks22
+\float@box=\box55
+\@float@everytoks=\toks23
+\@floatcapt=\box56
+)
+\@float@every@algorithm=\toks24
+\c@algorithm=\count429
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count430
+\c@ALG@rem=\count431
+\c@ALG@nested=\count432
+\ALG@tlm=\skip74
+\ALG@thistlm=\skip75
+\c@ALG@Lnr=\count433
+\c@ALG@blocknr=\count434
+\c@ALG@storecount=\count435
+\c@ALG@tmpcounter=\count436
+\ALG@tmplength=\skip76
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks25
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip77
+
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks26
+\ex@=\dimen170
+)) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen171
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count437
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count438
+\leftroot@=\count439
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count440
+\DOTSCASE@=\count441
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box57
+\strutbox@=\box58
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen172
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count442
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count443
+\dotsspace@=\muskip22
+\c@parentequation=\count444
+\dspbrk@lvl=\count445
+\tag@help=\toks27
+\row@=\count446
+\column@=\count447
+\maxfields@=\count448
+\andhelp@=\toks28
+\eqnshift@=\dimen173
+\alignsep@=\dimen174
+\tagshift@=\dimen175
+\tagwidth@=\dimen176
+\totwidth@=\dimen177
+\lineht@=\dimen178
+\@envbody=\toks29
+\multlinegap=\skip78
+\multlinetaggap=\skip79
+\mathdisplay@stack=\toks30
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (C:\Program Files\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen179
+\lightrulewidth=\dimen180
+\cmidrulewidth=\dimen181
+\belowrulesep=\dimen182
+\belowbottomsep=\dimen183
+\aboverulesep=\dimen184
+\abovetopsep=\dimen185
+\cmidrulesep=\dimen186
+\cmidrulekern=\dimen187
+\defaultaddspace=\dimen188
+\@cmidla=\count449
+\@cmidlb=\count450
+\@aboverulesep=\dimen189
+\@belowrulesep=\dimen190
+\@thisruleclass=\count451
+\@lastruleclass=\count452
+\@thisrulewidth=\dimen191
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen192
+\captionmargin=\dimen193
+\caption@leftmargin=\dimen194
+\caption@rightmargin=\dimen195
+\caption@width=\dimen196
+\caption@indent=\dimen197
+\caption@parindent=\dimen198
+\caption@hangindent=\dimen199
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count453
+\c@continuedfloat=\count454
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
+\csq@reset=\count455
+\csq@gtype=\count456
+\csq@glevel=\count457
+\csq@qlevel=\count458
+\csq@maxlvl=\count459
+\csq@tshold=\count460
+\csq@ltx@everypar=\toks31
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip80
+\enit@outerparindent=\dimen256
+\enit@toks=\toks32
+\enit@inbox=\box59
+\enit@count@id=\count461
+\enitdp@description=\count462
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip81
+\f@nch@offset@elh=\skip82
+\f@nch@offset@erh=\skip83
+\f@nch@offset@olh=\skip84
+\f@nch@offset@orh=\skip85
+\f@nch@offset@elf=\skip86
+\f@nch@offset@erf=\skip87
+\f@nch@offset@olf=\skip88
+\f@nch@offset@orf=\skip89
+\f@nch@height=\skip90
+\f@nch@footalignment=\skip91
+\f@nch@widthL=\skip92
+\f@nch@widthC=\skip93
+\f@nch@widthR=\skip94
+\@temptokenb=\toks33
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count463
+\Gm@cntv=\count464
+\c@Gm@tempcnt=\count465
+\Gm@bindingoffset=\dimen257
+\Gm@wd@mp=\dimen258
+\Gm@odd@mp=\dimen259
+\Gm@even@mp=\dimen260
+\Gm@layoutwidth=\dimen261
+\Gm@layoutheight=\dimen262
+\Gm@layouthoffset=\dimen263
+\Gm@layoutvoffset=\dimen264
+\Gm@dimlist=\toks34
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries/base\glossaries.sty
+Package: glossaries 2026/04/21 v5.1 (NLCT)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
+Package: mfirstuc 2025/04/03 v2.09 (NLCT)
+\@glsmfirst=\toks35
+\@glsmrest=\toks36
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/xfor\xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/tracklang\tracklang.sty
+Package: tracklang 2026/05/18 v1.6.7 (NLCT) Track Languages
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/generic/tracklang\tracklang.tex)
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/translator\translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries-english\glossaries-english.ldf
+File: glossaries-english.ldf 2014/11/23 v1.0
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/datatool\datatool-base.sty
+Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
+\l__datatool_tmpa_int=\count466
+\l__datatool_tmpb_int=\count467
+\l__datatool_tmpc_int=\count468
+\l__datatool_tmpd_int=\count469
+\l__datatool_count_int=\count470
+\l__datatool_tmp_datatype_int=\count471
+\l__datatool_tmpa_dim=\dimen265
+\l__datatool_tmpb_dim=\dimen266
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/datatool\datatool-l3fp.def
+File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
+)
+\@dtl@toks=\toks37
+\@dtl@tmpcount=\count472
+\dtl@tmplength=\skip95
+\l__datatool_measure_box=\box60
+\dtl@sortresult=\count473
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/datatool\datatool-utf8.ldf
+File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
+)
+\@dtl@datatype=\count474
+\c_datatool_unknown_int=\count475
+\l__datatool_year_int=\count476
+\l__datatool_month_int=\count477
+\l__datatool_day_int=\count478
+\l__datatool_hour_int=\count479
+\l__datatool_minute_int=\count480
+\l__datatool_second_int=\count481
+\l__datatool_tzhour_int=\count482
+\l__datatool_tzminute_int=\count483
+\l__datatool_julian_int=\count484
+\l__datatool_local_julian_int=\count485
+\l__datatool_prefix_int=\count486
+\l__datatool_suffix_int=\count487
+\@dtl@foreach@level=\count488
+
+
+Package tracklang Warning: No `datatool' support for dialect `english'  on input line 9924.
+
+\dtl@codeA=\count489
+\dtl@codeB=\count490
+)
+\gls@level=\count491
+\@gls@tmpb=\toks38
+\gls@tmplen=\skip96
+\l__glossaries_tmpa_dim=\dimen267
+\l__glossaries_tmpb_dim=\dimen268
+\glskeylisttok=\toks39
+\glslabeltok=\toks40
+\glsshorttok=\toks41
+\glslongtok=\toks42
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries/styles\glossary-hypernav.sty
+Package: glossary-hypernav 2026/04/21 v5.1 (NLCT)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty
+Package: glossary-list 2026/04/21 v5.1 (NLCT)
+\glslistdottedwidth=\skip97
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty
+Package: glossary-long 2026/04/21 v5.1 (NLCT)
+ (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip98
+\LTright=\skip99
+\LTpre=\skip100
+\LTpost=\skip101
+\LTchunksize=\count492
+\LTcapwidth=\dimen269
+\LT@head=\box61
+\LT@firsthead=\box62
+\LT@foot=\box63
+\LT@lastfoot=\box64
+\LT@gbox=\box65
+\LT@cols=\count493
+\LT@rows=\count494
+\c@LT@tables=\count495
+\c@LT@chunks=\count496
+\LT@p@ftn=\toks43
+)
+\glsdescwidth=\skip102
+\glspagelistwidth=\skip103
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty
+Package: glossary-super 2026/04/21 v5.1 (NLCT)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/supertabular\supertabular.sty
+Package: supertabular 2025/06/26 v4.2d the supertabular environment
+\c@tracingst=\count497
+\ST@wd=\dimen270
+\ST@rightskip=\skip104
+\ST@leftskip=\skip105
+\ST@parfillskip=\skip106
+\ST@pageleft=\dimen271
+\ST@headht=\dimen272
+\ST@tailht=\dimen273
+\ST@pagesofar=\dimen274
+\ST@pboxht=\dimen275
+\ST@rowht=\dimen276
+\ST@prevht=\dimen277
+\ST@toadd=\dimen278
+\ST@dimen=\dimen279
+\ST@pbox=\box66
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
+Package: glossary-tree 2026/04/21 v5.1 (NLCT)
+\l__glossaries_tree_max_known_level_int=\count498
+\l__glossaries_tree_offset_dim=\dimen280
+\l__glossaries_tree_namewidth_dim=\dimen281
+\l__glossaries_tree_symbolwidth_dim=\dimen282
+\l__glossaries_tree_prenamesym_width_dim=\dimen283
+\l__glossaries_tree_presubnamesym_width_dim=\dimen284
+\l__glossaries_tree_namewidth_padding_dim=\dimen285
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen286
+\l__glossaries_tree_namesymbolwidth_dim=\dimen287
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen288
+\l__glossaries_tree_level_int=\count499
+\glstreeindent=\skip107
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries-extra\glossaries-extra.sty
+Package: glossaries-extra 2026/04/21 v2.1 (NLCT)
+\@glsxtr@leveloffset=\count500
+\glsxtrresourcecount=\count501
+\@glsxtrnewgls@inner=\count502
+\glsshortpltok=\toks44
+\glslongpltok=\toks45
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/glossaries-extra\glossaries-extra-abbrstyles.def
+File: glossaries-extra-abbrstyles.def 2026/04/21 v2.1 (NLCT)
+)
+\mglselementindex=\count503
+) (C:\Program Files\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count504
+\lst@gtempboxa=\box67
+\lst@token=\toks46
+\lst@length=\count505
+\lst@currlwidth=\dimen289
+\lst@column=\count506
+\lst@pos=\count507
+\lst@lostspace=\dimen290
+\lst@width=\dimen291
+\lst@newlines=\count508
+\lst@lineno=\count509
+\lst@maxwidth=\dimen292
+ (C:\Program Files\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count510
+\lst@skipnumbers=\count511
+\lst@framebox=\box68
+) (C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Program Files\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count512
+\l__lipsum_a_int=\count513
+\l__lipsum_b_int=\count514
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+ (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen293
+\ar@mcellbox=\box69
+\extrarowheight=\dimen294
+\NC@list=\toks47
+\extratabsurround=\skip108
+\backup@length=\skip109
+\ar@cellbox=\box70
+)
+\rotheadsize=\dimen295
+\c@nlinenum=\count515
+\TeXr@lab=\toks48
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+ (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count516
+\calc@Bcount=\count517
+\calc@Adimen=\dimen296
+\calc@Bdimen=\dimen297
+\calc@Askip=\skip110
+\calc@Bskip=\skip111
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count518
+\calc@Cskip=\skip112
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count519
+\l_MT_multwidth_dim=\dimen298
+\origjot=\skip113
+\l_MT_shortvdotswithinadjustabove_dim=\dimen299
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen300
+\l_MT_above_intertext_sep=\dimen301
+\l_MT_below_intertext_sep=\dimen302
+\l_MT_above_shortintertext_sep=\dimen303
+\l_MT_below_shortintertext_sep=\dimen304
+\xmathstrut@box=\box71
+\xmathstrut@dim=\dimen305
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+\MT@toks=\toks49
+\MT@tempbox=\box72
+\MT@count=\count520
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks50
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen306
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count521
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-pdftex.def
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip114
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip115
+\multirow@cntb=\count522
+\multirow@dima=\skip116
+\bigstrutjot=\dimen307
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip117
+\L@UnitsRaiseTextstyle=\skip118
+\L@UnitsRaiseScriptstyle=\skip119
+) (C:\Program Files\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip120
+\RaggedLeftLeftskip=\skip121
+\RaggedRightLeftskip=\skip122
+\CenteringRightskip=\skip123
+\RaggedLeftRightskip=\skip124
+\RaggedRightRightskip=\skip125
+\CenteringParfillskip=\skip126
+\RaggedLeftParfillskip=\skip127
+\RaggedRightParfillskip=\skip128
+\JustifyingParfillskip=\skip129
+\CenteringParindent=\skip130
+\RaggedLeftParindent=\skip131
+\RaggedRightParindent=\skip132
+\JustifyingParindent=\skip133
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-05-15 v3.5.5 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count523
+\l__siunitx_number_exponent_fixed_int=\count524
+\l__siunitx_number_min_decimal_int=\count525
+\l__siunitx_number_min_integer_int=\count526
+\l__siunitx_number_round_precision_int=\count527
+\l__siunitx_number_lower_threshold_int=\count528
+\l__siunitx_number_upper_threshold_int=\count529
+\l__siunitx_number_group_first_int=\count530
+\l__siunitx_number_group_size_int=\count531
+\l__siunitx_number_group_min_int=\count532
+\l__siunitx_number_group_minimum_int=\count533
+\l__siunitx_compound_count_int=\count534
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/translations\translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box73
+\l__siunitx_table_tmp_dim=\dimen308
+\l__siunitx_table_column_width_dim=\dimen309
+\l__siunitx_table_integer_box=\box74
+\l__siunitx_table_decimal_box=\box75
+\l__siunitx_table_uncert_box=\box76
+\l__siunitx_table_before_box=\box77
+\l__siunitx_table_after_box=\box78
+\l__siunitx_table_before_dim=\dimen310
+\l__siunitx_table_carry_dim=\dimen311
+\l__siunitx_unit_tmp_int=\count535
+\l__siunitx_unit_position_int=\count536
+\l__siunitx_unit_total_int=\count537
+\l__siunitx_sexagesimal_tmp_dim=\dimen312
+\l__siunitx_sexagesimal_marker_box=\box79
+\l__siunitx_sexagesimal_unit_box=\box80
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count538
+\sf@farskip=\skip134
+\sf@captopadj=\dimen313
+\sf@capskip=\skip135
+\sf@nearskip=\skip136
+\c@subfigure=\count539
+\c@subfigure@save=\count540
+\c@lofdepth=\count541
+\c@subtable=\count542
+\c@subtable@save=\count543
+\c@lotdepth=\count544
+\sf@top=\skip137
+\sf@bottom=\skip138
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/svg\svg.sty
+Package: svg 2020/11/26 v2.02k (include SVG pictures)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlfile.sty
+Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlfile-hook.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hooks)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
+) (C:\Program Files\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+) (C:\Program Files\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\c@svg@param@lastpage=\count545
+\svg@box=\box81
+\c@svg@param@currpage=\count546
+) (C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/transparent\transparent.sty
+Package: transparent 2025-06-23 v1.6 Transparency with color stacks
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/transparent\transparent-nometadata.sty
+Package: transparent-nometadata 2025-06-23 v1.6 Transparency via pdfTeX's color stack (HO)
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+))) (C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks51
+\pgfutil@tempdima=\dimen314
+\pgfutil@tempdimb=\dimen315
+) (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box82
+) (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks52
+\pgfkeys@temptoks=\toks53
+ (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks54
+))
+\pgf@x=\dimen316
+\pgf@y=\dimen317
+\pgf@xa=\dimen318
+\pgf@ya=\dimen319
+\pgf@xb=\dimen320
+\pgf@yb=\dimen321
+\pgf@xc=\dimen322
+\pgf@yc=\dimen323
+\pgf@xd=\dimen324
+\pgf@yd=\dimen325
+\w@pgf@writea=\write4
+\r@pgf@reada=\read4
+\c@pgf@counta=\count547
+\c@pgf@countb=\count548
+\c@pgf@countc=\count549
+\c@pgf@countd=\count550
+\t@pgf@toka=\toks55
+\t@pgf@tokb=\toks56
+\t@pgf@tokc=\toks57
+\pgf@sys@id@count=\count551
+ (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count552
+\pgfsyssoftpath@bigbuffer@items=\count553
+) (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen326
+\TX@old@table=\dimen327
+\TX@old@col=\dimen328
+\TX@target=\dimen329
+\TX@delta=\dimen330
+\TX@cols=\count554
+\TX@ftn=\toks58
+) (C:\Program Files\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks59
+\verbatim@line=\toks60
+\verbatim@in@stream=\read5
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box83
+\beforetitleunit=\skip139
+\aftertitleunit=\skip140
+\ttl@plus=\dimen331
+\ttl@minus=\dimen332
+\ttl@toksa=\toks61
+\titlewidth=\dimen333
+\titlewidthlast=\dimen334
+\titlewidthfirst=\dimen335
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+LaTeX Info: Redefining \subref on input line 189.
+Package subcaption Info: The counter `subfigure' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input line 238.
+Package subcaption Info: The counter `subtable' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input line 238.
+)) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/threeparttable\threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box84
+) (common/package_config.tex
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 25.
+Package hyperref Info: Option `colorlinks' set `true' on input line 25.
+) (common/new_commands.tex) (common/thesis_info.tex) (common/font_config.tex) (glossaries.tex)
+\glswrite=\write5
+\glo@main@file=\write6
+\openout6 = `thesis.glo'.
+
+Package glossaries Info: Writing glossary file thesis.glo on input line 40.
+\glo@abbreviations@file=\write7
+\openout7 = `thesis.glo-abr'.
+
+Package glossaries Info: Writing glossary file thesis.glo-abr on input line 40.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 48.
+ (C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (thesis.aux)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+Package hyperref Info: Link coloring ON on input line 48.
+ (thesis.out) (thesis.out)
+\@outlinefile=\write8
+\openout8 = `thesis.out'.
+
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `thesis.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'thesis.bbl' found.
+ (thesis.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                cabrio2012
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                cocarascu2017
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 48.
+Package biblatex Info: Reference segment=0 on input line 48.
+ (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count555
+\scratchdimen=\dimen336
+\scratchbox=\box85
+\nofMPsegments=\count556
+\nofMParguments=\count557
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count558
+\MPscratchDim=\dimen337
+\MPnumerator=\count559
+\makeMPintoPDFobject=\count560
+\everyMPtoPDFconversion=\toks63
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 54.06006pt
+* modes: 
+* h-part:(L,W,R)=(72.2698pt, 398.9082pt, 72.2698pt)
+* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=398.9082pt
+* \textheight=700.50723pt
+* \oddsidemargin=54.05988pt
+* \evensidemargin=-0.00018pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count561
+Package microtype Info: Patching varwidth to enable character protrusion.
+\MT@vwid@leftmargin=\dimen338
+\MT@vwid@rightmargin=\dimen339
+LaTeX Info: Redefining \microtypecontext on input line 48.
+Package microtype Info: Applying patch `item' on input line 48.
+Package microtype Info: Applying patch `toc' on input line 48.
+Package microtype Info: Applying patch `eqnum' on input line 48.
+Package microtype Info: Applying patch `verbatim' on input line 48.
+LaTeX Info: Redefining \microtypesetup on input line 48.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 48.
+ (common/config.tex) (common/frontpage.tex
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: heightrounded 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(113.81102pt, 617.4248pt, 113.81102pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=614.83858pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=4.54103pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<images/polito_logo_2021_blu.jpg, id=222, 3522.15875pt x 2491.3075pt>
+File: images/polito_logo_2021_blu.jpg Graphic file (type jpg)
+<use images/polito_logo_2021_blu.jpg>
+Package pdftex.def Info: images/polito_logo_2021_blu.jpg  used on input line 14.
+(pdftex.def)             Requested size: 142.26378pt x 100.62369pt.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/15'.
+(microtype)             Ignoring protrusion settings for this character.
+
+
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 22.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 48.
+(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 48.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 48.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 48.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 48.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 48.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\miche\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+\openout5 = `thesis.ist'.
+
+
+{C:/Users/miche/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./images/polito_logo_2021_blu.jpg>]) (content/abstract.tex) [1
+
+] (content/acknowledgements.tex) [2
+
+] (thesis.toc
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [3
+
+])
+\tf@toc=\write9
+\openout9 = `thesis.toc'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4] (thesis.lof)
+\tf@lof=\write10
+\openout10 = `thesis.lof'.
+
+ [5
+
+] (thesis.lot)
+\tf@lot=\write11
+\openout11 = `thesis.lot'.
+
+ [6
+
+] (common/post_summary_config.tex) [7
+
+
+] (content/chapters.tex (content/chapters/introduction_01.tex
+Chapter 1.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 
+      [1
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2]
+
+LaTeX Warning: Reference `ch:results' on page 3 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'cocarascu2017' on page 3 undefined on input line 115.
+
+
+LaTeX Warning: Citation 'cabrio2012' on page 3 undefined on input line 118.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
+
+LaTeX Warning: Reference `ch:evaluation' on page 5 undefined on input line 216.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[5{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]|\T1/lmr/m/n/10.95 (+20) Each can-di-date scored
+ []
+
+
+Underfull \hbox (badness 5970) in paragraph at lines 279--279
+[]|\T1/lmr/m/n/10.95 (+20) Indirect, via embedding-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/lmr/m/n/10.95 (+20) distance heuris-tics (e.g.
+ []
+
+) (content/chapters/relatedWork_02.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+Chapter 2.
+
+LaTeX Warning: Reference `ch:evaluation' on page 8 undefined on input line 20.
+
+[8
+
+]
+
+LaTeX Warning: Reference `sec:gdn-stance' on page 9 undefined on input line 49.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
+Overfull \hbox (0.75632pt too wide) in paragraph at lines 82--100
+[][]\T1/lmr/m/n/10.95 (-20) Papageorgiou et al. [[][]16[][]] pro-pose a multi-agent GraphRAG frame-work for e-government,|
+ []
+
+
+LaTeX Warning: Reference `sec:uc2-methodology' on page 10 undefined on input line 109.
+
+) (content/chapters/corpus_03.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10]
+Chapter 3.
+
+LaTeX Warning: Citation 'gretz2020argq' on page 11 undefined on input line 8.
+
+
+LaTeX Warning: Citation 'hovy2013mace' on page 11 undefined on input line 28.
+
+[11
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]) (content/chapters/methodology_04.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13]
+Chapter 4.
+[14
+
+]
+
+LaTeX Warning: Citation 'reimers2019sbert' on page 15 undefined on input line 54.
+
+
+LaTeX Warning: Citation 'song2020mpnet' on page 15 undefined on input line 54.
+
+
+LaTeX Warning: Citation 'campello2013hdbscan' on page 15 undefined on input line 65.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 73.
+(C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[17]
+
+LaTeX Warning: Citation 'reimers2019sbert' on page 18 undefined on input line 231.
+
+
+LaTeX Warning: Citation 'song2020mpnet' on page 18 undefined on input line 231.
+
+
+Overfull \hbox (58.62273pt too wide) in paragraph at lines 230--238
+[]\T1/lmr/bx/sc/10.95 (-20) Blocking. \T1/lmr/m/n/10.95 (-20) A cheap embedding-cosine fil-ter, com-puted over \T1/lmr/m/sc/10.95 (-20) sentence-transformers/all-|
+ []
+
+
+LaTeX Warning: Citation 'he2023debertav3' on page 18 undefined on input line 240.
+
+
+LaTeX Warning: Citation 'bowman2015snli' on page 18 undefined on input line 241.
+
+
+LaTeX Warning: Citation 'williams2018mnli' on page 18 undefined on input line 241.
+
+
+Overfull \hbox (44.1438pt too wide) in paragraph at lines 239--245
+\T1/lmr/m/n/10.95 (-20) twice by the \T1/lmr/m/sc/10.95 (-20) cross-encoder/nli-deberta-v3-base \T1/lmr/m/n/10.95 (-20) cross-encoder [[]],|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+
+LaTeX Warning: Citation 'page1999pagerank' on page 19 undefined on input line 264.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19]
+
+LaTeX Warning: Citation 'reimers2019sbert' on page 20 undefined on input line 355.
+
+
+LaTeX Warning: Citation 'song2020mpnet' on page 20 undefined on input line 355.
+
+
+LaTeX Warning: Reference `ch:results' on page 20 undefined on input line 363.
+
+
+Overfull \hbox (17.90254pt too wide) in paragraph at lines 352--367
+\T1/lmr/m/n/10.95 (-20) same \T1/lmr/m/sc/10.95 (-20) sentence-transformers/all-mpnet-base-v2 \T1/lmr/m/n/10.95 (-20) em-bed-dings [[],|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
+
+LaTeX Warning: Citation 'reimers2019sbert' on page 22 undefined on input line 420.
+
+
+LaTeX Warning: Citation 'song2020mpnet' on page 22 undefined on input line 420.
+
+
+Overfull \hbox (13.60965pt too wide) in paragraph at lines 427--439
+[]\T1/lmr/m/n/10.95 (-20) Because Stan-dard-RAG's can-di-date pool is built di-rectly from the \T1/lmr/m/sc/10.95 (-20) sup-ports\T1/lmr/m/n/10.95 (-20) /\T1/lmr/m/sc/10.95 (-20) attacks|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22]
+
+LaTeX Warning: Reference `ch:results' on page 23 undefined on input line 498.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23]
+
+LaTeX Warning: Reference `ch:results' on page 24 undefined on input line 507.
+
+
+LaTeX Warning: Reference `ch:results' on page 24 undefined on input line 523.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 532.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 532.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 532.
+
+Overfull \hbox (1.4522pt too wide) in paragraph at lines 536--536
+[]|\T1/lmr/m/n/10 (-20) StandardRAG| |
+ []
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--536
+[]|\T1/lmr/m/n/10 (+20) Native pool
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--536
+\T1/lmr/m/n/10 (+20) (\T1/lmr/m/sc/10 (+20) supports\T1/lmr/m/n/10 (+20) /\T1/lmr/m/sc/10 (+20) attacks
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+[]|\T1/lmr/m/n/10 (+20) PR-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+[]|\T1/lmr/m/n/10 (+20) Personalized
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
+[]|\T1/lmr/m/n/10 (+20) RAG-no-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
+[]|\T1/lmr/m/n/10 (+20) Native pool
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
+\T1/lmr/m/n/10 (+20) (\T1/lmr/m/sc/10 (+20) supports\T1/lmr/m/n/10 (+20) /\T1/lmr/m/sc/10 (+20) attacks
+ []
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 538--539
+[]|\T1/lmr/m/n/10 (+20) No (plain
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--539
+[]|\T1/lmr/m/n/10 (+20) Native pool
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--539
+\T1/lmr/m/n/10 (+20) (\T1/lmr/m/sc/10 (+20) supports\T1/lmr/m/n/10 (+20) /\T1/lmr/m/sc/10 (+20) attacks
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+[]|\T1/lmr/m/n/10 (+20) No (ran-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+\T1/lmr/m/n/10 (+20) dom
+ []
+
+
+LaTeX Warning: Reference `ch:evaluation' on page 24 undefined on input line 553.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]
+
+LaTeX Warning: Reference `ch:results' on page 25 undefined on input line 566.
+
+
+LaTeX Warning: Reference `ch:evaluation' on page 25 undefined on input line 590.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25]
+
+LaTeX Warning: Reference `ch:discussion' on page 26 undefined on input line 637.
+
+
+Overfull \hbox (1.1337pt too wide) in paragraph at lines 645--660
+\T1/lmr/m/n/10.95 (-20) Every can-di-date pool dis-cussed so far, whether used by Stan-dard-RAG, PR-GraphRAG,|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 668.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 702.
+ (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+LaTeX Warning: Reference `ch:results' on page 28 undefined on input line 730.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28]
+
+LaTeX Warning: Reference `ch:results' on page 29 undefined on input line 752.
+
+
+Overfull \hbox (62.48824pt too wide) in paragraph at lines 784--794
+ [][] |
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29]
+
+LaTeX Warning: Reference `ch:results' on page 30 undefined on input line 831.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]
+
+LaTeX Warning: Reference `ch:evaluation' on page 31 undefined on input line 857.
+
+
+LaTeX Warning: Reference `ch:results' on page 31 undefined on input line 857.
+
+
+LaTeX Warning: Citation 'grattafiori2024llama3' on page 31 undefined on input line 867.
+
+
+LaTeX Warning: Citation 'gemma2026gemma4' on page 31 undefined on input line 868.
+
+
+LaTeX Warning: Citation 'thomas2024llmjudge' on page 31 undefined on input line 889.
+
+
+LaTeX Warning: Citation 'upadhyay2024umbrela' on page 31 undefined on input line 889.
+
+
+LaTeX Warning: Citation 'upadhyay2025largescale' on page 31 undefined on input line 889.
+
+
+LaTeX Warning: Citation 'panickssery2024selfpref' on page 31 undefined on input line 891.
+
+
+Overfull \hbox (5.86748pt too wide) in paragraph at lines 884--892
+[]\T1/lmr/m/n/10.95 (-20) , []], while a single-annotator|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[31]
+
+LaTeX Warning: Citation 'althammer2022tripjudge' on page 32 undefined on input line 900.
+
+
+LaTeX Warning: Citation 'hofstatter2020fira' on page 32 undefined on input line 912.
+
+
+LaTeX Warning: Citation 'althammer2022tripjudge' on page 32 undefined on input line 912.
+
+
+LaTeX Warning: Citation 'cohen1968kappa' on page 32 undefined on input line 918.
+
+
+LaTeX Warning: Citation 'landis1977kappa' on page 32 undefined on input line 923.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33] (content/chapters/evaluation_05.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+Chapter 5.
+
+LaTeX Warning: Reference `ch:results' on page 35 undefined on input line 9.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1' on page 35 undefined on input line 20.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2' on page 35 undefined on input line 21.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-diversity' on page 35 undefined on input line 27.
+
+
+LaTeX Warning: Reference `sec:evaluation-matching' on page 35 undefined on input line 33.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1' on page 35 undefined on input line 34.
+
+[35
+
+]
+
+LaTeX Warning: Citation 'reimers2019sbert' on page 36 undefined on input line 55.
+
+
+LaTeX Warning: Citation 'song2020mpnet' on page 36 undefined on input line 55.
+
+
+LaTeX Warning: Reference `ch:results' on page 36 undefined on input line 64.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36]
+
+LaTeX Warning: Reference `sec:evaluation-uc1' on page 37 undefined on input line 86.
+
+
+LaTeX Warning: Reference `tab:uc1-metrics' on page 37 undefined on input line 97.
+
+
+LaTeX Warning: Reference `ch:results' on page 37 undefined on input line 103.
+
+
+LaTeX Warning: Citation 'touche2022' on page 37 undefined on input line 106.
+
+
+LaTeX Warning: Citation 'perspectivearg2024' on page 37 undefined on input line 106.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 135.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+LaTeX Warning: Citation 'jarvelin2002ndcg' on page 37 undefined on input line 138.
+
+
+LaTeX Warning: Reference `sec:evaluation-matching' on page 37 undefined on input line 148.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37]
+
+LaTeX Warning: Reference `ch:results' on page 38 undefined on input line 160.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 188.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 188.
+
+
+LaTeX Warning: Reference `sec:evaluation-matching' on page 39 undefined on input line 204.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-distractorrate' on page 39 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'buckley2004bpref' on page 39 undefined on input line 223.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39]
+
+LaTeX Warning: Citation 'zhai2003srecall' on page 40 undefined on input line 239.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-relevance' on page 40 undefined on input line 272.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-diagnostics' on page 40 undefined on input line 272.
+
+
+LaTeX Warning: Citation 'ziegler2005diversification' on page 40 undefined on input line 274.
+
+
+LaTeX Warning: Citation 'clarke2008novelty' on page 40 undefined on input line 274.
+
+
+LaTeX Warning: Citation 'lu2026diversity' on page 40 undefined on input line 275.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[40]
+
+LaTeX Warning: Reference `eq:evaluation-ild' on page 41 undefined on input line 305.
+
+
+LaTeX Warning: Citation 'ziegler2005diversification' on page 41 undefined on input line 321.
+
+
+LaTeX Warning: Citation 'clarke2008novelty' on page 41 undefined on input line 321.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[41]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 337.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 337.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[42]
+
+LaTeX Warning: Citation 'he2023debertav3' on page 43 undefined on input line 380.
+
+
+Overfull \hbox (56.2145pt too wide) in paragraph at lines 379--393
+\T1/lmr/m/n/10.95 (-20) computed by the iden-ti-cal \T1/lmr/m/sc/10.95 (-20) cross-encoder/nli-deberta-v3-base \T1/lmr/m/n/10.95 (-20) clas-si-fier [[]]|
+ []
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-relevance' on page 43 undefined on input line 397.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-conflictdensity' on page 43 undefined on input line 397.
+
+
+LaTeX Warning: Citation 'zheng2023judging' on page 43 undefined on input line 401.
+
+
+LaTeX Warning: Citation 'liu2023geval' on page 43 undefined on input line 401.
+
+
+LaTeX Warning: Citation 'wang2024fair' on page 43 undefined on input line 410.
+
+
+LaTeX Warning: Citation 'panickssery2024selfpref' on page 43 undefined on input line 410.
+
+
+LaTeX Warning: Citation 'grattafiori2024llama3' on page 43 undefined on input line 417.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-conflictdensity' on page 43 undefined on input line 423.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43]
+
+LaTeX Warning: Reference `sec:evaluation-uc1-diversity' on page 44 undefined on input line 427.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2-rubric' on page 44 undefined on input line 440.
+
+
+LaTeX Warning: Citation 'samuel2026beyond' on page 44 undefined on input line 452.
+
+
+LaTeX Warning: Citation 'yang2025qwen3' on page 44 undefined on input line 454.
+
+
+LaTeX Warning: Citation 'laban2022summac' on page 44 undefined on input line 472.
+
+
+LaTeX Warning: Citation 'fabbri2021summeval' on page 44 undefined on input line 473.
+
+
+LaTeX Warning: Citation 'es2024ragas' on page 44 undefined on input line 474.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-conflictdensity' on page 44 undefined on input line 479.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2-balance' on page 44 undefined on input line 481.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[44]
+
+LaTeX Warning: Citation 'liu2023geval' on page 45 undefined on input line 489.
+
+
+LaTeX Warning: Citation 'es2024ragas' on page 45 undefined on input line 489.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-rubric' on page 45 undefined on input line 501.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2-rubric' on page 45 undefined on input line 505.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[45]
+
+LaTeX Warning: Citation 'zhang2020bertscore' on page 46 undefined on input line 538.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2-faithfulness' on page 46 undefined on input line 554.
+
+
+LaTeX Warning: Citation 'panickssery2024selfpref' on page 46 undefined on input line 557.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[46]
+
+LaTeX Warning: Reference `sec:evaluation-uc1-rubric' on page 47 undefined on input line 573.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-rubric' on page 47 undefined on input line 579.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2-coverage' on page 47 undefined on input line 589.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc2-bertscore' on page 47 undefined on input line 589.
+
+
+LaTeX Warning: Reference `ch:results' on page 47 undefined on input line 603.
+
+
+LaTeX Warning: Reference `ch:results' on page 47 undefined on input line 610.
+
+
+LaTeX Warning: Citation 'smucker2007significance' on page 47 undefined on input line 614.
+
+
+LaTeX Warning: Citation 'demsar2006statistical' on page 47 undefined on input line 614.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[47]
+
+LaTeX Warning: Reference `sec:evaluation-uc1-diversity' on page 48 undefined on input line 618.
+
+
+LaTeX Warning: Reference `sec:evaluation-uc1-distractorrate' on page 48 undefined on input line 619.
+
+
+LaTeX Warning: Reference `ch:results' on page 48 undefined on input line 622.
+
+
+LaTeX Warning: Citation 'efron1993bootstrap' on page 48 undefined on input line 632.
+
+
+LaTeX Warning: Reference `ch:results' on page 48 undefined on input line 634.
+
+
+LaTeX Warning: Reference `ch:results' on page 48 undefined on input line 637.
+
+
+LaTeX Warning: Citation 'thakur2025freshstack' on page 48 undefined on input line 644.
+
+)) (content/appendixA.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[48]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[49]
+Appendix A.
+) (content/appendixB.tex [50
+
+]
+Appendix B.
+) [51
+
+]
+Overfull \hbox (3.0725pt too wide) in paragraph at lines 136--136
+[]\T1/lmr/m/n/10.95 (-20) Miguel Arana-Catania, Felix-Anselm Van Lier, Rob Proc-ter, Na-taliya Tkachenko,|
+ []
+
+
+Overfull \hbox (36.15881pt too wide) in paragraph at lines 136--136
+\T1/lmr/m/n/10.95 (-20) RAG Ap-proach to Query-Focused Sum-ma-riza-tion^^Q. In: \T1/lmr/m/it/10.95 (-20) arXiv preprint arXiv:2404.16130|
+ []
+
+[52
+
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[53] (dedications.tex) [54
+
+] (thesis.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: C765AF7FC194D104E41BBA26AE8D82FD;10022
+(rerunfilecheck)             After:  D08C1793366D1604A680912289B1D1F2;13938.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'thesis.run.xml'.
+\openout1 = `thesis.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 46177 strings out of 467871
+ 930082 string characters out of 5428443
+ 1983212 words of memory out of 5000000
+ 73781 multiletter control sequences out of 15000+600000
+ 798482 words of font info for 339 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,12n,120p,2567b,2906s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{appendix*.13} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on thesis.pdf (62 pages, 2748056 bytes).
+PDF statistics:
+ 962 PDF objects out of 1000 (max. 8388607)
+ 196 named destinations out of 1000 (max. 500000)
+ 95170 words of extra memory for PDF output out of 106986 (max. 10000000)
+

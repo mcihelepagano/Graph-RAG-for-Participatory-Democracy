@@ -1,0 +1,20 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'thesis.blg'
+[168] biber-MSWIN64:342> INFO - === 
+[232] Biber.pm:421> INFO - Reading 'thesis.bcf'
+[392] Biber.pm:1002> INFO - Found 19 citekeys in bib section 0
+[411] Biber.pm:4487> INFO - Processing section 0
+[425] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[540] bibtex.pm:1713> INFO - LaTeX decoding ...
+[644] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[874] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[875] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[876] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[876] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[922] bbl.pm:676> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[941] bbl.pm:779> INFO - Output to thesis.bbl
+[942] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\miche\AppData\Local\Temp\biber_tmp_tWOU\f4d088b3f9f145b5c3058da33afd57d4_32352.utf8, line 12, warning: undefined macro "July"
+[942] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\miche\AppData\Local\Temp\biber_tmp_tWOU\f4d088b3f9f145b5c3058da33afd57d4_32352.utf8, line 79, warning: 26 characters of junk seen at toplevel
+[943] Biber.pm:132> WARN - I didn't find a database entry for 'cocarascu2017' (section 0)
+[943] Biber.pm:132> WARN - I didn't find a database entry for 'cabrio2012' (section 0)
+[943] Biber.pm:134> INFO - WARNINGS: 4

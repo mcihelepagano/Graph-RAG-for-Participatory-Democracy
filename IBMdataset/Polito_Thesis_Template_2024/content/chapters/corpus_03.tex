@@ -1,0 +1,112 @@
+\chapter{Corpus and Data}
+\label{ch:corpus}
+
+\section{IBM Project Debater Argument Quality Corpus}
+\label{sec:corpus-ibm}
+
+The primary corpus used in this thesis is the argument quality ranking dataset released as part
+of the IBM Project Debater initiative~\textcite{gretz2020argq}. The dataset consists of
+approximately 30{,}500 short arguments distributed across 71 controversial policy topics, each
+phrased as a debate motion such as ``We should ban homeschooling'' or ``We should subsidize
+Wikipedia.'' Arguments were collected through crowdsourcing: annotators were shown a topic and
+asked to contribute a short argument either supporting or opposing it, so every argument in the
+corpus is authored text rather than an excerpt extracted from a longer document. This authorship
+model gives the corpus a property that matters for the retrieval task studied later in this
+thesis: each argument is already a self-contained, single-claim unit of roughly sentence-to-short-
+paragraph length, which removes the need for a separate argument-segmentation step and lets the
+retrieval and graph-construction pipeline (Chapter~\ref{ch:methodology}) operate directly on the
+corpus's native units.
+
+Every argument carries two independent crowd-annotated labels, both of which this thesis relies
+on directly. The first is a \emph{stance} label, recording whether the argument supports or
+opposes its associated topic. Stance was collected from multiple annotators per argument and
+aggregated into a weighted-average score together with a confidence value, rather than taken as a
+single annotator's judgment; arguments where annotators disagreed enough to leave the aggregated
+stance close to the decision boundary are distinguishable from unambiguous cases through this
+confidence value. The second is a \emph{quality} label, produced through a large-scale pairwise
+and rating-based crowdsourcing protocol in which annotator reliability was estimated and
+low-reliability judgments down-weighted using MACE~\cite{hovy2013mace}, yielding a per-argument
+quality score together with an associated confidence estimate. Quality, in this annotation
+scheme, reflects how convincing or well-formed an argument is judged to be independent of which
+side it takes, and is separate from the stance label. This thesis makes direct use of the stance
+label to construct the graph's argument-to-policy edges: a PRO argument is linked to its policy
+through a \textsc{supports} edge and a CON argument through an \textsc{attacks} edge
+(Section~\ref{sec:methodology-graph}). The quality score is not used as a graph feature but is
+retained in the corpus and available as a covariate for later analysis.
+
+Topic coverage in the corpus is narrow rather than skewed in the way one might expect. The number
+of arguments per policy ranges from 331 to 554 (Table~\ref{tab:ibm-stats}), so no policy is
+underrepresented relative to the others by an order of magnitude; this still leaves a roughly
+1.7-fold difference between the sparsest and densest policy, which is the property that motivates
+the stratified policy-selection step described in Chapter~\ref{ch:methodology}. Stance balance,
+by contrast, is remarkably consistent across policies: as Section~\ref{sec:corpus-ibm-stats}
+shows, every one of the 71 policies has a PRO ratio between 47\% and 55\%, so unlike the
+argument-count range, stance imbalance is not a property this corpus exhibits and is not a
+consideration behind the policy-selection step.
+
+One property of the corpus places a boundary around what this thesis can claim. Arguments were
+elicited directly for the purpose of building this dataset rather than drawn from an existing
+deliberation platform, so their length, register, and single-claim structure are more uniform than
+what a real citizen-participation corpus produces, where contributions vary widely in length,
+coherence, and how directly they engage with the policy under discussion.
+
+\section{Descriptive Statistics}
+\label{sec:corpus-ibm-stats}
+
+Table~\ref{tab:ibm-stats} summarizes the corpus after the cleaning step described in
+Section~\ref{sec:corpus-ibm-cleaning}; in this case cleaning removed no rows, since no argument
+fell below the dataset's minimum length threshold and every argument received a non-neutral
+stance label.
+
+\begin{table}[htbp]
+\centering
+\caption{Descriptive statistics of the IBM Project Debater argument quality corpus.}
+\label{tab:ibm-stats}
+\begin{tabular}{ll}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+Total arguments & 30{,}497 \\
+Policies (topics) & 71 \\
+PRO arguments & 15{,}448 \\
+CON arguments & 15{,}049 \\
+Neutral-stance arguments & 0 \\
+Arguments per policy (min / median / max) & 331 / 421 / 554 \\
+Arguments per policy (mean, std) & 429.5, 45.9 \\
+Per-policy PRO ratio (min / median / max) & 0.475 / 0.505 / 0.542 \\
+Policies with PRO ratio outside {[}40\%, 60\%{]} & 0 / 71 \\
+Argument length in tokens (mean, std) & 18.2, 7.5 \\
+Argument length in tokens (median) & 17 \\
+Arguments with stance confidence below 0.7 & 1{,}135 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Overall the corpus is close to stance-balanced, with PRO arguments outnumbering CON arguments by
+only 399 out of 30{,}497, and this balance holds at the policy level as well: the per-policy PRO
+ratio ranges only from 0.475 to 0.542, and all 71 policies fall within a 40\%--60\% band. The
+policy with the strongest PRO skew, on the abolition of nuclear weapons, still has 254 CON
+arguments against 300 PRO; the policy with the strongest CON skew, on adopting atheism, has 199
+CON arguments against 180 PRO. Stance skew is therefore not a property this corpus exhibits at
+either the corpus-wide or the policy level, and is not a factor behind the policy-selection step
+in Chapter~\ref{ch:methodology}, which instead responds to the more modest variation in argument
+count per policy. Stance-confidence is high throughout, with only 1{,}135 arguments (3.7\% of the
+corpus) falling below a 0.7 confidence threshold, indicating that crowd annotators largely agreed
+on the stance of each argument. Argument length is also fairly uniform, averaging 18.2 tokens
+(whitespace-delimited) with a standard deviation of 7.5, consistent with the corpus's
+single-sentence, single-claim authorship model described in Section~\ref{sec:corpus-ibm}.
+
+\section{Data Cleaning}
+\label{sec:corpus-ibm-cleaning}
+
+Before use, the raw corpus underwent a light cleaning pass: fields were renamed for consistency
+with the rest of the pipeline (the topic field, in particular, is referred to as \emph{policy}
+throughout this thesis), and arguments were checked against the dataset's own minimum length
+threshold and for malformed or empty strings. On this corpus these checks removed nothing: as
+Table~\ref{tab:ibm-stats} shows, all 30{,}497 arguments passed cleaning intact, so the checks
+function as a safeguard against malformed input rather than as a meaningful filtering step. This
+step is deliberately minor and does not alter the crowd-assigned stance or quality labels; the
+substantive preprocessing this corpus undergoes, recovering the \textsc{contradicts} and
+\textsc{equivalent} relations between arguments through an NLI cross-encoder, is treated as a
+methodological contribution in its own right and is described in Chapter~\ref{ch:methodology}
+rather than here.

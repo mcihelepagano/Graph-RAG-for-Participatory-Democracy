@@ -1,0 +1,16 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces RAG versus Graph-RAG: general properties.}}{7}{table.caption.6}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Descriptive statistics of the IBM Project Debater argument quality corpus.}}{12}{table.caption.7}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces The 10 manually assigned MetaPolicy categories grouping the corpus's 71 policies.}}{16}{table.caption.8}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Effect of the bidirectional-minimum criterion on \textsc {contradicts} edge count, computed over the full 71-policy graph at a blocking floor of 0.70 and threshold of 0.90.}}{18}{table.caption.9}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces The four retrieval systems compared in this thesis, defined along the two axes MMR leaves open (candidate pool, relevance signal) plus whether diversification is applied.}}{24}{table.caption.10}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces The four pool-construction scenarios compared in this thesis, by whether injected distractor arguments participate in the \textsc {contradicts} graph.}}{30}{table.caption.11}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Decomposition of the 385,872 \textsc {contradicts} edges generated over the merged native-plus-distractor argument set at L100, by pair type.}}{30}{table.caption.12}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces UC1 metrics at a glance. Status marks whether a metric is part of this thesis's primary reported comparison or a supplementary diagnostic. Pool marks whether a metric is meaningful under the native pool, the hardened pool, or both.}}{38}{table.caption.13}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

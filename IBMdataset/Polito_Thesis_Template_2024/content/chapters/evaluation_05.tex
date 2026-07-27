@@ -1,0 +1,644 @@
+\chapter{Evaluation}
+\label{ch:evaluation}
+
+Chapter~\ref{ch:methodology} fixed everything that produces a retrieved list or a generated
+summary in this thesis: the four retrieval systems, the shared MMR mechanism they all select
+through, the two use cases and the operating points each is evaluated at, the hardened-pool
+construction that stresses retrieval under adversarial distractor pressure, and the dual-annotator
+protocol that turns every candidate argument into a graded relevance judgment. What remains is to
+turn a retrieved list, or a summary generated from one, into the numbers Chapter~\ref{ch:results}
+reports and compares across systems. That is the subject of this chapter.
+
+The two use cases give rise to two largely disjoint metric families, because they ask a retrieval
+system to produce two different kinds of output. UC1's retrieved lists are read directly, so its
+metrics ask the questions a moderator scanning the list would ask: are the most relevant arguments
+near the top, is the set free of near-duplicates, does it contain genuine pro/con tension rather
+than merely topic-adjacent material, and, once the pool is deliberately hardened, how much of what
+came back is contamination by design. UC2's output is a generated summary rather than a list, so
+its metrics ask a different family of questions: does the summary say what the retrieved arguments
+actually said, does it invent anything the retrieved arguments do not support, and does it
+represent both sides of the debate fairly. Section~\ref{sec:evaluation-uc1} defines the first
+family and Section~\ref{sec:evaluation-uc2} the second.
+
+Within each family, one subset of metrics forms the primary comparison this thesis reports across
+systems, matching the metric set reported in the conference paper this thesis expands on. A second
+subset is retained as supplementary diagnostics: metrics computed throughout evaluation-protocol
+development that surfaced a property of the metrics themselves worth documenting in its own right
+(most notably in Section~\ref{sec:evaluation-uc1-diversity}), or that this thesis develops in more
+depth than the original paper did. Both subsets are defined here in full, with the primary or
+supplementary status of each metric stated explicitly rather than left for the reader to infer from
+which table it eventually appears in.
+
+Before either family can be computed, every retrieved argument has to be resolved to a
+ground-truth grade. Section~\ref{sec:evaluation-matching} defines that resolution step first, since
+nearly every metric that follows in Section~\ref{sec:evaluation-uc1} depends on it.
+
+\section{Resolving Retrieved Arguments to Ground-Truth Grades}
+\label{sec:evaluation-matching}
+
+Every UC1 relevance metric, and UC2's Coverage metric, needs a way to look up a retrieved
+argument's grade in the dual-annotator ground truth of
+Section~\ref{sec:methodology-groundtruth}. For a system whose candidate pool is drawn directly
+from a policy's own graded arguments, this lookup is close to trivial: the retrieved text is one
+of the exact strings the annotators graded, so an exact, whitespace-stripped string match against
+the ground truth resolves the large majority of retrievals for StandardRAG, RAG-no-MMR, and
+Random. PR-GraphRAG is the case that requires more care. Its one-hop \textsc{contradicts}
+expansion (Section~\ref{sec:methodology-prgraphrag}) can, under the hardened pool, pull in a
+distractor argument that was graded as part of the distractor manifest rather than the target
+policy's own pool (Section~\ref{sec:methodology-groundtruth-distractors}), and, more rarely under
+the native pool, a genuine same-policy argument that the 200-item truncation happened to exclude
+from what was graded. An exact match against the target policy's own graded pool then fails, not
+because the argument is unjudged, but because it was judged under a different key.
+
+A retrieved argument that fails exact match is resolved by falling back to semantic matching: it
+is embedded with the same \textsc{sentence-transformers/all-mpnet-base-v2} model used throughout
+this thesis \cite{reimers2019sbert,song2020mpnet}, compared by cosine similarity against every
+argument the retrieving system had graded access to, and assigned the grade of its single closest
+match if that similarity clears $\tau_{\text{match}} = 0.75$, or treated as unmatched (grade 0, no
+credit) otherwise. An earlier version of this evaluation pipeline skipped the fallback entirely and
+resolved every retrieval by a plain substring lookup, so any retrieved argument phrased as even a
+close paraphrase of a graded one, of which the corpus has many, silently scored as a complete miss
+regardless of how relevant it actually was. This inflated the apparent gap between systems for
+reasons that had nothing to do with retrieval quality, since some systems happened to retrieve more
+verbatim pool members than others rather than because their retrieved arguments were less relevant,
+and it was diagnosed and corrected before any of the results in Chapter~\ref{ch:results} were
+produced. Two design choices in the resulting fallback matter for what the metrics defined later in
+this chapter actually measure.
+
+\begin{itemize}
+\item \textbf{Exact match is tried first, semantic match only as a fallback.} Every argument in the
+judged pool is looked up verbatim before any embedding is computed, so resolution for the three
+systems that never leave the judged pool is exact and introduces no matching noise at all. The
+embedding-based fallback exists specifically for the minority of retrievals that can fall outside
+the pool a policy's own arguments were graded from, and is applied only to those, rather than
+replacing exact lookup everywhere and paying its similarity-threshold uncertainty on every
+retrieval regardless of whether it is needed.
+
+\item \textbf{Resolution is single-best-match, not nearest-any-relevant-item.} A retrieved argument
+is credited with the grade of the one ground-truth argument it is closest to, not the highest grade
+found among any ground-truth argument within the similarity threshold. This closes what would
+otherwise be a saturation loophole on self-similar pools: without single-best-match resolution, a
+retrieved argument sitting near a cluster containing one highly-graded item could inherit that
+item's grade even if the retrieved argument itself is a weaker, less specific restatement of the
+same point, inflating every relevance metric that depends on the resolved grade.
+\end{itemize}
+
+Every relevance-dependent metric defined in Section~\ref{sec:evaluation-uc1} is written in terms of
+the grade this resolution step assigns, written $g(d)$ for a retrieved argument $d$, together with
+a match type, exact, semantic, or unmatched, that this thesis reports as a diagnostic alongside the
+relevance metrics themselves: a system whose top-$k$ list resolves mostly by exact match is
+retrieving verbatim pool members, while a rising semantic-match fraction signals that a growing
+share of its retrievals are reaching outside the graded pool, which is expected of PR-GraphRAG
+under the hardened pool and is otherwise a signal worth inspecting on its own.
+
+\section{UC1 Metrics: Conflict-Map Retrieval}
+\label{sec:evaluation-uc1}
+
+Table~\ref{tab:uc1-metrics} summarizes the eleven quantities computed over every UC1 retrieved
+list. Five of them, nDCG@$k$, MeanRel@$k$, Conflict density, EILD, and Distractor-rate@$k$, are
+the primary metrics this thesis reports as its headline UC1 comparison across systems, matching
+the metric set reported in the underlying conference paper. The remaining six, Precision@$k$,
+Recall@$k$, S-Recall@$k$, raw ILD, the LLM rubric judge, and the abandoned pairwise judge, are
+supplementary: computed throughout evaluation-protocol development, retained in the full evaluation
+report, and used in this chapter and in Chapter~\ref{ch:results} either as interpretive diagnostics
+or, in the case of raw ILD, specifically to expose a property of the primary metric it was replaced
+by. This design continues a tradition of graded, rank-aware relevance evaluation for argument
+retrieval established by shared evaluation tasks in the area \cite{touche2022,perspectivearg2024},
+adapted here to a setting where every candidate pool, not just a system's top-$k$ output, has been
+exhaustively graded (Section~\ref{sec:methodology-groundtruth-protocol}).
+
+\begin{table}[htbp]
+\centering
+\caption{UC1 metrics at a glance. Status marks whether a metric is part of this thesis's primary
+reported comparison or a supplementary diagnostic. Pool marks whether a metric is meaningful under
+the native pool, the hardened pool, or both.}
+\label{tab:uc1-metrics}
+\begin{tabular}{llll}
+\toprule
+\textbf{Metric} & \textbf{Status} & \textbf{Range} & \textbf{Pool} \\
+\midrule
+nDCG@$k$ & Primary & $[0,1]$ & Native \& hardened \\
+MeanRel@$k$ & Primary & $[0,3]$ & Native \& hardened \\
+Conflict density & Primary & $[0,1]$ & Native \& hardened \\
+EILD & Primary & $[0,1]$ & Native \& hardened \\
+Distractor-rate@$k$ & Primary & $[0,1]$ & Hardened only \\
+Precision@$k$ & Supplementary & $[0,1]$ & Native \& hardened \\
+Recall@$k$ & Supplementary & $[0,1]$ & Native \& hardened \\
+S-Recall@$k$ & Supplementary & $[0,1]$ & Native \& hardened \\
+ILD (raw) & Supplementary & $[0,1]$ & Native \& hardened \\
+LLM rubric judge (3 axes) & Supplementary & $[1,5]$ & Native \& hardened \\
+Pairwise judge & Abandoned & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Primary Relevance Metrics: nDCG@$k$ and MeanRel@$k$}
+\label{sec:evaluation-uc1-relevance}
+
+The primary relevance metric is graded nDCG@$k$ \cite{jarvelin2002ndcg}, computed with exponential
+rather than linear gain,
+
+\begin{equation}
+\mathrm{DCG}@k = \sum_{i=1}^{k} \frac{2^{g(d_i)} - 1}{\log_2(i+1)}, \qquad
+\mathrm{nDCG}@k = \frac{\mathrm{DCG}@k}{\mathrm{IDCG}@k},
+\label{eq:evaluation-ndcg}
+\end{equation}
+
+\noindent where $g(d_i) \in \{0,1,2,3\}$ is the resolved grade of the argument at rank $i$
+(Section~\ref{sec:evaluation-matching}) and $\mathrm{IDCG}@k$ is the DCG of the ideal ranking, the
+$k$ highest consensus grades available in the judged pool, sorted descending. Exponential gain
+rewards placing a grade-3 argument above a grade-2 one far more heavily than linear gain would,
+which matches how UC1 is actually read: a moderator scanning a five-item conflict map benefits far
+more from having the single most essential argument at the top than from a list that is merely,
+on average, somewhat more relevant. Because the native and hardened pools are both graded
+exhaustively rather than only over a positional shortlist
+(Section~\ref{sec:methodology-groundtruth-protocol}), $\mathrm{IDCG}@k$ is well defined for every
+policy and stance, an argument that would belong in the ideal top-$k$ can never be missing from the
+denominator simply because it fell past wherever a shortlist boundary happened to be drawn.
+
+nDCG@$k$ is reported at both operating points fixed in Chapter~\ref{ch:methodology}, $k=5$ under
+the native pool and $k=5$ under the hardened pool, and Chapter~\ref{ch:results} additionally
+reports it across the pool-size and $k$ sweep introduced there to check whether conclusions drawn
+at the single $k=5$ operating point generalize. A linear-gain variant, $\mathrm{DCG}@k = \sum_i
+g(d_i) / \log_2(i+1)$, is retained as a robustness check rather than reported as a second primary
+metric: it exists to confirm that any ordering observed under exponential gain is not an artifact
+of the specific gain function chosen, not because it measures something the exponential variant
+does not already capture.
+
+MeanRel@$k$ is nDCG@$k$'s rank-free companion,
+
+\begin{equation}
+\mathrm{MeanRel}@k = \frac{1}{k} \sum_{i=1}^{k} g(d_i),
+\label{eq:evaluation-meanrel}
+\end{equation}
+
+\noindent the mean resolved grade of the top-$k$ on the original 0--3 scale, dividing always by
+$k$ rather than by the number of items actually returned, so a system cannot raise its score simply
+by returning fewer arguments than requested. MeanRel@$k$ sits between a binary relevance metric,
+which collapses the full ordinal grade scale to a single relevant/non-relevant cut, and nDCG@$k$,
+which uses the full grade scale but folds it together with rank position. Reporting it alongside
+nDCG@$k$ answers a question nDCG@$k$ alone cannot: whether an observed difference between two
+systems reflects a genuine difference in the grades their retrieved arguments carry, or only a
+difference in how those grades happen to be ordered within the list. Two systems that retrieve the
+identical multiset of grades in different orders receive different nDCG@$k$ scores but the same
+MeanRel@$k$, so a gap that appears in nDCG@$k$ but closes in MeanRel@$k$ is a ranking difference,
+while a gap that survives in both is a difference in what was retrieved, not merely how it was
+arranged.
+
+\subsection{Rank-Free Diagnostics: Precision@$k$, Recall@$k$, and Subtopic Recall}
+\label{sec:evaluation-uc1-diagnostics}
+
+Three further relevance-based quantities are computed as supplementary diagnostics, each answering
+a narrower question than nDCG@$k$ or MeanRel@$k$ and each retained for a specific interpretive
+reason rather than as redundant coverage of the same construct.
+
+Precision@$k$ uses the binary relevant/non-relevant cut already fixed in
+Section~\ref{sec:methodology-groundtruth-consensus}, grade $\geq 2$,
+
+\begin{equation}
+\mathrm{Precision}@k = \frac{1}{k} \left| \{\, i \leq k : g(d_i) \geq 2 \,\} \right|,
+\label{eq:evaluation-precision}
+\end{equation}
+
+\noindent resolved, like every relevance metric in this chapter, by single-best-match
+(Section~\ref{sec:evaluation-matching}): a retrieved item counts as a hit only if its own resolved
+grade clears the threshold, not because it happens to sit near some other relevant item in
+embedding space. Precision@$k$ is easier to read at a glance than a graded metric, and, because it
+depends only on the binary cut rather than the full grade scale, it is the metric most directly
+comparable to the Distractor-rate@$k$ metric of Section~\ref{sec:evaluation-uc1-distractorrate},
+both being simple fractions of the top-$k$ that satisfy a yes/no condition.
+
+Recall@$k$ is the fraction of the judged pool's relevant arguments (grade $\geq 2$, deduplicated by
+ground-truth text) that appear anywhere in the top-$k$,
+
+\begin{equation}
+\mathrm{Recall}@k = \frac{\left| \{\, a \in \text{pool} : g(a) \geq 2 \,\} \cap \{d_1,\dots,d_k\} \right|}
+{\left| \{\, a \in \text{pool} : g(a) \geq 2 \,\} \right|}.
+\label{eq:evaluation-recall}
+\end{equation}
+
+\noindent Full-pool judging, rather than judging only a shortlist or only the union of what
+compared systems retrieve, is what makes this denominator well defined at all, following the same
+incomplete-judgment concern documented for pooled retrieval evaluation more generally
+\cite{buckley2004bpref}: a fixed, judged relevant set that every system is measured against, rather
+than one collected only from what was retrieved, avoids penalizing a system for surfacing a
+legitimate relevant argument that a narrower judging protocol never saw. Recall@$k$ is retained for
+continuity with earlier evaluation passes, but this thesis reports it as a demoted diagnostic
+rather than a primary metric, because its denominator is structurally uninformative at the
+operating points UC1 is actually reported at. The native pool's relevance base rate is 57.7\%
+(Section~\ref{sec:methodology-groundtruth-agreement}), so a typical 200-item pool contains on the
+order of 115 relevant arguments per stance, meaning even a perfect top-5 retrieval can never clear
+roughly $5/115 \approx 0.04$ Recall@5, and the hardened pool's lower 38.4\% base rate
+(Section~\ref{sec:methodology-groundtruth-distractors}) still leaves a denominator in the same
+range. Recall@$k$ at $k=5$ or $k=15$ is therefore compressed into a narrow band near zero for every
+system regardless of retrieval quality, and any small differences that do appear are dominated by
+noise in which few relevant items happen to fall in the top-$k$ rather than by a meaningful
+difference in coverage.
+
+S-Recall@$k$ is this thesis's response to that problem, following the subtopic-retrieval framing of
+\textcite{zhai2003srecall}: rather than asking what fraction of individually relevant arguments a
+system surfaces, it asks what fraction of the distinct \emph{points} present in the relevant set a
+system surfaces at least one instance of. The ground truth stores only a $(\text{text}, \text{grade})$
+pair per argument, with no subtopic label, so a notion of subtopic has to be operationalized before
+S-Recall@$k$ can be computed at all. This thesis operationalizes it by clustering the judged pool's
+relevant arguments, per policy and stance, with agglomerative average-linkage clustering over
+cosine distance between \textsc{sentence-transformers/all-mpnet-base-v2} embeddings, at a distance
+threshold of 0.15 (cosine similarity $\approx 0.85$) and no fixed number of clusters, since how many
+distinct argumentative points a given policy's relevant set actually contains is not known in
+advance and should vary from one policy to the next. S-Recall@$k$ is then the fraction of the
+resulting clusters represented at least once, by a relevant, resolved retrieval, in the top-$k$:
+
+\begin{equation}
+\mathrm{S\text{-}Recall}@k = \frac{\left|\, \{\, c(a) : a \in \{d_1,\dots,d_k\},\ g(a) \geq 2 \,\}\, \right|}
+{n_{\text{subtopics}}},
+\label{eq:evaluation-srecall}
+\end{equation}
+
+\noindent where $c(a)$ denotes the subtopic cluster a relevant retrieved argument $a$ resolves to
+and $n_{\text{subtopics}}$ is the total number of clusters found for that policy and stance.
+Clustering the relevant set into subtopics this way is a defensible operationalization rather than
+the only possible one, and the specific distance threshold is a genuine methodological choice
+rather than a value with an independent justification of its own. A sensitivity check across two or
+three neighboring thresholds would strengthen the claim that S-Recall@$k$'s conclusions are not an
+artifact of exactly where that threshold was set, and is noted here as a limitation of the current
+operationalization rather than carried out in this thesis.
+
+\subsection{Diversity: From Intra-List Distance to Relevance-Constrained Diversity}
+\label{sec:evaluation-uc1-diversity}
+
+Diversity is not an afterthought in UC1's evaluation design, it is the second half of exactly the
+tradeoff MMR is built to manage (Section~\ref{sec:methodology-mmr}), so a metric that measures it
+directly is needed alongside the relevance metrics of
+Sections~\ref{sec:evaluation-uc1-relevance}--\ref{sec:evaluation-uc1-diagnostics}. Diversity as a
+first-class retrieval objective has a long history in recommendation and IR evaluation
+\cite{ziegler2005diversification,clarke2008novelty} and continues to be treated as one in recent
+retrieval-augmented generation work \cite{lu2026diversity}. The most direct, reference-free way to
+measure it is intra-list distance,
+
+\begin{equation}
+\mathrm{ILD} = 1 - \operatorname*{mean}_{i<j} \mathrm{sim}(e_i, e_j),
+\label{eq:evaluation-ild}
+\end{equation}
+
+\noindent one minus the mean pairwise cosine similarity over every pair of items in the retrieved
+set, following \textcite{carbonell1998mmr}. ILD is exactly the quantity MMR's redundancy term
+(Equation~\ref{eq:mmr}) greedily works against at selection time, so it is the natural first choice
+for measuring what that term bought a system, and this thesis reports it as a supplementary
+diagnostic for that reason.
+
+Raw ILD, however, breaks in a specific and instructive way once the pool is hardened. Injected
+distractor arguments are drawn from topically adjacent sibling policies
+(Section~\ref{sec:methodology-hardened-pipeline}), close enough to the target policy to be
+plausible near-misses, but they are not close to the target policy's own genuine arguments in
+embedding space in the way two genuine arguments on the same specific point tend to be. A system
+that retrieves several such distractors alongside a few genuine arguments therefore scatters its
+retrieved set widely across embedding space almost by construction, since the distractors sit far
+from the genuine cluster and often far from each other as well, and raw ILD rewards exactly this
+scattering regardless of whether any of it is relevant. A retrieval system could, in principle,
+score near the top of the ILD distribution by retrieving five mutually unrelated, entirely
+irrelevant arguments, which is the opposite of what UC1's diversity criterion is meant to reward: a
+conflict map that spans several genuinely distinct points of contention, not one that merely spans
+several unrelated topics.
+
+EILD, an expected, relevance-constrained variant of intra-list distance, is the primary diversity
+metric this thesis reports for exactly this reason. It restricts the pairwise computation of
+Equation~\ref{eq:evaluation-ild} to the subset of the retrieved list that resolves to a relevant
+grade,
+
+\begin{equation}
+\mathrm{EILD} = 1 - \operatorname*{mean}_{\substack{i<j \\ g(d_i) \geq 2,\, g(d_j) \geq 2}}
+\mathrm{sim}(e_i, e_j),
+\label{eq:evaluation-eild}
+\end{equation}
+
+\noindent returning 0 when fewer than two relevant items are retrieved, which occurs occasionally
+at $k=5$ and becomes rare at the wider $k=15$ operating point UC2 draws from. A grade-0 distractor
+is excluded from every pair EILD sums over, so a retrieval set padded with irrelevant, embedding-
+distant filler can no longer inflate its diversity score the way it can inflate raw ILD. What EILD
+measures instead is genuinely the construct UC1 cares about: among the arguments a moderator would
+actually credit as relevant, how varied are the distinct points they make. This thresholded
+construction follows the broader relevance-aware turn in diversity and novelty evaluation
+\cite{ziegler2005diversification,clarke2008novelty}, restricting the diversity computation itself to
+a relevant subset rather than treating diversity and relevance as two independent criteria, though
+it stops short of a fully relevance-weighted formulation in which every pair's contribution would be
+scaled continuously by both items' grades rather than gated by a single threshold. This thesis
+reports raw ILD alongside EILD, labeled explicitly as a diagnostic, specifically so that the
+artifact just described remains visible in the full evaluation report rather than silently
+disappearing once EILD replaced it as the headline diversity number.
+
+Concretely, suppose a $k=5$ retrieved set resolves to grades $3, 2, 0, 2, 0$. Raw ILD averages over
+all $\binom{5}{2}=10$ pairs, including every pair that touches one of the two grade-0 items, so a
+system that happened to retrieve two embedding-distant distractors at ranks 3 and 5 sees its ILD
+pulled upward by six of those ten pairs regardless of how similar the three genuinely relevant items
+are to one another. EILD averages only over the $\binom{3}{2}=3$ pairs formed by the grade-3 and
+two grade-2 items, so if those three genuine arguments happen to restate a similar point, EILD
+reports that redundancy directly instead of letting the two irrelevant items mask it.
+
+\subsection{Distractor-Rate@$k$}
+\label{sec:evaluation-uc1-distractorrate}
+
+Distractor-rate@$k$ is a direct provenance metric, meaningful only under the hardened pool, that
+counts the fraction of the top-$k$ originating from the injected distractor manifest
+(Section~\ref{sec:methodology-hardened-pipeline}) rather than from the target policy's own native
+argument set,
+
+\begin{equation}
+\mathrm{DR}@k = \frac{\left| \{\,d_1,\dots,d_k\,\} \cap \text{distractor manifest} \right|}{k}.
+\label{eq:evaluation-distractorrate}
+\end{equation}
+
+\noindent Unlike every relevance metric in this chapter, Distractor-rate@$k$ needs no resolved
+grade at all: it asks a question about where a retrieved argument came from, not about how relevant
+it is, and the distractor manifest recorded at injection time (Section~\ref{sec:methodology-hardened-pipeline})
+answers that question directly. This makes Distractor-rate@$k$ an independent cross-check on the
+grade-based relevance metrics rather than a restatement of them in different units. A distractor is
+not, by construction, guaranteed to be irrelevant to the target policy, a sibling-policy argument
+drawn for topical closeness can occasionally be graded relevant on its own merits
+(Section~\ref{sec:methodology-groundtruth-distractors}), so a low Distractor-rate@$k$ and a high
+nDCG@$k$ are correlated but not identical claims: the first says a system's structural filtering
+kept contamination out of the retrieved list, the second says what it did retrieve was well graded,
+and a system could in principle score well on one without the other.
+
+\subsection{Conflict Density}
+\label{sec:evaluation-uc1-conflictdensity}
+
+Every metric defined so far asks whether a retrieved argument is relevant to its policy. Conflict
+density asks a different question entirely, one that goes directly to what UC1 is actually for: does
+the retrieved PRO set engage the retrieved CON set, or does it merely sit alongside it. A retrieved
+list can be highly relevant by every grade-based metric above while still failing UC1's purpose if
+its pro and con arguments talk past each other rather than contesting the same underlying claims,
+since a conflict map that does not show genuine conflict has not done its job regardless of how
+relevant each individual argument is. Conflict density is the mean natural-language-inference
+contradiction probability over every retrieved PRO$\times$CON pair,
+
+\begin{equation}
+\mathrm{ConfDensity} = \operatorname*{mean}_{p \in \text{PRO}, c \in \text{CON}} P(\text{contradict} \mid p, c),
+\label{eq:evaluation-confdensity}
+\end{equation}
+
+\noindent computed by the identical \textsc{cross-encoder/nli-deberta-v3-base} classifier
+\cite{he2023debertav3} introduced in Section~\ref{sec:methodology-edges} for \textsc{contradicts}
+edge recovery, applied here to retrieved argument pairs rather than to candidate corpus pairs. The
+two uses of this NLI classifier differ in what they do with its output. Edge recovery converts a
+contradiction probability into a binary accept/reject decision, requiring the bidirectional minimum
+of forward and backward scores to clear $\tau_{\text{contra}} = 0.90$
+(Section~\ref{sec:methodology-edges-calibration}), because a graph edge is either present or absent.
+Conflict density instead reports the continuous mean probability directly, with no threshold and no
+bidirectionality requirement, because it is a diagnostic score meant to be averaged and compared
+across systems rather than a structural decision that has to be made once and stored. A retrieved
+set can therefore register a moderate conflict density even where no individual pair would have
+cleared the edge-recovery threshold, which is expected: conflict density is measuring the degree of
+argumentative tension present in what was retrieved, not counting how many \textsc{contradicts}
+edges happen to already exist between those specific arguments in the graph.
+
+\subsection{LLM Rubric Judging and the Abandoned Pairwise Comparison}
+\label{sec:evaluation-uc1-rubric}
+
+The five metrics of Sections~\ref{sec:evaluation-uc1-relevance}--\ref{sec:evaluation-uc1-conflictdensity}
+are all decomposed, verifiable quantities: each one reduces to a well-defined computation over
+resolved grades, embeddings, or NLI scores, with a narrow and inspectable failure mode. This thesis
+also computes a holistic quality judgment as a supplementary cross-check, following the
+LLM-as-judge line of evaluation \cite{zheng2023judging,liu2023geval}, on the reasoning that a
+decomposed metric suite can miss a failure only a reader of the full retrieved set would notice, and
+that agreement between the holistic judgment and the decomposed metrics is itself evidence that the
+decomposed metrics are measuring what they claim to.
+
+The first design tried for this holistic judgment was a binary, double-sided pairwise comparison: an
+LLM judge shown two systems' retrieved sets for the same policy and asked which one it preferred,
+each pair judged in both presentation orders to cancel positional bias, a precaution motivated by
+documented evidence that LLM judges are not immune to such artifacts
+\cite{wang2024fair,panickssery2024selfpref}. This design was tried and abandoned. Because the
+systems compared in this thesis retrieve from overlapping, often near-identical candidate pools
+under the native condition, a forced binary choice produced tie rates in the 73--97\% range across
+policies, leaving too little discriminative signal to be useful for anything beyond confirming that
+the judge could not reliably tell two similar retrieved sets apart.
+
+The rubric judge that replaced it scores each system's retrieved set independently rather than
+comparatively, on a 1--5 scale across three named axes, using Llama 3.3 70B \cite{grattafiori2024llama3}
+at temperature 0 for reproducibility:
+
+\begin{itemize}
+\item \textbf{Conflict engagement.} Do the PRO and CON arguments directly engage each other,
+attacking the same premises and dimensions, rather than talking past each other, the same construct
+Conflict density (Section~\ref{sec:evaluation-uc1-conflictdensity}) targets through NLI rather than
+holistic judgment.
+
+\item \textbf{Redundancy avoidance.} Does each argument in the set add a distinct point, with
+little repetition within it, the same construct EILD (Section~\ref{sec:evaluation-uc1-diversity})
+targets through embedding distance rather than holistic judgment.
+
+\item \textbf{Balanced writing aid.} Would this retrieved set equip a citizen to write a balanced,
+well-informed position paper covering the strongest pros, the strongest cons, and the underlying
+value tensions between them, a construct none of the decomposed metrics above measures directly.
+\end{itemize}
+
+Scoring each set independently rather than pairwise restores meaningful spread, since ties then
+occur only where two sets are judged genuinely equal on an axis rather than being forced whenever a
+comparative judgment is too close to call. The rubric judge is reported as a supplementary
+cross-check rather than promoted into the primary metric set, both because it lacks the narrow,
+verifiable failure mode of the decomposed metrics above and because its usefulness depends on
+whether it actually separates systems, a question Section~\ref{sec:evaluation-uc2-rubric} returns
+to directly for UC2's version of the same judge, where the answer turns out to be less favorable
+than it is here.
+
+\section{UC2 Metrics: Debate Summarization}
+\label{sec:evaluation-uc2}
+
+UC1's metrics all operate on a retrieved list. UC2 asks a different question of the same
+underlying retrieval: once a system's top-$k$ arguments are handed to a summarizer, does the
+resulting summary preserve what made that retrieval good or bad, or does the generation step wash
+those differences out. This question is not answerable from UC1's metrics alone, since retrieval
+quality and downstream generation quality are related but distinct constructs that need not move
+together \cite{samuel2026beyond}, which is exactly why this thesis evaluates both use cases rather
+than treating UC1 as a sufficient proxy for UC2. Summaries are generated with Qwen3:8b
+\cite{yang2025qwen3} at temperature 0, from the structured five-field prompt fixed in
+Section~\ref{sec:methodology-uc2}, and this section defines the four automatic metrics computed
+over the resulting summary text.
+
+\subsection{Coverage}
+\label{sec:evaluation-uc2-coverage}
+
+Coverage measures whether the summary omits genuine debate content that was available to it,
+operationalized as NLI-entailment-based recall of the retrieved argument set,
+
+\begin{equation}
+\mathrm{Coverage} = \frac{\left| \{\, a \in \text{retrieved} : \max_{s \in \text{summary}}
+P(\text{entail} \mid s, a) > 0.5 \,\} \right|}{|\text{retrieved}|},
+\label{eq:evaluation-coverage}
+\end{equation}
+
+\noindent the fraction of retrieved arguments for which some sentence in the summary entails it.
+Framing coverage as entailment rather than lexical overlap follows the NLI-based line of
+summarization evaluation \cite{laban2022summac}, and specifically the recall-oriented framing used
+in general summarization evaluation \cite{fabbri2021summeval} and in retrieval-augmented generation
+evaluation toolkits \cite{es2024ragas}, adapted here to the retrieved-argument set rather than to a
+reference summary: an argument the summary paraphrases or restates counts as covered even where no
+words overlap, while an argument the summary never mentions, regardless of how it is worded,
+does not. The entailment probability is computed by the same \textsc{cross-encoder/nli-deberta-v3-base}
+classifier used throughout this thesis (Section~\ref{sec:methodology-edges},
+Section~\ref{sec:evaluation-uc1-conflictdensity}), applied here to summary-sentence and
+source-argument pairs rather than to argument-argument pairs, and the $0.5$ threshold is the same
+entailment cutoff Section~\ref{sec:evaluation-uc2-balance} reuses for Stance Balance below.
+
+\subsection{Faithfulness}
+\label{sec:evaluation-uc2-faithfulness}
+
+Faithfulness measures the opposite failure mode: does the summary assert anything not grounded in
+what was actually retrieved. Rather than a holistic judgment of factual accuracy, Faithfulness is
+computed as structured, per-claim verification, following the claim-decomposition approach to
+generation evaluation \cite{liu2023geval,es2024ragas}. An LLM judge, Llama 3.3 70B at temperature 0,
+first extracts every distinct factual or argumentative claim from the summary text, explicitly
+excluding mere framing statements that assert nothing substantive about the debate, and then decides
+for each extracted claim whether it is supported, directly stated or clearly entailed, by the
+retrieved source arguments the summarizer was given. Faithfulness is the resulting fraction,
+
+\begin{equation}
+\mathrm{Faithfulness} = \frac{\#\ \text{supported claims}}{\#\ \text{claims in summary}}.
+\label{eq:evaluation-faithfulness}
+\end{equation}
+
+\noindent This binary, per-claim outcome is what distinguishes Faithfulness from a holistic rubric
+score of the kind Section~\ref{sec:evaluation-uc1-rubric} defined for UC1: each claim receives an
+independently checkable supported/unsupported verdict against a specific source passage rather than
+a single scalar impression of the summary as a whole, closer in kind to Coverage and Precision@$k$
+than to the rubric judge, which is exactly why it is reported among UC2's primary four metrics
+rather than alongside the rubric judge Section~\ref{sec:evaluation-uc2-rubric} excludes.
+
+\subsection{Stance Balance}
+\label{sec:evaluation-uc2-balance}
+
+UC2 was introduced in Section~\ref{sec:methodology-uc2} as helping a citizen understand both sides
+of a debate, not only whichever side a system happened to retrieve more of, so a metric that
+measures whether the generated summary actually reflects both sides is needed directly rather than
+inferred from Coverage or Faithfulness alone. Stance Balance reuses the same NLI entailment
+machinery as Coverage, applied separately to the retrieved PRO arguments and the retrieved CON
+arguments: for each stance, it counts how many of that stance's retrieved arguments the summary
+entails above the same $0.5$ threshold, and computes the proportion of covered content attributable
+to the PRO side,
+
+\begin{equation}
+\mathrm{pro\_frac} = \frac{\text{covered}_{\text{pro}}}{\text{covered}_{\text{pro}} + \text{covered}_{\text{con}}},
+\qquad
+\mathrm{StanceBalance} = 1 - 2\,\left| \mathrm{pro\_frac} - 0.5 \right|.
+\label{eq:evaluation-balance}
+\end{equation}
+
+\noindent A summary that entails an equal number of PRO and CON arguments scores 1.0, perfect
+balance, and a summary that entails arguments from only one side scores 0.0, regardless of how many
+arguments from that one side it covers. Stance Balance is deliberately independent of Coverage: a
+summary can be perfectly balanced while covering very little of either side, or highly one-sided
+while covering a great deal of one side and none of the other, and the two metrics are reported
+side by side rather than combined into a single number precisely so that this distinction remains
+visible.
+
+\subsection{BERTScore F1 and the Independent Reference Summary}
+\label{sec:evaluation-uc2-bertscore}
+
+The three metrics above all score the summary against its own retrieved arguments. BERTScore F1
+\cite{zhang2020bertscore} instead scores it against an independently generated reference summary,
+giving UC2 one metric that is not itself computed from the same source material the summary was
+asked to be faithful to. BERTScore matches each candidate-summary token to its most similar
+reference-summary token by contextual embedding cosine similarity, and symmetrically each reference
+token to its most similar candidate token, and reports the F1 of the two resulting matching scores.
+Because the matching is over embeddings rather than surface tokens, a candidate and reference that
+paraphrase the same content in entirely different words still score highly, which is the property
+that makes BERTScore suitable here: two summaries of the same debate, written by different models,
+are unlikely to share much vocabulary even when they agree on substance.
+
+The reference summary itself has to be constructed carefully to avoid a specific circularity. If the
+reference were generated by the same model used as the candidate summarizer, Qwen3:8b, BERTScore
+would partly reward stylistic self-similarity, a summary would score well for sounding like
+something the same model tends to produce, rather than for capturing the same content a genuinely
+different model would independently converge on. This thesis therefore generates the reference
+summary with a model held distinct from both the candidate summarizer and the LLM used for
+Faithfulness judging in Section~\ref{sec:evaluation-uc2-faithfulness}, following the same
+disjoint-model reasoning already used for the dual-annotator ground truth
+(Section~\ref{sec:methodology-groundtruth-protocol}) and motivated by the same documented
+self-preference risk in LLM-based evaluation \cite{panickssery2024selfpref}. A further, less obvious
+design choice is that the reference summary is regenerated separately for each pool condition and
+each system's own retrieved argument set, rather than produced once as a single global gold
+reference reused everywhere. Given a universal reference, BERTScore would conflate two different
+questions, whether a system's retrieval enabled a summary close to one fixed target, and whether the
+candidate summarizer faithfully rendered whatever it was actually given, since a system that
+retrieves a different set of arguments than the reference was built from is penalized for that
+difference regardless of how well it summarized its own retrieval. Generating the reference from the
+same retrieved arguments the candidate summary was built from isolates the second question instead:
+BERTScore then measures whether the candidate summarizer's rendering of a given input diverges from
+a stronger model's rendering of the identical input, a generation-consistency check rather than a
+retrieval-quality-via-reference check, and the two are not the same claim.
+
+\subsection{Why UC2 Omits Holistic Rubric Judging}
+\label{sec:evaluation-uc2-rubric}
+
+UC1's rubric judge (Section~\ref{sec:evaluation-uc1-rubric}) is retained as a useful supplementary
+diagnostic because it shows meaningful spread across systems and axes, evidence that it is
+discriminating between retrieved sets of genuinely different quality rather than defaulting to a
+uniform response. UC2's version of the same judge, an independent 1--5 score across coverage,
+balance, insight, and specificity, scored by Llama 3.3 70B at temperature 0 on the same
+direct-scoring design that replaced UC1's abandoned pairwise comparison
+(Section~\ref{sec:evaluation-uc1-rubric}), was computed during evaluation-protocol development and
+did not show the same spread. Every system's mean score on every axis clustered inside a narrow band
+near the top of the 1--5 scale, typically between 4.0 and 5.0, regardless of which retrieval system
+had produced the summary being judged. A metric that assigns nearly every summary a score within one
+point of the ceiling carries almost no information for ranking systems against each other: whatever
+genuine quality differences exist between summaries produced from different retrievals, the rubric
+judge is not resolving them.
+
+This thesis therefore follows the underlying conference paper's decision and reports UC2's rubric
+judge as a supplementary, non-primary diagnostic, in favor of the four automatic metrics of
+Sections~\ref{sec:evaluation-uc2-coverage}--\ref{sec:evaluation-uc2-bertscore}, each of which has a
+narrower, more verifiable failure mode than a single holistic scalar and, unlike the rubric judge,
+demonstrably separates systems in practice. This is a deliberate asymmetry with UC1 rather than an
+inconsistency: the same judging methodology behaves differently on the two use cases because UC1's
+retrieved sets are heterogeneous enough for a holistic judge to distinguish, while UC2's
+five-field structured summaries, produced from a fixed prompt template regardless of which system
+fed them, apparently converge in surface quality closely enough that a coarse 1--5 scale cannot tell
+them apart even where the automatic metrics still can.
+
+\section{Reporting Conventions and Metric Reliability}
+\label{sec:evaluation-reporting}
+
+Every metric defined in this chapter is computed at the level of a single (policy, stance) pair for
+UC1 or a single policy for UC2, then aggregated in two stages before it reaches a comparison table
+in Chapter~\ref{ch:results}. For UC1's stance-aware metrics, a PRO score and a CON score are first
+computed independently for each policy and averaged into one per-policy figure, so that a policy
+with an unusually strong PRO side and a weak CON side, or vice versa, does not silently favor
+whichever stance a system happens to handle better. Per-policy figures are then averaged, together
+with their standard deviation, across the fixed 30-policy stratified sample of
+Section~\ref{sec:methodology-policy-selection}. The per-policy figures themselves are retained in
+the full evaluation report rather than discarded once the aggregate is computed, both because
+Chapter~\ref{ch:results} cross-references them against policy-level covariates such as argument-count
+density and \textsc{equivalent}-community modularity, and because retaining a per-unit breakdown
+rather than only a pooled mean is standard practice in comparing IR systems across a fixed set of
+topics, where paired, per-topic comparison is generally more informative than comparing aggregate
+averages alone \cite{smucker2007significance,demsar2006statistical}.
+
+Two further reporting conventions follow directly from decisions already fixed in
+Chapter~\ref{ch:methodology}. Every metric is reported separately under the native pool and the
+hardened pool, since Section~\ref{sec:evaluation-uc1-diversity} and
+Section~\ref{sec:evaluation-uc1-distractorrate} have already shown that a metric's behavior, and in
+EILD's case its very validity as a diversity measure, can differ qualitatively between the two
+conditions. And every UC1 metric is reported at the fixed $k=5$ operating point as the primary
+comparison, with the pool-size and $k$ sweep of Chapter~\ref{ch:results} reported separately as a
+generalization check rather than folded into the same table, since a conclusion that only holds at
+one specific operating point is a materially weaker claim than one that holds across a swept range.
+
+A metric's reported value is only as trustworthy as its stability across independent evaluation
+runs, a question that matters most for the Random baseline, since a random retriever's score on any
+given evaluation run is, by construction, one draw from a distribution rather than a deterministic
+property of the system. As a validation step taken during evaluation-protocol development, Random's
+retrieval was re-run over 20 independent random seeds at the native-pool, $k=5$ operating point, and
+nDCG@5 was recomputed on each. The resulting distribution has a mean of 0.388 and a 95\% bootstrap
+confidence interval \cite{efron1993bootstrap} of $[0.377, 0.399]$, a width of roughly 0.022 around a
+value close to the single-seed figure reported as Random's headline score in
+Chapter~\ref{ch:results}. An interval this narrow, and this far from zero, indicates that Random's
+elevated apparent competitiveness under the native pool (Section~\ref{sec:methodology-groundtruth-distractors})
+is a stable, structural property of the native pool's high relevance density, not an artifact of one
+unusually favorable random draw. This distinction matters directly for how Chapter~\ref{ch:results}
+interprets any comparison involving Random: a tie between Random and a designed retrieval system
+under the native pool, given this check, is evidence that the metric's headroom is compressed on
+that pool, an interpretation this thesis returns to when discussing why the pool was hardened in the
+first place, rather than evidence that either system's evaluation run happened to be lucky. This kind
+of seed-level robustness check is one instance of a broader concern in constructing retrieval
+benchmarks that are difficult enough, and stable enough, to actually discriminate between systems
+rather than being dominated by evaluation noise \cite{thakur2025freshstack}.

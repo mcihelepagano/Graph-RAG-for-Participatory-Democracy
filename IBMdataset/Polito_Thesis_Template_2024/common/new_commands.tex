@@ -1,0 +1,86 @@
+
+% how to change Contents to Table of Contents
+\addto\captionsenglish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+}
+
+% to change the name of Abbreviations to Acronyms
+% not needed if use use entry types and define those
+% \renewcommand{\abbreviationsname}{Acronyms}
+
+% to allow line comments in algorithms
+\algnewcommand{\LineComment}[1]{\State \(\triangleright\) #1}
+
+% to declare abs and norm
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\scriptsize\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C,
+    lineskip=-0.1ex
+}
+
+\newcommand{\Dedications}{%
+    \chapter*{Dedications}
+    \addcontentsline{toc}{chapter}{Dedications} % Aggiunge 'Dedications' all'indice
+}
+
+\newcommand{\paginavuota}{
+    \newpage
+    \thispagestyle{empty}
+}
+
+% Formato per subsubsection
+\titleformat{\subsubsection}[block]
+  {\normalfont\normalsize\bfseries} % Stile del titolo
+  {\thesubsubsection} % Aggiungi il numero di subsubsection
+  {1em} % Spaziatura tra numero e titolo
+  {} % Comando dopo il titolo
+
+\renewcommand\thesubsubsection{\thesection.\arabic{subsection}.\arabic{subsubsection}} % Formato della numerazione per subsubsection
+
+% Formato per paragraph
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries} % Stile del titolo
+  {\theparagraph} % Aggiungi il numero di paragraph
+  {1em} % Spaziatura tra numero e titolo
+  {} % Comando dopo il titolo
+
+\renewcommand\theparagraph{\thesubsubsection.\arabic{paragraph}} % Formato della numerazione per paragraph
+
+% Definisci un nuovo comando per la subsubsubsection
+% Definisci un nuovo comando per la subsubsubsection
+\newcommand{\subsubsubsection}[1]{%
+  \paragraph{#1}\mbox{}\\ % Usa la formattazione del paragraph e va a capo
+  \addcontentsline{toc}{paragraph}{#1} % Aggiungi al sommario
+}
+

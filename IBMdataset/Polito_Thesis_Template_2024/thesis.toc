@@ -1,0 +1,71 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Context and Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Questions}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Technical Background}{3}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Natural language processing and argumentative relations.}{3}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Knowledge graphs.}{3}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Retrieval-augmented generation.}{4}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Graph-RAG.}{4}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}A Brief History: Why These Techniques Became Prominent}{4}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}How RAG Works}{5}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}How Graph-RAG Works}{6}{subsection.1.4.7}%
+\contentsline {subsection}{\numberline {1.4.8}Advantages and Limitations}{6}{subsection.1.4.8}%
+\contentsline {section}{\numberline {1.5}Thesis Structure}{7}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Related Work}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Argument Mining on Deliberation Platforms}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Knowledge Graphs for Argumentative and Deliberative Data}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}RAG and Graph-RAG in Civic and Governmental Applications}{10}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Corpus and Data}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}IBM Project Debater Argument Quality Corpus}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Descriptive Statistics}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Data Cleaning}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Methodology}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Graph Construction}{14}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Policy Grouping: MetaPolicy and Topic}{14}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Calibrating the \textsc {Contradicts} Threshold}{16}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Argument-Level Edge Recovery}{18}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}PageRank Centrality}{19}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Retrieval Framework}{20}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Maximal Marginal Relevance}{20}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Retrieval Systems Compared}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}StandardRAG: the Embedding-Only Baseline}{22}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}PR-GraphRAG: the Graph-Aware System}{22}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}RAG-no-MMR: a Diversification Ablation}{23}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Random: a Sanity Floor}{24}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Summary}{24}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Use Cases}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}UC1: Conflict-Map Retrieval}{25}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}UC2: Debate Summarization}{25}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Policy Selection}{26}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Hardened Pool Construction}{27}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Why the Native Pool Is Not a Sufficient Test}{27}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Constructing the Distractor Pool}{27}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Injection Levels}{28}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Four Edge-Connectivity Scenarios}{29}{subsection.4.6.4}%
+\contentsline {section}{\numberline {4.7}Ground Truth Generation}{31}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Grading Protocol}{31}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Consensus Resolution}{32}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Inter-Annotator Agreement}{32}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}Grading the Hardened Pools}{33}{subsection.4.7.4}%
+\contentsline {chapter}{\numberline {5}Evaluation}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Resolving Retrieved Arguments to Ground-Truth Grades}{36}{section.5.1}%
+\contentsline {section}{\numberline {5.2}UC1 Metrics: Conflict-Map Retrieval}{37}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Primary Relevance Metrics: nDCG@$k$ and MeanRel@$k$}{37}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Rank-Free Diagnostics: Precision@$k$, Recall@$k$, and Subtopic Recall}{39}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Diversity: From Intra-List Distance to Relevance-Constrained Diversity}{40}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Distractor-Rate@$k$}{42}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Conflict Density}{42}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}LLM Rubric Judging and the Abandoned Pairwise Comparison}{43}{subsection.5.2.6}%
+\contentsline {section}{\numberline {5.3}UC2 Metrics: Debate Summarization}{44}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Coverage}{44}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Faithfulness}{45}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Stance Balance}{45}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}BERTScore F1 and the Independent Reference Summary}{46}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Why UC2 Omits Holistic Rubric Judging}{47}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Reporting Conventions and Metric Reliability}{47}{section.5.4}%
+\contentsline {chapter}{\numberline {A}Appendix A}{50}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendix B}{51}{appendix.B}%
+\contentsline {chapter}{Bibliography}{52}{appendix*.14}%
+\contentsline {chapter}{Dedications}{54}{appendix*.15}%
